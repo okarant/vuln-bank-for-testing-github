@@ -1,0 +1,7 @@
+{
+  "subagent_type": "generalPurpose",
+  "model": "claude-4.6-opus-high-thinking",
+  "run_in_background": false,
+  "description": "delegated batch",
+  "prompt": "Perform ONLY this bounded unit and nothing else:\n{STEP_TASK}\nCM-IDs for THIS batch (do not touch any others): {BATCH_CM_IDS}\nReturn: {RETURN_SPEC}\nDo NOT create alternative/parallel files; act in place per the contract."
+}
