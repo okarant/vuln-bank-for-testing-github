@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-06-11T20:23:52.466781",
+  "project": {
+    "sde_project_id": 31905,
+    "sde_application": "vuln-bank-for-testing-app",
+    "repository": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+    "branch": "security-hardening/vuln-bank-for-testing-20260611-2023",
+    "business_unit": "Vulnerable Apps Testing (ID: 2424)"
+  },
+  "survey": {
+    "answers_applied": 27,
+    "evidence_file": ".sde-security/survey-evidence.md"
+  },
+  "countermeasures": {
+    "total": 100,
+    "classifications": {
+      "CODE_FIX": 32,
+      "ML_CODE": 9,
+      "INFRA": 28,
+      "PROCESS": 31
+    },
+    "process_cms_noted": 31,
+    "skill_files_generated": 69,
+    "library_implementations_found": 0,
+    "all_ai_authored": true
+  },
+  "artifacts": {
+    "agents_md": "AGENTS.md",
+    "skills_directory": ".sde-security/skills/",
+    "classifications": ".sde-security/cm-work/classifications.json",
+    "code_mappings": ".sde-security/cm-work/code-mappings.json",
+    "survey_evidence": ".sde-security/survey-evidence.md",
+    "library_lookup": ".sde-security/cm-work/library-lookup-results.json",
+    "cm_manifest": ".sde-security/cm-work/cm-manifest.json"
+  },
+  "domains": [
+    "ai-ml",
+    "authentication",
+    "cryptography",
+    "data-privacy",
+    "deployment",
+    "docker",
+    "file-security",
+    "general-security",
+    "github",
+    "input-validation",
+    "network-security",
+    "resource-management",
+    "shell-security",
+    "web-security"
+  ],
+  "verification": {
+    "count_match": true,
+    "cross_reference": true,
+    "intent_check": true,
+    "library_fidelity": true,
+    "agents_md_markers": true
+  }
+}

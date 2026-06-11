@@ -1,0 +1,602 @@
+[
+  {
+    "id": "T31905-T1187",
+    "title": "Test if secrets are stored in Dockerfiles (Docker)",
+    "phase": "QA",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T1186",
+    "title": "Do not store secrets in Dockerfiles (Docker)",
+    "phase": "Deployment",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T3916",
+    "title": "Ensure automated and secure deployment (GitHub)",
+    "phase": "Deployment",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T3903",
+    "title": "Implement application and webhook security strategies (GitHub)",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T3906",
+    "title": "Implement secure build worker management (GitHub)",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1387",
+    "title": "Ensure the security of products acquired through the supply chain and contractors",
+    "phase": "Activities",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T4484",
+    "title": "Mitigate excessive agency in Large Language Models (AI/ML Developer)",
+    "phase": "Development",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T50",
+    "title": "Use indirect object reference maps if accessing files",
+    "phase": "Stories",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2139",
+    "title": "Prevent information exposure through APIs",
+    "phase": "Development",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T2606",
+    "title": "Verify RBAC implemented instead of individual accounts",
+    "phase": "QA",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T1213",
+    "title": "Verify that cgroup usage is confirmed (Docker)",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T2353",
+    "title": "Verify that proper criteria for software security checks are defined and implemented",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T1180",
+    "title": "Check container health (Docker)",
+    "phase": "Deployment",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T323",
+    "title": "Test that default accounts are disabled or default passwords are changed",
+    "phase": "QA",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T4492",
+    "title": "Prevent model theft in Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T3926",
+    "title": "Test third-party artifact security (GitHub)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T220",
+    "title": "Verify that user password is salted and hashed",
+    "phase": "QA",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T65",
+    "title": "Restrict accepted HTTP verbs",
+    "phase": "Stories",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T36",
+    "title": "Escape untrusted data in HTML, HTML attributes, CSS, and JavaScript",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T17",
+    "title": "Do not only rely on client-side authorization",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1159",
+    "title": "Verify that TLS authentication is configured for the Docker daemon (Docker)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T4466",
+    "title": "Prevent Large Language Model denial of service (Project Manager)",
+    "phase": "Stories",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T119",
+    "title": "Test for clickjacking",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T338",
+    "title": "Control access to resources through user authentication and authorization",
+    "phase": "Stories",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T62",
+    "title": "Protect passwords in property and configuration files",
+    "phase": "Stories",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T375",
+    "title": "Release resources when no longer needed",
+    "phase": "Development",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T1370",
+    "title": "Identify and track common software weaknesses and threats",
+    "phase": "Activities",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T2614",
+    "title": "Verify database traffic is validated",
+    "phase": "QA",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T4482",
+    "title": "Mitigate excessive agency in Large Language Models (Project Manager)",
+    "phase": "Stories",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T1203",
+    "title": "Test if container CPU priority is appropriately set (Docker)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T3924",
+    "title": "Test pipeline definition and security (GitHub)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T3927",
+    "title": "Test dependency management strategy (GitHub)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T4452",
+    "title": "Test environmental vulnerabilities (Bash/Shell)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T3901",
+    "title": "Enforce repository management and security strategies (GitHub)",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1540",
+    "title": "Verify that browser data is cleared upon user logout",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T545",
+    "title": "Verify that personal information is anonymized before being reused for secondary purposes",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2257",
+    "title": "Regularly update and patch containerization systems",
+    "phase": "Deployment",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T2601",
+    "title": "Use Transparent Data Encryption with Enterprise Databases",
+    "phase": "Deployment",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2331",
+    "title": "Verify whether any plan exists for data privacy incident response",
+    "phase": "QA",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T2140",
+    "title": "Test that APIs do not expose sensitive information",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T4448",
+    "title": "Test prevention against input file attacks (Bash/Shell)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T4480",
+    "title": "Design secure plugins for Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T2296",
+    "title": "Securely install and configure all software components",
+    "phase": "Activities",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T4440",
+    "title": "Enforce access controls (Bash/Shell)",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2516",
+    "title": "Verify that common software weaknesses and threats are identified and tracked.",
+    "phase": "QA",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T2670",
+    "title": "Verify that applicable compliance regulations are identified",
+    "phase": "QA",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T754",
+    "title": "Enable the restriction of processing personal information of an individual for a specific purpose",
+    "phase": "Stories",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T4835",
+    "title": "Implement defenses against vector and embedding weaknesses",
+    "phase": "Architecture",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1177",
+    "title": "Verify that secure and updated images are used (Docker)",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T4476",
+    "title": "Prevent sensitive information disclosure in Large Language Models (AI/ML Developer)",
+    "phase": "Development",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T4833",
+    "title": "Test fine-tuning alignement of generative AI models",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1210",
+    "title": "Configure seccomp profile (Docker)",
+    "phase": "Deployment",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2258",
+    "title": "Minimize host OS attack surface",
+    "phase": "Deployment",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T87",
+    "title": "Verify that all data in transit is encrypted using a secure TLS channel",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T3925",
+    "title": "Test artifact signing (GitHub)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T179",
+    "title": "Allow access for users to remove their personal information from the system",
+    "phase": "Stories",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T240",
+    "title": "Test whether users can remove their data from the system",
+    "phase": "QA",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T1156",
+    "title": "Do not use the aufs storage driver (Docker)",
+    "phase": "Deployment",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1212",
+    "title": "Confirm cgroup usage (Docker)",
+    "phase": "Deployment",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T4456",
+    "title": "Prevent prompt injection in Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T756",
+    "title": "Verify if personal data processing activities are recorded and maintained",
+    "phase": "QA",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T2474",
+    "title": "Include security constraints in all user stories and features",
+    "phase": "Activities",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T1194",
+    "title": "Do not run SSH within containers (Docker)",
+    "phase": "Deployment",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T70",
+    "title": "Implement account lockout or authentication throttling for system accounts",
+    "phase": "Stories",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2141",
+    "title": "Perform function level authorization in API",
+    "phase": "Architecture",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T60",
+    "title": "Use correct and approved cryptographic algorithms, parameters, and key lengths",
+    "phase": "Stories",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2661",
+    "title": "Change insecure configuration defaults and remove unnecessary features",
+    "phase": "Deployment",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T1921",
+    "title": "Track and manage usage of third-party and commercial off the shelf (COTS) hardware or software",
+    "phase": "Activities",
+    "priority": 10
+  },
+  {
+    "id": "T31905-T2256",
+    "title": "Authenticate and log all access to registries containing sensitive or proprietary images",
+    "phase": "Stories",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2478",
+    "title": "Manage re-deployment routines",
+    "phase": "Deployment",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T2352",
+    "title": "Verify that supporting toolchains are properly implemented",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T3932",
+    "title": "Test separation of deployment configuration files (GitHub)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T4447",
+    "title": "Test directory writing and reading (Bash/Shell)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1160",
+    "title": "Set ulimit appropriately (Docker)",
+    "phase": "Deployment",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T4475",
+    "title": "Prevent sensitive information disclosure in Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T4459",
+    "title": "Prevent prompt injection in Large Language Models (QA Analyst)",
+    "phase": "Deployment",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T85",
+    "title": "Test server-side enforcement of authorization",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T219",
+    "title": "Avoid transmitting confidential data through URL parameters",
+    "phase": "Development",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T279",
+    "title": "Avoid dynamically loading any code without proper security considerations",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2110",
+    "title": "Verify that signed image enforcement is enabled (Docker)",
+    "phase": "QA",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T2501",
+    "title": "Perform cybersecurity planning",
+    "phase": "Activities",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T2604",
+    "title": "Follow best practices for data restoring operations",
+    "phase": "Deployment",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T2676",
+    "title": "Verify that a bi-directional communication channel is established and maintained for receiving security reports and sending notifications",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1158",
+    "title": "Configure TLS authentication for the Docker daemon (Docker)",
+    "phase": "Deployment",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T93",
+    "title": "Test that sessions expire upon logout",
+    "phase": "QA",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T2612",
+    "title": "Verify backup archive bits are protected",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T2282",
+    "title": "Test to confirm that unauthenticated parts of the application are accessible",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2506",
+    "title": "Verify the cybersecurity assessment report",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T421",
+    "title": "Verify if web page template is vulnerable to client side template injection (CSTI)",
+    "phase": "QA",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T114",
+    "title": "Test system-to-system authentication lockout or throttling",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2170",
+    "title": "Ensure that personal information processed by the application meets data localization requirements",
+    "phase": "Stories",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T1235",
+    "title": "Test that only trusted users can control the Docker daemon (Docker)",
+    "phase": "QA",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1892",
+    "title": "Perform a Threat and Risk Assessment (TRA)",
+    "phase": "Activities",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T573",
+    "title": "Prevent UDDI/ebXML spoofing",
+    "phase": "Stories",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T79",
+    "title": "Test password change functions",
+    "phase": "QA",
+    "priority": 6
+  },
+  {
+    "id": "T31905-T1369",
+    "title": "Perform security testing using DAST tools",
+    "phase": "Activities",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T2613",
+    "title": "Verify best practices for data-restoring operations are followed",
+    "phase": "QA",
+    "priority": 7
+  },
+  {
+    "id": "T31905-T3902",
+    "title": "Ensure regular review and inactive users removal (GitHub)",
+    "phase": "Development",
+    "priority": 8
+  },
+  {
+    "id": "T31905-T1368",
+    "title": "Perform security testing using SAST tools",
+    "phase": "Activities",
+    "priority": 9
+  },
+  {
+    "id": "T31905-T222",
+    "title": "Verify server-to-server authentication",
+    "phase": "QA",
+    "priority": 6
+  }
+]

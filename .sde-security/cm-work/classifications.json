@@ -1,0 +1,1390 @@
+[
+  {
+    "id": "T31905-T1187",
+    "title": "Test if secrets are stored in Dockerfiles (Docker)",
+    "phase": "QA",
+    "priority": 10,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1187-test-if-secrets-are-stored-in-dockerfile/SKILL.md"
+  },
+  {
+    "id": "T31905-T1186",
+    "title": "Do not store secrets in Dockerfiles (Docker)",
+    "phase": "Deployment",
+    "priority": 10,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1186-do-not-store-secrets-in-dockerfiles-doc/SKILL.md"
+  },
+  {
+    "id": "T31905-T3916",
+    "title": "Ensure automated and secure deployment (GitHub)",
+    "phase": "Deployment",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "docker-compose.yml",
+      "Dockerfile"
+    ],
+    "reason": "Deployment/infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "github",
+    "skill_path": ".sde-security/skills/github/t3916-ensure-automated-and-secure-deployment/SKILL.md"
+  },
+  {
+    "id": "T31905-T3903",
+    "title": "Implement application and webhook security strategies (GitHub)",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [],
+    "reason": "GitHub repository configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "github",
+    "skill_path": ".sde-security/skills/github/t3903-implement-application-and-webhook-securi/SKILL.md"
+  },
+  {
+    "id": "T31905-T3906",
+    "title": "Implement secure build worker management (GitHub)",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [],
+    "reason": "GitHub repository configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "github",
+    "skill_path": ".sde-security/skills/github/t3906-implement-secure-build-worker-management/SKILL.md"
+  },
+  {
+    "id": "T31905-T1387",
+    "title": "Ensure the security of products acquired through the supply chain and contractors",
+    "phase": "Activities",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T4484",
+    "title": "Mitigate excessive agency in Large Language Models (AI/ML Developer)",
+    "phase": "Development",
+    "priority": 7,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "ai_agent_deepseek.py"
+    ],
+    "reason": "AI agent has unrestricted DB access",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "ai-ml",
+    "skill_path": ".sde-security/skills/ai-ml/t4484-mitigate-excessive-agency-in-large-langu/SKILL.md"
+  },
+  {
+    "id": "T31905-T50",
+    "title": "Use indirect object reference maps if accessing files",
+    "phase": "Stories",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Direct object references used for file access",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "file-security",
+    "skill_path": ".sde-security/skills/file-security/t50-use-indirect-object-reference-maps-if-ac/SKILL.md"
+  },
+  {
+    "id": "T31905-T2139",
+    "title": "Prevent information exposure through APIs",
+    "phase": "Development",
+    "priority": 7,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Debug info exposed in API responses",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "web-security",
+    "skill_path": ".sde-security/skills/web-security/t2139-prevent-information-exposure-through-api/SKILL.md"
+  },
+  {
+    "id": "T31905-T2606",
+    "title": "Verify RBAC implemented instead of individual accounts",
+    "phase": "QA",
+    "priority": 10,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py"
+    ],
+    "reason": "Individual admin flag instead of RBAC",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t2606-verify-rbac-implemented-instead-of-indiv/SKILL.md"
+  },
+  {
+    "id": "T31905-T1213",
+    "title": "Verify that cgroup usage is confirmed (Docker)",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1213-verify-that-cgroup-usage-is-confirmed-d/SKILL.md"
+  },
+  {
+    "id": "T31905-T2353",
+    "title": "Verify that proper criteria for software security checks are defined and implemented",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Security criteria definition is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T1180",
+    "title": "Check container health (Docker)",
+    "phase": "Deployment",
+    "priority": 6,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1180-check-container-health-docker/SKILL.md"
+  },
+  {
+    "id": "T31905-T323",
+    "title": "Test that default accounts are disabled or default passwords are changed",
+    "phase": "QA",
+    "priority": 9,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "docker-compose.yml"
+    ],
+    "reason": "Default postgres credentials in docker-compose",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "cryptography",
+    "skill_path": ".sde-security/skills/cryptography/t323-test-that-default-accounts-are-disabled/SKILL.md"
+  },
+  {
+    "id": "T31905-T4492",
+    "title": "Prevent model theft in Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "No custom ML model in codebase (uses API)",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T3926",
+    "title": "Test third-party artifact security (GitHub)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "GitHub testing/verification is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T220",
+    "title": "Verify that user password is salted and hashed",
+    "phase": "QA",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py"
+    ],
+    "reason": "Passwords stored in plaintext",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "cryptography",
+    "skill_path": ".sde-security/skills/cryptography/t220-verify-that-user-password-is-salted-and/SKILL.md"
+  },
+  {
+    "id": "T31905-T65",
+    "title": "Restrict accepted HTTP verbs",
+    "phase": "Stories",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "No HTTP verb restriction on routes",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "web-security",
+    "skill_path": ".sde-security/skills/web-security/t65-restrict-accepted-http-verbs/SKILL.md"
+  },
+  {
+    "id": "T31905-T36",
+    "title": "Escape untrusted data in HTML, HTML attributes, CSS, and JavaScript",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "XSS/injection vulnerabilities in output",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "input-validation",
+    "skill_path": ".sde-security/skills/input-validation/t36-escape-untrusted-data-in-html-html-attr/SKILL.md"
+  },
+  {
+    "id": "T31905-T17",
+    "title": "Do not only rely on client-side authorization",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py"
+    ],
+    "reason": "Missing authorization checks on endpoints",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t17-do-not-only-rely-on-client-side-authoriz/SKILL.md"
+  },
+  {
+    "id": "T31905-T1159",
+    "title": "Verify that TLS authentication is configured for the Docker daemon (Docker)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1159-verify-that-tls-authentication-is-config/SKILL.md"
+  },
+  {
+    "id": "T31905-T4466",
+    "title": "Prevent Large Language Model denial of service (Project Manager)",
+    "phase": "Stories",
+    "priority": 7,
+    "classification": "ML_CODE",
+    "files_affected": [],
+    "reason": "Requires new code/design implementation",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "ai-ml",
+    "skill_path": ".sde-security/skills/ai-ml/t4466-prevent-large-language-model-denial-of-s/SKILL.md"
+  },
+  {
+    "id": "T31905-T119",
+    "title": "Test for clickjacking",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "No X-Frame-Options header",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "web-security",
+    "skill_path": ".sde-security/skills/web-security/t119-test-for-clickjacking/SKILL.md"
+  },
+  {
+    "id": "T31905-T338",
+    "title": "Control access to resources through user authentication and authorization",
+    "phase": "Stories",
+    "priority": 7,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Some endpoints missing auth checks",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t338-control-access-to-resources-through-user/SKILL.md"
+  },
+  {
+    "id": "T31905-T62",
+    "title": "Protect passwords in property and configuration files",
+    "phase": "Stories",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "auth.py",
+      "app.py"
+    ],
+    "reason": "JWT_SECRET hardcoded in source",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "cryptography",
+    "skill_path": ".sde-security/skills/cryptography/t62-protect-passwords-in-property-and-config/SKILL.md"
+  },
+  {
+    "id": "T31905-T375",
+    "title": "Release resources when no longer needed",
+    "phase": "Development",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "database.py"
+    ],
+    "reason": "Connection pool resource management",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "resource-management",
+    "skill_path": ".sde-security/skills/resource-management/t375-release-resources-when-no-longer-needed/SKILL.md"
+  },
+  {
+    "id": "T31905-T1370",
+    "title": "Identify and track common software weaknesses and threats",
+    "phase": "Activities",
+    "priority": 10,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T2614",
+    "title": "Verify database traffic is validated",
+    "phase": "QA",
+    "priority": 9,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py",
+      "database.py"
+    ],
+    "reason": "SQL injection vulnerabilities exist in codebase",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "general-security",
+    "skill_path": ".sde-security/skills/general-security/t2614-verify-database-traffic-is-validated/SKILL.md"
+  },
+  {
+    "id": "T31905-T4482",
+    "title": "Mitigate excessive agency in Large Language Models (Project Manager)",
+    "phase": "Stories",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "PM-level requirements definition",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T1203",
+    "title": "Test if container CPU priority is appropriately set (Docker)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1203-test-if-container-cpu-priority-is-approp/SKILL.md"
+  },
+  {
+    "id": "T31905-T3924",
+    "title": "Test pipeline definition and security (GitHub)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "GitHub testing/verification is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T3927",
+    "title": "Test dependency management strategy (GitHub)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "GitHub testing/verification is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T4452",
+    "title": "Test environmental vulnerabilities (Bash/Shell)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "start.sh"
+    ],
+    "reason": "Shell script security testing",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "shell-security",
+    "skill_path": ".sde-security/skills/shell-security/t4452-test-environmental-vulnerabilities-bash/SKILL.md"
+  },
+  {
+    "id": "T31905-T3901",
+    "title": "Enforce repository management and security strategies (GitHub)",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [],
+    "reason": "GitHub repository configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "github",
+    "skill_path": ".sde-security/skills/github/t3901-enforce-repository-management-and-securi/SKILL.md"
+  },
+  {
+    "id": "T31905-T1540",
+    "title": "Verify that browser data is cleared upon user logout",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "QA testing/verification process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T545",
+    "title": "Verify that personal information is anonymized before being reused for secondary purposes",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "ML_CODE",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "No data deletion/anonymization feature",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "data-privacy",
+    "skill_path": ".sde-security/skills/data-privacy/t545-verify-that-personal-information-is-anon/SKILL.md"
+  },
+  {
+    "id": "T31905-T2257",
+    "title": "Regularly update and patch containerization systems",
+    "phase": "Deployment",
+    "priority": 10,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Container deployment configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t2257-regularly-update-and-patch-containerizat/SKILL.md"
+  },
+  {
+    "id": "T31905-T2601",
+    "title": "Use Transparent Data Encryption with Enterprise Databases",
+    "phase": "Deployment",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "docker-compose.yml"
+    ],
+    "reason": "Database encryption is infra config",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "cryptography",
+    "skill_path": ".sde-security/skills/cryptography/t2601-use-transparent-data-encryption-with-ent/SKILL.md"
+  },
+  {
+    "id": "T31905-T2331",
+    "title": "Verify whether any plan exists for data privacy incident response",
+    "phase": "QA",
+    "priority": 9,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Policy/plan verification is a process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T2140",
+    "title": "Test that APIs do not expose sensitive information",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "QA testing/verification process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T4448",
+    "title": "Test prevention against input file attacks (Bash/Shell)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "start.sh"
+    ],
+    "reason": "Shell script security testing",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "shell-security",
+    "skill_path": ".sde-security/skills/shell-security/t4448-test-prevention-against-input-file-attac/SKILL.md"
+  },
+  {
+    "id": "T31905-T4480",
+    "title": "Design secure plugins for Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 6,
+    "classification": "ML_CODE",
+    "files_affected": [
+      "ai_agent_deepseek.py"
+    ],
+    "reason": "AI plugin architecture not secure by design",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "ai-ml",
+    "skill_path": ".sde-security/skills/ai-ml/t4480-design-secure-plugins-for-large-language/SKILL.md"
+  },
+  {
+    "id": "T31905-T2296",
+    "title": "Securely install and configure all software components",
+    "phase": "Activities",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T4440",
+    "title": "Enforce access controls (Bash/Shell)",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "start.sh"
+    ],
+    "reason": "Shell script security hardening",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "shell-security",
+    "skill_path": ".sde-security/skills/shell-security/t4440-enforce-access-controls-bash-shell/SKILL.md"
+  },
+  {
+    "id": "T31905-T2516",
+    "title": "Verify that common software weaknesses and threats are identified and tracked.",
+    "phase": "QA",
+    "priority": 10,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "QA testing/verification process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T2670",
+    "title": "Verify that applicable compliance regulations are identified",
+    "phase": "QA",
+    "priority": 10,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Compliance identification is a process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T754",
+    "title": "Enable the restriction of processing personal information of an individual for a specific purpose",
+    "phase": "Stories",
+    "priority": 8,
+    "classification": "ML_CODE",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "No data processing restriction feature",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "data-privacy",
+    "skill_path": ".sde-security/skills/data-privacy/t754-enable-the-restriction-of-processing-per/SKILL.md"
+  },
+  {
+    "id": "T31905-T4835",
+    "title": "Implement defenses against vector and embedding weaknesses",
+    "phase": "Architecture",
+    "priority": 8,
+    "classification": "ML_CODE",
+    "files_affected": [
+      "ai_agent_deepseek.py"
+    ],
+    "reason": "No RAG/embedding security implemented",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "ai-ml",
+    "skill_path": ".sde-security/skills/ai-ml/t4835-implement-defenses-against-vector-and-em/SKILL.md"
+  },
+  {
+    "id": "T31905-T1177",
+    "title": "Verify that secure and updated images are used (Docker)",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1177-verify-that-secure-and-updated-images-ar/SKILL.md"
+  },
+  {
+    "id": "T31905-T4476",
+    "title": "Prevent sensitive information disclosure in Large Language Models (AI/ML Developer)",
+    "phase": "Development",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "General process/organizational task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T4833",
+    "title": "Test fine-tuning alignement of generative AI models",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "No model fine-tuning in codebase (uses API)",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T1210",
+    "title": "Configure seccomp profile (Docker)",
+    "phase": "Deployment",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1210-configure-seccomp-profile-docker/SKILL.md"
+  },
+  {
+    "id": "T31905-T2258",
+    "title": "Minimize host OS attack surface",
+    "phase": "Deployment",
+    "priority": 7,
+    "classification": "INFRA",
+    "files_affected": [
+      "docker-compose.yml",
+      "Dockerfile"
+    ],
+    "reason": "Deployment/infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "deployment",
+    "skill_path": ".sde-security/skills/deployment/t2258-minimize-host-os-attack-surface/SKILL.md"
+  },
+  {
+    "id": "T31905-T87",
+    "title": "Verify that all data in transit is encrypted using a secure TLS channel",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "ML_CODE",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "No TLS configuration in Flask app",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "network-security",
+    "skill_path": ".sde-security/skills/network-security/t87-verify-that-all-data-in-transit-is-encry/SKILL.md"
+  },
+  {
+    "id": "T31905-T3925",
+    "title": "Test artifact signing (GitHub)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "GitHub testing/verification is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T179",
+    "title": "Allow access for users to remove their personal information from the system",
+    "phase": "Stories",
+    "priority": 6,
+    "classification": "ML_CODE",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "No data deletion/anonymization feature",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "data-privacy",
+    "skill_path": ".sde-security/skills/data-privacy/t179-allow-access-for-users-to-remove-their-p/SKILL.md"
+  },
+  {
+    "id": "T31905-T240",
+    "title": "Test whether users can remove their data from the system",
+    "phase": "QA",
+    "priority": 6,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "QA testing/verification process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T1156",
+    "title": "Do not use the aufs storage driver (Docker)",
+    "phase": "Deployment",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1156-do-not-use-the-aufs-storage-driver-dock/SKILL.md"
+  },
+  {
+    "id": "T31905-T1212",
+    "title": "Confirm cgroup usage (Docker)",
+    "phase": "Deployment",
+    "priority": 7,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1212-confirm-cgroup-usage-docker/SKILL.md"
+  },
+  {
+    "id": "T31905-T4456",
+    "title": "Prevent prompt injection in Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 7,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "ai_agent_deepseek.py"
+    ],
+    "reason": "AI agent vulnerable to prompt injection",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "ai-ml",
+    "skill_path": ".sde-security/skills/ai-ml/t4456-prevent-prompt-injection-in-large-langua/SKILL.md"
+  },
+  {
+    "id": "T31905-T756",
+    "title": "Verify if personal data processing activities are recorded and maintained",
+    "phase": "QA",
+    "priority": 10,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Data processing records are a process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T2474",
+    "title": "Include security constraints in all user stories and features",
+    "phase": "Activities",
+    "priority": 6,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T1194",
+    "title": "Do not run SSH within containers (Docker)",
+    "phase": "Deployment",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1194-do-not-run-ssh-within-containers-docker/SKILL.md"
+  },
+  {
+    "id": "T31905-T70",
+    "title": "Implement account lockout or authentication throttling for system accounts",
+    "phase": "Stories",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py"
+    ],
+    "reason": "No lockout on login attempts",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t70-implement-account-lockout-or-authenticat/SKILL.md"
+  },
+  {
+    "id": "T31905-T2141",
+    "title": "Perform function level authorization in API",
+    "phase": "Architecture",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Missing function-level auth on some endpoints",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t2141-perform-function-level-authorization-in/SKILL.md"
+  },
+  {
+    "id": "T31905-T60",
+    "title": "Use correct and approved cryptographic algorithms, parameters, and key lengths",
+    "phase": "Stories",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "auth.py"
+    ],
+    "reason": "Weak JWT secret and algorithm config",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "cryptography",
+    "skill_path": ".sde-security/skills/cryptography/t60-use-correct-and-approved-cryptographic-a/SKILL.md"
+  },
+  {
+    "id": "T31905-T2661",
+    "title": "Change insecure configuration defaults and remove unnecessary features",
+    "phase": "Deployment",
+    "priority": 9,
+    "classification": "INFRA",
+    "files_affected": [
+      "docker-compose.yml",
+      "Dockerfile"
+    ],
+    "reason": "Deployment/infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "deployment",
+    "skill_path": ".sde-security/skills/deployment/t2661-change-insecure-configuration-defaults-a/SKILL.md"
+  },
+  {
+    "id": "T31905-T1921",
+    "title": "Track and manage usage of third-party and commercial off the shelf (COTS) hardware or software",
+    "phase": "Activities",
+    "priority": 10,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T2256",
+    "title": "Authenticate and log all access to registries containing sensitive or proprietary images",
+    "phase": "Stories",
+    "priority": 8,
+    "classification": "ML_CODE",
+    "files_affected": [],
+    "reason": "Requires new code/design implementation",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t2256-authenticate-and-log-all-access-to-regis/SKILL.md"
+  },
+  {
+    "id": "T31905-T2478",
+    "title": "Manage re-deployment routines",
+    "phase": "Deployment",
+    "priority": 6,
+    "classification": "INFRA",
+    "files_affected": [
+      "docker-compose.yml",
+      "Dockerfile"
+    ],
+    "reason": "Deployment/infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "deployment",
+    "skill_path": ".sde-security/skills/deployment/t2478-manage-re-deployment-routines/SKILL.md"
+  },
+  {
+    "id": "T31905-T2352",
+    "title": "Verify that supporting toolchains are properly implemented",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Toolchain verification is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T3932",
+    "title": "Test separation of deployment configuration files (GitHub)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "GitHub testing/verification is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T4447",
+    "title": "Test directory writing and reading (Bash/Shell)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "start.sh"
+    ],
+    "reason": "Shell script security testing",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "shell-security",
+    "skill_path": ".sde-security/skills/shell-security/t4447-test-directory-writing-and-reading-bash/SKILL.md"
+  },
+  {
+    "id": "T31905-T1160",
+    "title": "Set ulimit appropriately (Docker)",
+    "phase": "Deployment",
+    "priority": 6,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1160-set-ulimit-appropriately-docker/SKILL.md"
+  },
+  {
+    "id": "T31905-T4475",
+    "title": "Prevent sensitive information disclosure in Large Language Models (MLOps Engineer)",
+    "phase": "Architecture",
+    "priority": 7,
+    "classification": "ML_CODE",
+    "files_affected": [],
+    "reason": "Requires new code/design implementation",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "ai-ml",
+    "skill_path": ".sde-security/skills/ai-ml/t4475-prevent-sensitive-information-disclosure/SKILL.md"
+  },
+  {
+    "id": "T31905-T4459",
+    "title": "Prevent prompt injection in Large Language Models (QA Analyst)",
+    "phase": "Deployment",
+    "priority": 7,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "ai_agent_deepseek.py"
+    ],
+    "reason": "AI agent vulnerable to prompt injection",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "ai-ml",
+    "skill_path": ".sde-security/skills/ai-ml/t4459-prevent-prompt-injection-in-large-langua/SKILL.md"
+  },
+  {
+    "id": "T31905-T85",
+    "title": "Test server-side enforcement of authorization",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Authorization gaps in endpoints",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t85-test-server-side-enforcement-of-authoriz/SKILL.md"
+  },
+  {
+    "id": "T31905-T219",
+    "title": "Avoid transmitting confidential data through URL parameters",
+    "phase": "Development",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Token passed in URL params",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "general-security",
+    "skill_path": ".sde-security/skills/general-security/t219-avoid-transmitting-confidential-data-thr/SKILL.md"
+  },
+  {
+    "id": "T31905-T279",
+    "title": "Avoid dynamically loading any code without proper security considerations",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Dynamic imports/module loading without validation",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "general-security",
+    "skill_path": ".sde-security/skills/general-security/t279-avoid-dynamically-loading-any-code-witho/SKILL.md"
+  },
+  {
+    "id": "T31905-T2110",
+    "title": "Verify that signed image enforcement is enabled (Docker)",
+    "phase": "QA",
+    "priority": 9,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t2110-verify-that-signed-image-enforcement-is/SKILL.md"
+  },
+  {
+    "id": "T31905-T2501",
+    "title": "Perform cybersecurity planning",
+    "phase": "Activities",
+    "priority": 6,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T2604",
+    "title": "Follow best practices for data restoring operations",
+    "phase": "Deployment",
+    "priority": 7,
+    "classification": "INFRA",
+    "files_affected": [],
+    "reason": "Backup/restore is infrastructure",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "general-security",
+    "skill_path": ".sde-security/skills/general-security/t2604-follow-best-practices-for-data-restoring/SKILL.md"
+  },
+  {
+    "id": "T31905-T2676",
+    "title": "Verify that a bi-directional communication channel is established and maintained for receiving security reports and sending notifications",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Communication channel setup is process",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T1158",
+    "title": "Configure TLS authentication for the Docker daemon (Docker)",
+    "phase": "Deployment",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1158-configure-tls-authentication-for-the-doc/SKILL.md"
+  },
+  {
+    "id": "T31905-T93",
+    "title": "Test that sessions expire upon logout",
+    "phase": "QA",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "auth.py",
+      "app.py"
+    ],
+    "reason": "JWT tokens have no expiration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t93-test-that-sessions-expire-upon-logout/SKILL.md"
+  },
+  {
+    "id": "T31905-T2612",
+    "title": "Verify backup archive bits are protected",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "INFRA",
+    "files_affected": [],
+    "reason": "Backup/restore is infrastructure",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "deployment",
+    "skill_path": ".sde-security/skills/deployment/t2612-verify-backup-archive-bits-are-protected/SKILL.md"
+  },
+  {
+    "id": "T31905-T2282",
+    "title": "Test to confirm that unauthenticated parts of the application are accessible",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "Debug endpoints accessible without auth",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t2282-test-to-confirm-that-unauthenticated-par/SKILL.md"
+  },
+  {
+    "id": "T31905-T2506",
+    "title": "Verify the cybersecurity assessment report",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Requires organizational assessment",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T421",
+    "title": "Verify if web page template is vulnerable to client side template injection (CSTI)",
+    "phase": "QA",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py"
+    ],
+    "reason": "XSS/injection vulnerabilities in output",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "input-validation",
+    "skill_path": ".sde-security/skills/input-validation/t421-verify-if-web-page-template-is-vulnerabl/SKILL.md"
+  },
+  {
+    "id": "T31905-T114",
+    "title": "Test system-to-system authentication lockout or throttling",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py"
+    ],
+    "reason": "No lockout on login attempts",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t114-test-system-to-system-authentication-loc/SKILL.md"
+  },
+  {
+    "id": "T31905-T2170",
+    "title": "Ensure that personal information processed by the application meets data localization requirements",
+    "phase": "Stories",
+    "priority": 9,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Data localization requirements are process/legal",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T1235",
+    "title": "Test that only trusted users can control the Docker daemon (Docker)",
+    "phase": "QA",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [
+      "Dockerfile",
+      "docker-compose.yml"
+    ],
+    "reason": "Docker infrastructure configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "docker",
+    "skill_path": ".sde-security/skills/docker/t1235-test-that-only-trusted-users-can-control/SKILL.md"
+  },
+  {
+    "id": "T31905-T1892",
+    "title": "Perform a Threat and Risk Assessment (TRA)",
+    "phase": "Activities",
+    "priority": 9,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T573",
+    "title": "Prevent UDDI/ebXML spoofing",
+    "phase": "Stories",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "UDDI/ebXML not present in codebase",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T79",
+    "title": "Test password change functions",
+    "phase": "QA",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py"
+    ],
+    "reason": "Testing reveals code-level auth issues",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "cryptography",
+    "skill_path": ".sde-security/skills/cryptography/t79-test-password-change-functions/SKILL.md"
+  },
+  {
+    "id": "T31905-T1369",
+    "title": "Perform security testing using DAST tools",
+    "phase": "Activities",
+    "priority": 8,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T2613",
+    "title": "Verify best practices for data-restoring operations are followed",
+    "phase": "QA",
+    "priority": 7,
+    "classification": "INFRA",
+    "files_affected": [],
+    "reason": "Backup/restore is infrastructure",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "general-security",
+    "skill_path": ".sde-security/skills/general-security/t2613-verify-best-practices-for-data-restoring/SKILL.md"
+  },
+  {
+    "id": "T31905-T3902",
+    "title": "Ensure regular review and inactive users removal (GitHub)",
+    "phase": "Development",
+    "priority": 8,
+    "classification": "INFRA",
+    "files_affected": [],
+    "reason": "GitHub repository configuration",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "github",
+    "skill_path": ".sde-security/skills/github/t3902-ensure-regular-review-and-inactive-users/SKILL.md"
+  },
+  {
+    "id": "T31905-T1368",
+    "title": "Perform security testing using SAST tools",
+    "phase": "Activities",
+    "priority": 9,
+    "classification": "PROCESS",
+    "files_affected": [],
+    "reason": "Activities-phase CM: organizational/process task",
+    "library_match": null,
+    "skill_type": "none"
+  },
+  {
+    "id": "T31905-T222",
+    "title": "Verify server-to-server authentication",
+    "phase": "QA",
+    "priority": 6,
+    "classification": "CODE_FIX",
+    "files_affected": [
+      "app.py",
+      "auth.py"
+    ],
+    "reason": "Testing reveals code-level auth issues",
+    "library_match": false,
+    "skill_type": "ai_authored",
+    "domain": "authentication",
+    "skill_path": ".sde-security/skills/authentication/t222-verify-server-to-server-authentication/SKILL.md"
+  }
+]

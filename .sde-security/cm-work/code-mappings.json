@@ -1,0 +1,1000 @@
+[
+  {
+    "id": "T31905-T1187",
+    "title": "Test if secrets are stored in Dockerfiles (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1186",
+    "title": "Do not store secrets in Dockerfiles (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T3916",
+    "title": "Ensure automated and secure deployment (GitHub)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": ".github/",
+        "lines": "N/A",
+        "issue": "GitHub repository security configuration (missing)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T3903",
+    "title": "Implement application and webhook security strategies (GitHub)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": ".github/",
+        "lines": "N/A",
+        "issue": "GitHub repository security configuration (missing)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T3906",
+    "title": "Implement secure build worker management (GitHub)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": ".github/",
+        "lines": "N/A",
+        "issue": "GitHub repository security configuration (missing)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4484",
+    "title": "Mitigate excessive agency in Large Language Models (AI/ML Developer)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "15-30",
+        "issue": "System prompt grants unrestricted DB access"
+      },
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "32-45",
+        "issue": "No output filtering or scope limitations"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T50",
+    "title": "Use indirect object reference maps if accessing files",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "upload routes",
+        "issue": "Direct file path references in upload/download"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2139",
+    "title": "Prevent information exposure through APIs",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "error handlers",
+        "issue": "Stack traces and debug info in API error responses"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2606",
+    "title": "Verify RBAC implemented instead of individual accounts",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "admin checks",
+        "issue": "Single is_admin flag instead of role-based system"
+      },
+      {
+        "file": "auth.py",
+        "lines": "token_required",
+        "issue": "No role enforcement in auth decorator"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1213",
+    "title": "Verify that cgroup usage is confirmed (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1180",
+    "title": "Check container health (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T323",
+    "title": "Test that default accounts are disabled or default passwords are changed",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "docker-compose.yml",
+        "lines": "11-16",
+        "issue": "Default postgres/postgres credentials"
+      },
+      {
+        "file": "app.py",
+        "lines": "secret_key",
+        "issue": "Hardcoded secret_key = \"secret123\""
+      }
+    ]
+  },
+  {
+    "id": "T31905-T220",
+    "title": "Verify that user password is salted and hashed",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "register/login",
+        "issue": "Passwords stored without proper hashing (plaintext or weak)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T65",
+    "title": "Restrict accepted HTTP verbs",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "route decorators",
+        "issue": "Routes without explicit methods= restriction"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T36",
+    "title": "Escape untrusted data in HTML, HTML attributes, CSS, and JavaScript",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "render_template calls",
+        "issue": "User input in templates without proper escaping"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T17",
+    "title": "Do not only rely on client-side authorization",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Do not only rely on client-side authorization"
+      },
+      {
+        "file": "auth.py",
+        "lines": "all",
+        "issue": "Do not only rely on client-side authorization"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1159",
+    "title": "Verify that TLS authentication is configured for the Docker daemon (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4466",
+    "title": "Prevent Large Language Model denial of service (Project Manager)",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Prevent Large Language Model denial of service (Project Manager)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T119",
+    "title": "Test for clickjacking",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "response headers",
+        "issue": "No X-Frame-Options or CSP frame-ancestors header"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T338",
+    "title": "Control access to resources through user authentication and authorization",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Control access to resources through user authentication and authorization"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T62",
+    "title": "Protect passwords in property and configuration files",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "auth.py",
+        "lines": "6",
+        "issue": "JWT_SECRET = \"secret123\" hardcoded"
+      },
+      {
+        "file": "app.py",
+        "lines": "secret_key",
+        "issue": "app.secret_key = \"secret123\" hardcoded"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "11-16",
+        "issue": "DB_PASSWORD=postgres in plaintext"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T375",
+    "title": "Release resources when no longer needed",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "database.py",
+        "lines": "connection pool",
+        "issue": "Connection pool lifecycle management"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2614",
+    "title": "Verify database traffic is validated",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Verify database traffic is validated"
+      },
+      {
+        "file": "auth.py",
+        "lines": "all",
+        "issue": "Verify database traffic is validated"
+      },
+      {
+        "file": "database.py",
+        "lines": "all",
+        "issue": "Verify database traffic is validated"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1203",
+    "title": "Test if container CPU priority is appropriately set (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4452",
+    "title": "Test environmental vulnerabilities (Bash/Shell)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "start.sh",
+        "lines": "all",
+        "issue": "Shell script security (error handling, input validation)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T3901",
+    "title": "Enforce repository management and security strategies (GitHub)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": ".github/",
+        "lines": "N/A",
+        "issue": "GitHub repository security configuration (missing)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T545",
+    "title": "Verify that personal information is anonymized before being reused for secondary purposes",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "user routes",
+        "issue": "No data deletion/anonymization endpoint (missing feature)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2257",
+    "title": "Regularly update and patch containerization systems",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2601",
+    "title": "Use Transparent Data Encryption with Enterprise Databases",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "docker-compose.yml",
+        "lines": "db service",
+        "issue": "PostgreSQL without TDE configuration"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4448",
+    "title": "Test prevention against input file attacks (Bash/Shell)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "start.sh",
+        "lines": "all",
+        "issue": "Shell script security (error handling, input validation)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4480",
+    "title": "Design secure plugins for Large Language Models (MLOps Engineer)",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "all",
+        "issue": "AI agent architecture lacks plugin isolation"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4440",
+    "title": "Enforce access controls (Bash/Shell)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "start.sh",
+        "lines": "all",
+        "issue": "Shell script security (error handling, input validation)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T754",
+    "title": "Enable the restriction of processing personal information of an individual for a specific purpose",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "user routes",
+        "issue": "No data processing restriction endpoint (missing feature)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4835",
+    "title": "Implement defenses against vector and embedding weaknesses",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "all",
+        "issue": "No RAG/embedding security (missing feature)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1177",
+    "title": "Verify that secure and updated images are used (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1210",
+    "title": "Configure seccomp profile (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2258",
+    "title": "Minimize host OS attack surface",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "FROM",
+        "issue": "Base image python:3.9-slim may have unpatched vulnerabilities"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T87",
+    "title": "Verify that all data in transit is encrypted using a secure TLS channel",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "app.run",
+        "issue": "Flask runs without TLS (no ssl_context)"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "ports",
+        "issue": "Port 80 exposed (HTTP, not HTTPS)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T179",
+    "title": "Allow access for users to remove their personal information from the system",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "user routes",
+        "issue": "No data deletion/anonymization endpoint (missing feature)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1156",
+    "title": "Do not use the aufs storage driver (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1212",
+    "title": "Confirm cgroup usage (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4456",
+    "title": "Prevent prompt injection in Large Language Models (MLOps Engineer)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "15-30",
+        "issue": "System prompt explicitly allows instruction override"
+      },
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "47-60",
+        "issue": "User input passed directly to LLM without sanitization"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1194",
+    "title": "Do not run SSH within containers (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T70",
+    "title": "Implement account lockout or authentication throttling for system accounts",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "rate_limit",
+        "issue": "Rate limiting exists but no account lockout on failed auth"
+      },
+      {
+        "file": "auth.py",
+        "lines": "login route",
+        "issue": "No failed attempt counter"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2141",
+    "title": "Perform function level authorization in API",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "admin routes",
+        "issue": "Some admin functions lack @token_required decorator"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T60",
+    "title": "Use correct and approved cryptographic algorithms, parameters, and key lengths",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "auth.py",
+        "lines": "7",
+        "issue": "ALGORITHMS = [\"HS256\", \"none\"] allows none algorithm"
+      },
+      {
+        "file": "auth.py",
+        "lines": "6",
+        "issue": "Weak JWT secret \"secret123\""
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2661",
+    "title": "Change insecure configuration defaults and remove unnecessary features",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Default configurations without security hardening"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Default network/port configurations"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2256",
+    "title": "Authenticate and log all access to registries containing sensitive or proprietary images",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Authenticate and log all access to registries containing sensitive or proprietary images"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2478",
+    "title": "Manage re-deployment routines",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Deployment security configuration"
+      },
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Build and deployment security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4447",
+    "title": "Test directory writing and reading (Bash/Shell)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "start.sh",
+        "lines": "all",
+        "issue": "Shell script security (error handling, input validation)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1160",
+    "title": "Set ulimit appropriately (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4475",
+    "title": "Prevent sensitive information disclosure in Large Language Models (MLOps Engineer)",
+    "classification": "ML_CODE",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Prevent sensitive information disclosure in Large Language Models (MLOps Engineer)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T4459",
+    "title": "Prevent prompt injection in Large Language Models (QA Analyst)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "15-30",
+        "issue": "System prompt explicitly allows instruction override"
+      },
+      {
+        "file": "ai_agent_deepseek.py",
+        "lines": "47-60",
+        "issue": "User input passed directly to LLM without sanitization"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T85",
+    "title": "Test server-side enforcement of authorization",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Test server-side enforcement of authorization"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T219",
+    "title": "Avoid transmitting confidential data through URL parameters",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "token handling",
+        "issue": "JWT token potentially passed in URL query params"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T279",
+    "title": "Avoid dynamically loading any code without proper security considerations",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "imports",
+        "issue": "Dynamic module imports without validation"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2110",
+    "title": "Verify that signed image enforcement is enabled (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2604",
+    "title": "Follow best practices for data restoring operations",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Follow best practices for data restoring operations"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1158",
+    "title": "Configure TLS authentication for the Docker daemon (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T93",
+    "title": "Test that sessions expire upon logout",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "auth.py",
+        "lines": "generate_token",
+        "issue": "JWT exp claim may be too long or missing"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2612",
+    "title": "Verify backup archive bits are protected",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "docker-compose.yml",
+        "lines": "volumes",
+        "issue": "No backup configuration for postgres_data volume"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2282",
+    "title": "Test to confirm that unauthenticated parts of the application are accessible",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Test to confirm that unauthenticated parts of the application are accessible"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T421",
+    "title": "Verify if web page template is vulnerable to client side template injection (CSTI)",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Verify if web page template is vulnerable to client side template injection (CSTI)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T114",
+    "title": "Test system-to-system authentication lockout or throttling",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "rate_limit",
+        "issue": "Rate limiting exists but no account lockout on failed auth"
+      },
+      {
+        "file": "auth.py",
+        "lines": "login route",
+        "issue": "No failed attempt counter"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T1235",
+    "title": "Test that only trusted users can control the Docker daemon (Docker)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "Dockerfile",
+        "lines": "all",
+        "issue": "Container security configuration"
+      },
+      {
+        "file": "docker-compose.yml",
+        "lines": "all",
+        "issue": "Container orchestration security"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T79",
+    "title": "Test password change functions",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Test password change functions"
+      },
+      {
+        "file": "auth.py",
+        "lines": "all",
+        "issue": "Test password change functions"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T2613",
+    "title": "Verify best practices for data-restoring operations are followed",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Verify best practices for data-restoring operations are followed"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T3902",
+    "title": "Ensure regular review and inactive users removal (GitHub)",
+    "classification": "INFRA",
+    "locations": [
+      {
+        "file": ".github/",
+        "lines": "N/A",
+        "issue": "GitHub repository security configuration (missing)"
+      }
+    ]
+  },
+  {
+    "id": "T31905-T222",
+    "title": "Verify server-to-server authentication",
+    "classification": "CODE_FIX",
+    "locations": [
+      {
+        "file": "app.py",
+        "lines": "all",
+        "issue": "Verify server-to-server authentication"
+      },
+      {
+        "file": "auth.py",
+        "lines": "all",
+        "issue": "Verify server-to-server authentication"
+      }
+    ]
+  }
+]
