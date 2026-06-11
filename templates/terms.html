@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terms of Service - VulnBank</title>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.setAttribute("data-theme", localStorage.getItem("vb-theme") || "light");</script>
+    <style>
+        body { background: var(--bg); }
+        .legal-page { max-width: 720px; margin: 0 auto; padding: 3rem 2rem; }
+        .legal-page h1 { font-family: var(--font-display); font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .legal-page .subtitle { color: var(--text-3); margin-bottom: 2rem; font-size: 0.9375rem; }
+        .legal-page h2 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .legal-page p { color: var(--text-2); line-height: 1.8; margin-bottom: 1rem; font-size: 0.9375rem; }
+        .legal-page .back-link { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 600; color: var(--brand); margin-bottom: 2rem; }
+        .legal-page .back-link:hover { color: var(--brand-dark); }
+        .legal-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="legal-page">
+        <div class="legal-nav">
+            <a href="{{ url_for('index') }}" class="back-link">&larr; Back to home</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                <span class="toggle-icon toggle-icon-sun">☀️</span>
+                <span class="toggle-slider"></span>
+                <span class="toggle-icon toggle-icon-moon">🌙</span>
+            </button>
+        </div>
+        <h1>Terms of Service</h1>
+        <p class="subtitle">By using VulnBank, you agree to be bound by these terms and conditions.</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing this website, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service and our Privacy Policy. If you do not agree to these terms, please do not use the service.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>VulnBank is a digital banking platform that provides account management, money transfers, virtual cards, bill payments, merchant payment processing, and AI-powered customer support.</p>
+
+        <h2>3. Account Security</h2>
+        <p>You are responsible for maintaining the confidentiality of your account credentials. You agree to notify us immediately of any unauthorized use of your account. VulnBank is not liable for losses resulting from unauthorized access to your account.</p>
+
+        <h2>4. Acceptable Use</h2>
+        <p>You agree to use VulnBank only for lawful purposes. You may not use the service in any way that could damage, disable, or impair the platform, or interfere with any other party's use of the service.</p>
+
+        <h2>5. Financial Transactions</h2>
+        <p>All transactions initiated through VulnBank are processed as instructed. Users are responsible for verifying transaction details before confirming. Disputes should be raised through our customer support channels.</p>
+
+        <h2>6. User Content</h2>
+        <p>You retain ownership of any content you submit to the platform. By submitting content, you grant VulnBank a limited license to use it as necessary to provide the service.</p>
+
+        <h2>7. Termination</h2>
+        <p>We reserve the right to terminate or suspend your account at our discretion if you violate these terms. You may close your account at any time by contacting our support team.</p>
+
+        <h2>8. Disclaimers</h2>
+        <p>THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. VulnBank does not warrant that the service will be uninterrupted, error-free, or free of harmful components.</p>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, VulnBank shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service.</p>
+
+        <h2>10. Governing Law</h2>
+        <p>These terms shall be governed by and construed in accordance with applicable law. Any disputes arising from these terms shall be resolved through binding arbitration.</p>
+
+        <h2>11. Updates to These Terms</h2>
+        <p>We may update these terms from time to time. Continued use of the service after changes constitutes acceptance of the revised terms. We will notify users of material changes via email or in-app notification.</p>
+    </div>
+    <script>
+        function toggleTheme() {
+            const h = document.documentElement;
+            const n = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            h.setAttribute('data-theme', n); localStorage.setItem('vb-theme', n);
+        }
+    </script>
+</body>
+</html>

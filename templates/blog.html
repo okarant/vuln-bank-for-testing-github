@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - VulnBank</title>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.setAttribute("data-theme", localStorage.getItem("vb-theme") || "light");</script>
+    <style>
+        body { background: var(--bg); }
+        .blog-page { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+        .blog-page h1 { font-family: var(--font-display); font-size: 2.25rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .blog-page .subtitle { color: var(--text-3); margin-bottom: 2rem; font-size: 1.0625rem; }
+        .blog-page h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; font-weight: 600; color: var(--brand); margin-bottom: 2rem; }
+        .back-link:hover { color: var(--brand-dark); }
+        .legal-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+
+        /* Search styles */
+        .search-container { margin-bottom: 2rem; }
+        .search-box {
+            display: flex; align-items: center; gap: 0.75rem;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--r-lg); padding: 0.75rem 1rem;
+            transition: border-color var(--dur-mid) ease;
+        }
+        .search-box:focus-within { border-color: var(--brand); }
+        .search-box input {
+            flex: 1; background: transparent; border: none; outline: none;
+            font-size: 1rem; color: var(--text-1);
+        }
+        .search-box input::placeholder { color: var(--text-4); }
+        .search-box button {
+            background: var(--brand); color: #fff; border: none;
+            padding: 0.5rem 1rem; border-radius: var(--r-sm);
+            font-weight: 600; cursor: pointer;
+            transition: background var(--dur-mid) ease;
+        }
+        .search-box button:hover { background: var(--brand-dark); }
+        .search-results-info {
+            background: var(--surface-2); padding: 1rem;
+            border-radius: var(--r-md); margin-bottom: 1.5rem;
+            color: var(--text-2); font-size: 0.9375rem;
+        }
+        .search-results-info strong { color: var(--brand); }
+        .blog-post.hidden { display: none; }
+        .no-results {
+            text-align: center; padding: 3rem; color: var(--text-3);
+        }
+        .no-results svg {
+            width: 48px; height: 48px; margin-bottom: 1rem;
+            color: var(--text-4);
+        }
+
+        .blog-post { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 2rem; margin-bottom: 2rem; transition: background var(--dur-mid) ease, border-color var(--dur-mid) ease; }
+        .blog-post:hover { border-color: var(--brand); }
+        .blog-post h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--brand); margin-bottom: 0.5rem; }
+        .blog-post .meta { font-size: 0.875rem; color: var(--text-3); margin-bottom: 1rem; }
+        .blog-post p { color: var(--text-2); line-height: 1.8; margin-bottom: 1rem; }
+        .blog-post .read-more { display: inline-block; color: var(--brand); font-weight: 600; font-size: 0.9375rem; margin-top: 0.5rem; }
+        .blog-post .read-more:hover { color: var(--brand-dark); }
+
+        .featured-post { background: linear-gradient(135deg, var(--navy-700) 0%, var(--navy-900) 100%); color: #fff; border: none; }
+        .featured-post h3 { color: #fff; }
+        .featured-post .meta { color: rgba(255,255,255,0.6); }
+        .featured-post p { color: rgba(255,255,255,0.85); }
+        .featured-post .read-more { color: var(--brand-light); }
+        .featured-post .read-more:hover { color: #fff; }
+
+        @media (max-width: 600px) {
+            .blog-page { padding: 3rem 1.5rem; }
+            .blog-post { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-page">
+        <div class="legal-nav">
+            <a href="{{ url_for('index') }}" class="back-link">&larr; Back to home</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                <span class="toggle-icon toggle-icon-sun">☀️</span>
+                <span class="toggle-slider"></span>
+                <span class="toggle-icon toggle-icon-moon">🌙</span>
+            </button>
+        </div>
+        <h1>VulnBank Blog</h1>
+        <p class="subtitle">Thoughts, news, and updates from the VulnBank team.</p>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search blog posts..." oninput="handleSearch(this.value)">
+                <button type="button" onclick="handleSearch(document.getElementById('search-input').value, true)">Search</button>
+            </div>
+            <div id="search-info" class="search-results-info" style="display:none;"></div>
+        </div>
+
+        <div class="blog-post featured-post blog-post-item">
+            <h3>Introducing VulnBank 2.0: More Features, Better Experience</h3>
+            <p class="meta">March 12, 2026 • By the VulnBank Team</p>
+            <p>We're excited to announce the release of VulnBank 2.0, featuring an expanded feature set that now includes profile image uploads, virtual card management, and a redesigned merchant payment experience. Our users asked for more, and we delivered.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>Streamlining Account Security for Our Users</h3>
+            <p class="meta">February 28, 2026 • By CTO</p>
+            <p>We've been listening to your feedback on our authentication flow. In this post we walk through the decisions behind our password policy, session management, and how we balance user convenience with account protection.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>How We Scaled to Handle Peak Traffic</h3>
+            <p class="meta">February 15, 2026 • By Infrastructure Team</p>
+            <p>When our traffic spiked last week, our infrastructure team put our scaling strategy to the test. In this post we share lessons learned and the improvements we're rolling out to keep VulnBank fast and reliable.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>Customer Spotlight: Power Users Share Their Favorite Features</h3>
+            <p class="meta">January 30, 2026 • By Customer Support</p>
+            <p>We spoke to some of our most active users about how they use VulnBank day-to-day. From virtual card management to bill payments, here's what they love most about the platform.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>Building Our Authentication System: Design Decisions</h3>
+            <p class="meta">January 15, 2026 • By Lead Developer</p>
+            <p>In this technical deep-dive, we walk through how we designed our JWT-based authentication flow, the trade-offs we considered, and how it integrates with the rest of the VulnBank platform.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>Making Banking Accessible to Everyone</h3>
+            <p class="meta">December 20, 2025 • By Product Team</p>
+            <p>At VulnBank, we believe banking should be accessible to everyone. In this post we discuss how we're improving the user experience across devices and working to make financial tools more inclusive.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>Behind the Scenes: Building Our File Upload System</h3>
+            <p class="meta">December 5, 2025 • By Engineering Team</p>
+            <p>Users asked for the ability to upload profile pictures, and we delivered. In this post we discuss the engineering choices behind our file upload pipeline and how we handle image processing at scale.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>Redesigning the Admin Dashboard</h3>
+            <p class="meta">November 18, 2025 • By Product Team</p>
+            <p>Our admin panel received a major overhaul this quarter. We rethought the layout, improved navigation, and added new analytics views to help administrators manage the platform more efficiently.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <div class="blog-post blog-post-item">
+            <h3>Our API Documentation: Now Better Than Ever</h3>
+            <p class="meta">November 1, 2025 • By API Team</p>
+            <p>We're proud to announce our updated OpenAPI specification, now available at /api/docs. It documents every endpoint with clear examples and response schemas to help developers integrate with VulnBank quickly.</p>
+            <p class="read-more">Continue reading →</p>
+        </div>
+
+        <h2>Categories</h2>
+        <div class="blog-post blog-post-item" style="padding: 1.5rem;">
+            <p><strong>Engineering:</strong> Technical deep-dives and architecture decisions</p>
+            <p><strong>Product:</strong> Feature announcements and roadmap updates</p>
+            <p><strong>Company:</strong> Team news and milestones</p>
+            <p><strong>Developers:</strong> API guides and integration tutorials</p>
+        </div>
+
+        <div id="no-results" class="no-results" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <p>No blog posts found matching your search.</p>
+        </div>
+    </div>
+    <script>
+        function toggleTheme() {
+            const h = document.documentElement;
+            const n = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            h.setAttribute('data-theme', n); localStorage.setItem('vb-theme', n);
+        }
+
+        function handleSearch(query, updateUrl = false) {
+            const posts = document.querySelectorAll('.blog-post-item');
+            const searchInfo = document.getElementById('search-info');
+            const noResults = document.getElementById('no-results');
+            let visibleCount = 0;
+
+            if (query && query.trim() !== '') {
+                searchInfo.style.display = 'block';
+                searchInfo.innerHTML = 'Searching for: <strong>' + query + '</strong>';
+
+                if (updateUrl) {
+                    const url = new URL(window.location);
+                    url.searchParams.set('q', query);
+                    window.history.pushState({}, '', url);
+                }
+            } else {
+                searchInfo.style.display = 'none';
+            }
+
+            posts.forEach(post => {
+                const title = post.querySelector('h3')?.textContent.toLowerCase() || '';
+                const content = post.querySelector('p')?.textContent.toLowerCase() || '';
+                const searchQuery = query.toLowerCase();
+
+                if (!query || title.includes(searchQuery) || content.includes(searchQuery)) {
+                    post.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    post.classList.add('hidden');
+                }
+            });
+
+            noResults.style.display = (query && visibleCount === 0) ? 'block' : 'none';
+        }
+
+        // Handle URL parameter on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            if (query) {
+                document.getElementById('search-input').value = query;
+                handleSearch(query);
+            }
+        });
+    </script>
+</body>
+</html>
