@@ -1,0 +1,85 @@
+{
+  "source_skill": "code-scan-verification-validation",
+  "handoff_version": "1",
+  "scan_engine": "zeropath",
+  "authoritative_source": null,
+  "verification_mode": "standalone",
+  "execution_mode": "inline",
+  "resumed_from": "2026-06-12T14:52:30Z",
+  "generated_at": "2026-06-12T14:59:58Z",
+  "upstream_handoff": null,
+  "project_id": "31903",
+  "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+  "scope": "all",
+  "scope_args": {},
+  "fail_rollback_opt_in": "yes_rollback",
+  "zeropath": {
+    "repositoryId": "236b41c7-d68e-48d4-a0ce-70748740ade8",
+    "mappingId": "47eb638d-0f06-4e5c-a8b6-ee68491ffd9e",
+    "scanId": "bd5cd0df-b8b7-4878-a3ef-0e36dc519532",
+    "scan_branch": "security-hardening/vuln-bank-for-testing-20260611-2005",
+    "scan_branch_remote_sha": "55f190a8d77b04b1935f5f686255518a22eb0c71",
+    "commitSha": "55f190a8d77b04b1935f5f686255518a22eb0c71",
+    "sync_stats": { "countermeasuresFetched": 3, "sastDetectable": 3, "rulesCreated": 0, "skipped": 0 },
+    "push_stats": { "issuesMapped": 0, "countermeasuresMarkedDone": 3, "unmapped": 105, "status": "success" },
+    "coverage": [
+      { "taskId": "31903-T1186", "coverage": "sast" },
+      { "taskId": "31903-T1187", "coverage": "sast" },
+      { "taskId": "31903-T3", "coverage": "sast" }
+    ],
+    "pass_by_absence_count": 3
+  },
+  "totals": {
+    "verified_pass": 3,
+    "verified_partial": 0,
+    "verified_fail": 0,
+    "skipped": 0,
+    "skipped_out_of_scope": 0,
+    "note_failed": 0
+  },
+  "verification_results": [
+    {
+      "full_cm_id": "31903-T1186",
+      "title": "Do not store secrets in Dockerfiles (Docker)",
+      "status": "pass",
+      "confidence": "n/a",
+      "ai_status": null,
+      "zp_status": "pass",
+      "zp_issue_url": null,
+      "findings": [],
+      "findings_aggregated_for_sde": [],
+      "finding_ref": "",
+      "note_post_status": "NOT_SENT_ZP_NATIVE",
+      "reason": "ZeroPath native push wrote this verification (pass-by-absence; 0 issues mapped); skill posted nothing (R-ZP2)"
+    },
+    {
+      "full_cm_id": "31903-T1187",
+      "title": "Test if secrets are stored in Dockerfiles (Docker)",
+      "status": "pass",
+      "confidence": "n/a",
+      "ai_status": null,
+      "zp_status": "pass",
+      "zp_issue_url": null,
+      "findings": [],
+      "findings_aggregated_for_sde": [],
+      "finding_ref": "",
+      "note_post_status": "NOT_SENT_ZP_NATIVE",
+      "reason": "ZeroPath native push wrote this verification (pass-by-absence; 0 issues mapped); skill posted nothing (R-ZP2)"
+    },
+    {
+      "full_cm_id": "31903-T3",
+      "title": "Require old passwords when users change passwords",
+      "status": "pass",
+      "confidence": "n/a",
+      "ai_status": null,
+      "zp_status": "pass",
+      "zp_issue_url": null,
+      "findings": [],
+      "findings_aggregated_for_sde": [],
+      "finding_ref": "",
+      "note_post_status": "NOT_SENT_ZP_NATIVE",
+      "reason": "ZeroPath native push wrote this verification (pass-by-absence; 0 issues mapped); skill posted nothing (R-ZP2)"
+    }
+  ],
+  "failed_cms_for_rework": []
+}
