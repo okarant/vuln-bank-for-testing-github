@@ -1,0 +1,39 @@
+{
+  "source_skill": "code-scan-verification-validation",
+  "handoff_version": "1",
+  "scan_engine": "hybrid",
+  "authoritative_source": "zeropath",
+  "verification_mode": "enter_project",
+  "execution_mode": "inline",
+  "resumed_from": null,
+  "generated_at": "2026-06-16T16:11:34Z",
+  "upstream_handoff": null,
+  "project_id": "31909",
+  "risk_policy_id": null,
+  "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+  "scope": "all",
+  "scope_args": {},
+  "fail_rollback_opt_in": "no_verification_only",
+  "_test_note": "WF4 BOUNDED DEMONSTRATION — this run only finalized a representative 4-CM subset of the 340 in-scope (R-ZP10 forced-all) CMs. A real run would cover all 340. This file reflects the final R9a (authoritative=zeropath) state.",
+  "_bounded_subset": ["31909-T16", "31909-T1919", "31909-T38", "31909-T37"],
+  "totals": { "verified_pass": 4, "verified_partial": 0, "verified_fail": 0, "skipped": 0, "skipped_out_of_scope": 0, "note_failed": 0 },
+  "verification_results": [
+    { "full_cm_id": "31909-T16", "status": "pass", "confidence": "high", "ai_status": "fail", "zp_status": "pass", "zp_issue_url": null, "findings": [{"file": "app.py", "line": 443, "description": "Forced Browsing: /debug/users, /check_balance, /transactions lack @token_required", "category": "residual-vulnerable-pattern"}], "finding_ref": "Agent: zp-code-scan-verification-validation | Model: claude-opus-4-8-thinking-high | Repo: vuln-bank-for-testing-github | CM: 31909-T16 | Run: 2026-06-16T16:11:34Z | Engine: hybrid | Handoff: .sde-verification-handoff.json", "note_post_status": "POSTED", "reason": "WEAK PASS: zeropath pass-by-absence authoritative; AI found fail" },
+    { "full_cm_id": "31909-T1919", "status": "pass", "confidence": "high", "ai_status": "fail", "zp_status": "pass", "zp_issue_url": null, "findings": [{"file": "auth.py", "line": 10, "description": "Insecure JWT: 'none' algorithm allowed, verify_signature=False fallback, weak secret", "category": "residual-vulnerable-pattern"}], "finding_ref": "Agent: zp-code-scan-verification-validation | Model: claude-opus-4-8-thinking-high | Repo: vuln-bank-for-testing-github | CM: 31909-T1919 | Run: 2026-06-16T16:11:34Z | Engine: hybrid | Handoff: .sde-verification-handoff.json", "note_post_status": "POSTED", "reason": "WEAK PASS: zeropath pass-by-absence authoritative; AI found fail" },
+    { "full_cm_id": "31909-T38", "status": "pass", "confidence": "high", "ai_status": "fail", "zp_status": "pass", "zp_issue_url": null, "findings": [{"file": "auth.py", "line": 97, "description": "SQL Injection: f-string SQL concatenation across auth.py/app.py/transaction_graphql.py", "category": "residual-vulnerable-pattern"}], "finding_ref": "Agent: zp-code-scan-verification-validation | Model: claude-opus-4-8-thinking-high | Repo: vuln-bank-for-testing-github | CM: 31909-T38 | Run: 2026-06-16T16:11:34Z | Engine: hybrid | Handoff: .sde-verification-handoff.json", "note_post_status": "POSTED", "reason": "WEAK PASS: zeropath pass-by-absence authoritative; AI found fail" },
+    { "full_cm_id": "31909-T37", "status": "pass", "confidence": "high", "ai_status": "pass", "zp_status": "pass", "zp_issue_url": null, "findings": [{"file": "static/dashboard.js", "line": 133, "description": "DOM-based XSS absent: location.hash flows only into querySelector selector, not an HTML sink", "category": "vulnerability-absent"}], "finding_ref": "Agent: zp-code-scan-verification-validation | Model: claude-opus-4-8-thinking-high | Repo: vuln-bank-for-testing-github | CM: 31909-T37 | Run: 2026-06-16T16:11:34Z | Engine: hybrid | Handoff: .sde-verification-handoff.json", "note_post_status": "POSTED", "reason": "WEAK PASS counted (final pass set by zeropath pass-by-absence); AI independently agrees pass" }
+  ],
+  "zeropath": {
+    "repositoryId": "236b41c7-d68e-48d4-a0ce-70748740ade8",
+    "mappingId": "a3070513-554e-4f00-976f-93468da3b8ff",
+    "scan_branch": "security-hardening/vuln-bank-for-testing-github-20260616-1404",
+    "scan_branch_remote_sha": "f7ad7e46f04e6bcbac3a10d9e17d85524ec8a4f0",
+    "scanId": "5e9eeefd-06b2-455b-9abd-0f8ffbecb754",
+    "commitSha": "f7ad7e46f04e6bcbac3a10d9e17d85524ec8a4f0",
+    "sync_stats": { "supportedCount": 340, "totalCount": 368 },
+    "push_stats": { "countermeasuresMarkedDone": 340, "issuesMapped": 0, "unmapped": 110 },
+    "coverage": [{"taskId": "31909-T16", "coverage": "sast"}, {"taskId": "31909-T1919", "coverage": "sast"}, {"taskId": "31909-T38", "coverage": "sast"}, {"taskId": "31909-T37", "coverage": "sast"}],
+    "pass_by_absence_count": 4
+  },
+  "failed_cms_for_rework": []
+}

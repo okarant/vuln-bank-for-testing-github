@@ -1,7 +1,9 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from functools import wraps
 import hashlib
+import os
 import random
+import secrets
 import string
 import time
 
@@ -14,27 +16,28 @@ from database import execute_query
 
 
 def generate_merchant_api_key():
-    """Generate a predictable merchant API key"""
-    four_digit_code = ''.join(random.choices(string.digits, k=4))
-    return f"vk_{hashlib.sha256(four_digit_code.encode()).hexdigest()}"
+    """Generate a high-entropy, unpredictable merchant API key (>=128 bits of entropy)."""
+    return f"vk_{secrets.token_hex(32)}"
 
 
 def generate_authorization_code():
-    """Generate a predictable payment authorization code"""
-    return f"AUTH{int(time.time())}{random.randint(100, 999)}"
+    """Generate an unpredictable payment authorization code using a CSPRNG."""
+    return f"AUTH{secrets.token_hex(8).upper()}"
 
 
 def generate_merchant_token(merchant):
     """
-    Generate a weak merchant JWT.
+    Generate a signed, expiring merchant JWT.
     merchant tuple shape: id, name, email, api_key, is_active, created_at
     """
+    now = datetime.utcnow()
     payload = {
         'merchant_id': merchant[0],
         'merchant_name': merchant[1],
         'merchant_email': merchant[2],
         'is_merchant': True,
-        'iat': datetime.utcnow()
+        'iat': now,
+        'exp': now + timedelta(seconds=int(os.environ.get("JWT_TTL_SECONDS", "3600")))
     }
     return jwt.encode(payload, auth.JWT_SECRET, algorithm='HS256')
 
@@ -56,12 +59,14 @@ def get_merchant_from_request():
     """
     api_key = request.headers.get('X-Merchant-Api-Key')
     if api_key:
-        query = f"""
+        merchants = execute_query(
+            """
             SELECT id, name, email, api_key, is_active, created_at
             FROM merchants
-            WHERE api_key = '{api_key}'
-        """
-        merchants = execute_query(query)
+            WHERE api_key = %s
+            """,
+            (api_key,)
+        )
         if merchants:
             return merchant_tuple_to_dict(merchants[0]), 'api_key'
 
@@ -71,12 +76,14 @@ def get_merchant_from_request():
         payload = verify_token(token)
         if payload and payload.get('is_merchant'):
             merchant_id = payload.get('merchant_id')
-            query = f"""
+            merchants = execute_query(
+                """
                 SELECT id, name, email, api_key, is_active, created_at
                 FROM merchants
-                WHERE id = {merchant_id}
-            """
-            merchants = execute_query(query)
+                WHERE id = %s
+                """,
+                (merchant_id,)
+            )
             if merchants:
                 return merchant_tuple_to_dict(merchants[0]), 'jwt'
 
@@ -152,14 +159,25 @@ def init_merchant_payment_routes(app):
             name = data.get('name')
             email = data.get('email')
             password = data.get('password')
-            api_key = generate_merchant_api_key()
 
-            query = f"""
+            # Server-to-server / merchant (system) accounts must satisfy the same
+            # strong password policy as end users.
+            ok, msg = auth.validate_password_policy(password)
+            if not ok:
+                return jsonify({'status': 'error', 'message': msg}), 400
+
+            api_key = generate_merchant_api_key()
+            hashed_password = auth.hash_password(password)
+
+            # Parameterized query (no SQL injection); password stored salted+hashed.
+            result = execute_query(
+                """
                 INSERT INTO merchants (name, email, password, api_key)
-                VALUES ('{name}', '{email}', '{password}', '{api_key}')
+                VALUES (%s, %s, %s, %s)
                 RETURNING id, name, email, api_key, is_active, created_at
-            """
-            result = execute_query(query)
+                """,
+                (name, email, hashed_password, api_key)
+            )
 
             if not result:
                 return jsonify({
@@ -170,29 +188,20 @@ def init_merchant_payment_routes(app):
             merchant = merchant_tuple_to_dict(result[0])
             token = generate_merchant_token(result[0])
 
+            # The API key is shown ONCE at creation time and never echoed back
+            # afterwards; no password or raw request is included in the response.
             return jsonify({
                 'status': 'success',
                 'message': 'Merchant registered successfully',
                 'merchant': merchant,
                 'api_key': api_key,
-                'token': token,
-                'debug_info': {
-                    'raw_request': data,
-                    'password': password,
-                    'api_key': api_key,
-                    'auth_methods': ['X-Merchant-Api-Key', 'Authorization Bearer JWT'],
-                    'created_at': str(datetime.now())
-                }
+                'token': token
             })
 
-        except Exception as e:
+        except Exception:
             return jsonify({
                 'status': 'error',
-                'message': str(e),
-                'debug_info': {
-                    'raw_request': request.get_json(silent=True),
-                    'endpoint': '/api/v1/merchants/register'
-                }
+                'message': 'Merchant registration failed'
             }), 500
 
     @app.route('/api/v1/merchants/login', methods=['POST'])
@@ -202,21 +211,34 @@ def init_merchant_payment_routes(app):
             email = data.get('email')
             password = data.get('password')
 
-            query = f"""
-                SELECT id, name, email, api_key, is_active, created_at
-                FROM merchants
-                WHERE email = '{email}' AND password = '{password}'
-            """
-            result = execute_query(query)
+            lock_key = f"merchant_login:{email}"
+            if auth.is_locked_out(lock_key):
+                return jsonify({
+                    'status': 'error',
+                    'message': 'Account temporarily locked due to repeated failed attempts. Try again later.'
+                }), 429
 
-            if not result:
+            # Parameterized lookup by email, then verify against the salted hash.
+            result = execute_query(
+                """
+                SELECT id, name, email, api_key, is_active, created_at, password
+                FROM merchants
+                WHERE email = %s
+                """,
+                (email,)
+            )
+            row = result[0] if result else None
+
+            if not row or not auth.verify_password(row[6], password):
+                auth.record_failed_auth(lock_key)
                 return jsonify({
                     'status': 'error',
                     'message': 'Invalid merchant credentials'
                 }), 401
 
-            merchant = merchant_tuple_to_dict(result[0])
-            token = generate_merchant_token(result[0])
+            auth.reset_failed_auth(lock_key)
+            merchant = merchant_tuple_to_dict(row)
+            token = generate_merchant_token(row)
 
             return jsonify({
                 'status': 'success',
@@ -226,23 +248,20 @@ def init_merchant_payment_routes(app):
                 'merchant': merchant
             })
 
-        except Exception as e:
+        except Exception:
             return jsonify({
                 'status': 'error',
-                'message': str(e)
+                'message': 'Merchant login failed'
             }), 500
 
     @app.route('/api/v1/merchants/me', methods=['GET'])
     @merchant_required
     def get_current_merchant(current_merchant):
+        # Do not echo the API key/token back in responses (avoid token leakage/caching).
+        merchant_view = {k: v for k, v in current_merchant.items() if k != 'api_key'}
         return jsonify({
             'status': 'success',
-            'merchant': current_merchant,
-            'debug_info': {
-                'auth_method': current_merchant.get('auth_method'),
-                'api_key': current_merchant.get('api_key'),
-                'server_time': str(datetime.now())
-            }
+            'merchant': merchant_view
         })
 
     @app.route('/api/v1/payments/charge', methods=['POST'])

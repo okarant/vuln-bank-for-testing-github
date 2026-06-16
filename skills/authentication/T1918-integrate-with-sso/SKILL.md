@@ -36,4 +36,4 @@ Use the following guidelines for secure Single Sign-On (SSO) integrations:
 
 - The requirement "Integrate with SSO" is documented with an owner and an infrastructure/process plan.
 
-**Status:** Pending
+**Status:** Documented

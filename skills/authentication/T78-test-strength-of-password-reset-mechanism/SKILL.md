@@ -63,4 +63,4 @@ __5. If the application uses cookies when submitting a username, try to submit a
 - The fix is applied in-place to the original files (no `*_secure.*` copies).
 - A test or manual check confirms the vulnerability is no longer exploitable.
 
-**Status:** Pending
+**Status:** Applied

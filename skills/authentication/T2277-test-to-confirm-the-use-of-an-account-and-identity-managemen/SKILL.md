@@ -48,4 +48,4 @@ Test to confirm that the account management system is capable of organizing user
 
 - The requirement "Test to confirm the use of an account and identity management system" is documented with an owner and an infrastructure/process plan.
 
-**Status:** Pending
+**Status:** Documented

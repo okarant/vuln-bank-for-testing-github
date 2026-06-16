@@ -34,4 +34,4 @@ This test checks if a message throttling mechanism has been properly implemented
 - The fix is applied in-place to the original files (no `*_secure.*` copies).
 - A test or manual check confirms the vulnerability is no longer exploitable.
 
-**Status:** Pending
+**Status:** Applied

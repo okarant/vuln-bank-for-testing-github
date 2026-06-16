@@ -41,4 +41,4 @@ __simple_password_check__ and __cracklib_password_check__ plugins. They add comm
 
 - The requirement "Consider adding plugins for stronger authentication protocols and stricter password complexity rules (MariaDB)" is documented with an owner and an infrastructure/process plan.
 
-**Status:** Pending
+**Status:** Documented

@@ -84,4 +84,4 @@ CEK itself can be created and managed in different ways (specified by *alg* JWE 
 - The fix is applied in-place to the original files (no `*_secure.*` copies).
 - A test or manual check confirms the vulnerability is no longer exploitable.
 
-**Status:** Pending
+**Status:** Applied

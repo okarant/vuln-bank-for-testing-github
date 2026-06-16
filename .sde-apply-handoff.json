@@ -1,0 +1,344 @@
+{
+  "source_skill": "apply-security-fixes",
+  "handoff_version": "2",
+  "generated_at": "2026-06-16T17:16:10.979202Z",
+  "upstream_handoff": ".sde-handoff.json",
+  "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+  "project_id": 31909,
+  "security_branch": "security-hardening/vuln-bank-for-testing-github-20260616-1404",
+  "scope": "domain=authentication",
+  "totals": {
+    "applied": 26,
+    "documented": 4,
+    "skipped": 0,
+    "scoped_total": 30
+  },
+  "countermeasures": [
+    {
+      "id": "T10",
+      "full_id": "31909-T10",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T114",
+      "full_id": "31909-T114",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T1362",
+      "full_id": "31909-T1362",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "auth.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T1363",
+      "full_id": "31909-T1363",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "auth.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T1918",
+      "full_id": "31909-T1918",
+      "status": "Documented",
+      "category": "INFRA",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T1919",
+      "full_id": "31909-T1919",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T2",
+      "full_id": "31909-T2",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T220",
+      "full_id": "31909-T220",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "database.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T222",
+      "full_id": "31909-T222",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T2276",
+      "full_id": "31909-T2276",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "auth.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T2277",
+      "full_id": "31909-T2277",
+      "status": "Documented",
+      "category": "INFRA",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T230",
+      "full_id": "31909-T230",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "merchant_payments.py",
+        "auth.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T2652",
+      "full_id": "31909-T2652",
+      "status": "Documented",
+      "category": "INFRA",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T281",
+      "full_id": "31909-T281",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T284",
+      "full_id": "31909-T284",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "merchant_payments.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T285",
+      "full_id": "31909-T285",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T3",
+      "full_id": "31909-T3",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T323",
+      "full_id": "31909-T323",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T338",
+      "full_id": "31909-T338",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T340",
+      "full_id": "31909-T340",
+      "status": "Documented",
+      "category": "INFRA",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T394",
+      "full_id": "31909-T394",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "auth.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T395",
+      "full_id": "31909-T395",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "auth.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T61",
+      "full_id": "31909-T61",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T62",
+      "full_id": "31909-T62",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T69",
+      "full_id": "31909-T69",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T7",
+      "full_id": "31909-T7",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "database.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T70",
+      "full_id": "31909-T70",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "merchant_payments.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T76",
+      "full_id": "31909-T76",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T78",
+      "full_id": "31909-T78",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "auth.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T79",
+      "full_id": "31909-T79",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py"
+      ],
+      "sde_note_result": "ADDED"
+    }
+  ]
+}

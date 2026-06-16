@@ -42,4 +42,4 @@ Use the following guidelines to test that default passwords are changed or defau
 - The fix is applied in-place to the original files (no `*_secure.*` copies).
 - A test or manual check confirms the vulnerability is no longer exploitable.
 
-**Status:** Pending
+**Status:** Applied

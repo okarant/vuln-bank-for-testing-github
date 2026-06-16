@@ -56,4 +56,4 @@ __Note__: Default authenticators (passwords) that are used for installation of t
 
 - The requirement "Use an account and identity management system" is documented with an owner and an infrastructure/process plan.
 
-**Status:** Pending
+**Status:** Documented

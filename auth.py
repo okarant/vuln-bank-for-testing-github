@@ -1,40 +1,145 @@
 from flask import jsonify, request
 import jwt
 import datetime
-import sqlite3  
+import os
+import re
+import secrets
+import sqlite3
+import time
+from collections import defaultdict
 from functools import wraps
 
+from werkzeug.security import generate_password_hash, check_password_hash
 
-JWT_SECRET = "secret123"
+from database import execute_query
 
-ALGORITHMS = ['HS256', 'none']
+
+def _load_jwt_secret():
+    """Load the JWT signing secret from the environment.
+
+    Falls back to an ephemeral, process-local random secret when the variable
+    is absent so the application never ships with a predictable hardcoded key.
+    """
+    secret = os.environ.get("JWT_SECRET")
+    if not secret:
+        secret = secrets.token_urlsafe(64)
+        print(
+            "WARNING: JWT_SECRET is not set. Generated an ephemeral signing key; "
+            "set JWT_SECRET in the environment for stable, production-grade tokens."
+        )
+    return secret
+
+
+JWT_SECRET = _load_jwt_secret()
+
+# Only a single strong HMAC algorithm is accepted. Unsigned ('none') tokens are never allowed.
+ALGORITHMS = ['HS256']
+
+# Access/ID token lifetime (seconds).
+TOKEN_TTL_SECONDS = int(os.environ.get("JWT_TTL_SECONDS", "3600"))
+
+# Minimum password policy shared by end users AND server-to-server/system accounts.
+MIN_PASSWORD_LENGTH = 12
+
+
+def validate_password_policy(password):
+    """Return (ok, message). Single shared baseline for ALL account types."""
+    if not password or len(password) < MIN_PASSWORD_LENGTH:
+        return False, f"Password must be at least {MIN_PASSWORD_LENGTH} characters long"
+    classes = [r'[a-z]', r'[A-Z]', r'\d', r'[^A-Za-z0-9]']
+    if sum(1 for pattern in classes if re.search(pattern, password)) < 3:
+        return False, "Password must combine at least three of: lowercase, uppercase, digits, symbols"
+    return True, ""
+
+
+def hash_password(password):
+    """Salt and hash a password with PBKDF2-HMAC-SHA256 (per-password random salt)."""
+    return generate_password_hash(password, method='pbkdf2:sha256', salt_length=16)
+
+
+def verify_password(stored_hash, provided_password):
+    """Constant-time verification of a provided password against a stored hash."""
+    if not stored_hash or provided_password is None:
+        return False
+    try:
+        return check_password_hash(stored_hash, provided_password)
+    except Exception:
+        return False
+
+
+def hash_token(raw_token):
+    """One-way hash for storing OTP/reset PINs and API tokens at rest."""
+    return generate_password_hash(raw_token, method='pbkdf2:sha256', salt_length=16)
+
+
+def verify_hashed_token(stored_hash, provided_token):
+    if not stored_hash or provided_token is None:
+        return False
+    try:
+        return check_password_hash(stored_hash, provided_token)
+    except Exception:
+        return False
+
+
+def generate_secure_pin(digits=6):
+    """Cryptographically secure numeric one-time PIN."""
+    upper = 10 ** digits
+    return str(secrets.randbelow(upper)).zfill(digits)
+
+
+def generate_api_token(nbytes=32):
+    """Cryptographically secure, high-entropy access/API token (>=128 bits)."""
+    return secrets.token_urlsafe(nbytes)
+
+
+# ---- Account lockout / authentication throttling (in-memory) ----
+_failed_auth = defaultdict(list)
+LOCKOUT_THRESHOLD = int(os.environ.get("AUTH_LOCKOUT_THRESHOLD", "5"))
+LOCKOUT_WINDOW_SECONDS = int(os.environ.get("AUTH_LOCKOUT_WINDOW", str(15 * 60)))
+
+
+def _prune_failures(key, now):
+    _failed_auth[key] = [ts for ts in _failed_auth[key] if ts > now - LOCKOUT_WINDOW_SECONDS]
+
+
+def is_locked_out(key):
+    now = time.time()
+    _prune_failures(key, now)
+    return len(_failed_auth[key]) >= LOCKOUT_THRESHOLD
+
+
+def record_failed_auth(key):
+    now = time.time()
+    _prune_failures(key, now)
+    _failed_auth[key].append(now)
+
+
+def reset_failed_auth(key):
+    _failed_auth.pop(key, None)
+
 
 def generate_token(user_id, username, is_admin=False):
-    """Generate a JWT token."""
+    """Generate a signed JWT access token with issue/expiry claims."""
+    now = datetime.datetime.utcnow()
     payload = {
         'user_id': user_id,
         'username': username,
         'is_admin': is_admin,
-        'iat': datetime.datetime.utcnow()
+        'iat': now,
+        'exp': now + datetime.timedelta(seconds=TOKEN_TTL_SECONDS)
     }
-    
-    token = jwt.encode(payload, JWT_SECRET, algorithm='HS256')
-    return token
+    return jwt.encode(payload, JWT_SECRET, algorithm='HS256')
+
 
 def verify_token(token):
-    """Verify a JWT token."""
+    """Verify a JWT token's signature and expiry. Never accepts unsigned tokens."""
     try:
-        payload = jwt.decode(token, JWT_SECRET, algorithms=ALGORITHMS)
-        return payload
-    except jwt.exceptions.InvalidSignatureError:
-        try:
-            # Second try without verification
-            payload = jwt.decode(token, options={'verify_signature': False})
-            return payload
-        except:
-            return None
-    except Exception as e:
-        print(f"Token verification error: {str(e)}")
+        return jwt.decode(token, JWT_SECRET, algorithms=ALGORITHMS)
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None
+    except Exception:
         return None
 
 
@@ -55,12 +160,9 @@ def token_required(f):
             except IndexError:
                 token = None
                 
-        if not token and 'token' in request.args:
-            token = request.args['token']
-            
-        if not token and 'token' in request.form:
-            token = request.form['token']
-            
+        # Access tokens are accepted only from the Authorization header or an
+        # httponly cookie. They are never read from query-string/form parameters
+        # because those are cached by proxies and leak into logs/history.
         if not token and 'token' in request.cookies:
             token = request.cookies['token']
             
@@ -88,37 +190,36 @@ def init_auth_routes(app):
     def api_login():
         auth = request.get_json()
         suspension_message = 'Your account has been suspended, contact support or walk in to any of our branch to resolve the issue'
-        
+
         if not auth or not auth.get('username') or not auth.get('password'):
             return jsonify({'error': 'Missing credentials'}), 401
-            
-        conn = sqlite3.connect('bank.db')
-        c = conn.cursor()
-        query = f"SELECT * FROM users WHERE username='{auth.get('username')}' AND password='{auth.get('password')}'"
-        c.execute(query)
-        user = c.fetchone()
-        conn.close()
-        
-        if not user:
+
+        username = auth.get('username')
+        lock_key = f"login:{username}"
+        if is_locked_out(lock_key):
+            return jsonify({'error': 'Account temporarily locked due to repeated failed attempts. Try again later.'}), 429
+
+        # Parameterized query (no SQL injection); password is verified against a
+        # salted PBKDF2 hash rather than compared in plaintext SQL.
+        rows = execute_query("SELECT * FROM users WHERE username = %s", (username,))
+        user = rows[0] if rows else None
+
+        if not user or not verify_password(user[2], auth.get('password')):
+            record_failed_auth(lock_key)
             return jsonify({'error': 'Invalid credentials'}), 401
 
         if len(user) > 9 and user[9]:
             return jsonify({'error': suspension_message}), 403
-            
-        # Generate token
+
+        reset_failed_auth(lock_key)
         token = generate_token(user[0], user[1], user[5])
-        
+
         return jsonify({
             'token': token,
             'user_id': user[0],
             'username': user[1],
             'account_number': user[3],
-            'is_admin': user[5],
-            'debug_info': {
-                'login_time': str(datetime.datetime.now()),
-                'ip_address': request.remote_addr,
-                'user_agent': request.headers.get('User-Agent')
-            }
+            'is_admin': user[5]
         })
 
     @app.route('/api/check_balance', methods=['GET'])
