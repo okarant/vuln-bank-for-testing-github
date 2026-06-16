@@ -1,0 +1,983 @@
+### SECTION S7 | Application General
+## SUBSECTION Q193 | Components
+Q Q101 | Components In Development | mandatory=False
+   A A4 | Web application
+   A A6 | Web service
+   A A1264 | Microservice backend
+   A A1289 | Frontend
+   A A5 | Generic server
+   A A713 | Mobile app
+   A A194 | Generic client
+   A A1077 | Hardware
+   A A8 | Stand-alone
+   A A2322 | Firmware
+Q Q253 | Components In Use | mandatory=False
+   A A1078 | Uses a database
+   A A1084 | Uses third-party software libraries, modules, and/or open source/COTS components
+Q CQ5 | test q | mandatory=False
+   A CA15 | test
+## SUBSECTION Q258 | Architecture/Environment
+Q Q500 | Architectural Features | mandatory=False
+   A A2303 | Fault Tolerance
+   A A1142 | Contains components that communicate through a network
+Q Q322 | Architecture | mandatory=False
+   A A2013 | Blockchain
+   A A1262 | Microservices ecosystem
+   A A1137 | IoT ecosystem
+  Q Q459 | Blockchain Architecture | mandatory=False
+     A A2014 | Smart Contract
+  Q Q261 | IoT Architecture | mandatory=False
+     A A1138 | Has a local area network between IoT devices in scope
+     A A1103 | This is the core component of a multi-component IoT system
+## SUBSECTION Q284 | Context and Characteristics
+Q Q460 | Accessibility Requirements | mandatory=False
+   A A2016 | Does this project need to meet accessibility requirements?
+Q Q252 | Application's Context and Characteristics | mandatory=False
+   A A1350 | Include general countermeasures in the Activity phase (process engineering tasks) in this project
+   A A759 | This is a financial application
+   A A744 | The application handles health data
+   A A1093 | Handles payment through another service provider
+   A A1075 | This is an ICS or IACS
+   A A1150 | This is a game application
+   A A1145 | This is a mainframe application
+   A A1283 | This is an automotive application
+   A A1291 | Consumes cloud services
+   A A1292 | Provides cloud services
+  Q Q501 | Process Engineering Tasks Breakdown | mandatory=False
+     A A2297 | Application Development
+     A A2304 | Environment Setup
+     A A2298 | IT Infrastructure
+     A A2305 | Network Infrastructure
+     A A2306 | Third-party Vendor
+Q Q124 | Payment Service Provider | mandatory=False
+   A A1163 | PayPal
+Q Q295 | Game Applications | mandatory=False
+   A A1153 | Has a rating
+Q Q165 | Health Care Systems | mandatory=False
+   A A1081 | Has critical operations or emergency functions
+Q Q239 | Application Runs at a Higher Access Level Than Its Users | mandatory=False
+   A A785 | Yes
+Q Q285 | ICS | mandatory=False
+   A A1076 | Has critical operations
+   A A1089 | The system consists of zones, and channels or conduits
+### SECTION S8 | Platform and Language
+## SUBSECTION Q293 | Platform/Operating System
+Q Q294 | Application Target Platform | mandatory=False
+   A A2301 | Windows
+   A A1154 | Mac OS
+   A A714 | iOS
+   A A715 | Android
+Q Q498 | OS Hardening | mandatory=False
+   A A1151 | Windows
+   A A1152 | Linux/Unix
+  Q Q301 | Mandatory Access Control (MAC) | mandatory=False
+     A A1180 | SELinux
+     A A1181 | AppArmor
+## SUBSECTION Q195 | Language and Framework
+Q Q109 | Programming Language | mandatory=False
+   A A781 | Apex for Force.com
+   A A2353 | ABAP (SAP)
+   A A2 | C#
+   A A1284 | VB
+   A A193 | C/C++
+   A A1164 | Go
+   A A1 | Java
+   A A3 | JavaScript
+   A A1352 | TypeScript
+   A A1272 | Kotlin
+   A A716 | Objective-C
+   A A782 | PHP
+   A A707 | Python
+   A A719 | Ruby
+   A A1129 | Swift for iOS
+   A CA14 | Framework
+   A A1621 | Bash/Shell
+   A A2108 | Low-code/No-code
+   A A1365 | Rust
+  Q Q110 | Technology/Framework | mandatory=False
+     A A48 | .NET
+     A A1099 | AngularJS
+     A A697 | Django
+     A A1281 | Flutter
+     A A47 | Java EE
+     A A1105 | MEAN Stack
+     A A2109 | Micronaut
+     A A1063 | Node.js
+     A A191 | Rails
+     A A1136 | React
+     A A1158 | Sinatra
+     A A1325 | GraphQL
+     A A2319 | Vue.js
+  Q Q519 | SAP Security Baseline Template | mandatory=False
+     A A2365 | Host Operating System for SAP Servers
+     A A2360 | SAP ABAP Application Server
+     A A2361 | SAP Java Application Server
+     A A2362 | SAP High-performance ANalytic Application (HANA)
+     A A2363 | SAP Graphical User Interface (GUI)
+     A A2364 | SAP Business Technology Platform (BTP)
+     A A2366 | SAP Web Dispatcher
+## SUBSECTION Q196 | Web Technologies
+Q Q108 | Web Server Used | mandatory=False
+   A A74 | Apache
+   A A75 | Microsoft IIS
+   A A1149 | NGINX
+Q Q516 | Low-Code Website Development Tools | mandatory=False
+   A A2352 | Power Pages
+Q Q191 | Web Client Technologies Used | mandatory=False
+   A A94 | Uses iFrames
+   A A721 | jQuery
+   A A792 | HTML5
+   A A1192 | CORS
+  Q Q245 | Advanced HTML5 Features Used | mandatory=False
+     A A793 | WebSocket
+     A A1191 | HTML5 Web Storage
+## SUBSECTION Q246 | Mobile Technologies
+Q Q264 | Mobile App Features | mandatory=False
+   A A1106 | Enables in-app purchases
+Q Q256 | Mobile Components | mandatory=False
+   A A1088 | Uses a WebView component
+Q Q287 | Android App Features | mandatory=False
+   A A1139 | Shares data or files with other local applications
+Q CQ4 | Mobile Backend as a Service | mandatory=False
+   A CA11 | Apple CloudKit
+## SUBSECTION Q304 | Database Technologies
+Q Q440 | Data Platforms | mandatory=False
+   A A1927 | Snowflake
+Q Q103 | Database | mandatory=False
+   A A11 | Stand-alone database that supports SQL
+   A A732 | NoSQL Database
+Q Q305 | Database Management System (DBMS) | mandatory=False
+   A A1126 | MongoDB
+   A A1195 | MySQL
+   A A1252 | PostgreSQL
+   A A765 | SQLite local data storage
+   A A1221 | Oracle
+   A A1222 | Microsoft SQL Server
+   A CA10 | ACME Secure MySQL
+   A A1368 | InfluxDB
+   A A1369 | Neo4j
+   A A1370 | MariaDB
+   A A2355 | IBM Db2
+   A A1371 | CockroachDB
+   A A1372 | Apache Cassandra
+   A A1373 | MarkLogic
+  Q Q317 | Oracle Database Auditing | mandatory=False
+     A A1224 | Unified Auditing
+     A A1225 | Traditional Auditing
+## SUBSECTION Q369 | Network Technologies
+Q Q372 | Network Components | mandatory=False
+   A A1566 | Directory Server
+   A A1567 | DNS Server
+   A A1568 | Firewall
+   A A1569 | FTP Server
+   A A1570 | IDS/IPS
+   A A1571 | Load Balancer
+   A A1572 | Message Broker
+   A A1575 | Proxy Server
+   A A1576 | Router
+   A A1577 | Service Bus
+   A A1578 | Virtual Private Network (VPN) Server
+   A A1585 | Content Delivery Network (CDN)
+  Q Q507 | Message Brokers | mandatory=False
+     A A2316 | Apache Kafka
+## SUBSECTION Q197 | Java Technologies
+Q Q146 | Java EE Technologies Used | mandatory=False
+   A A96 | JSF
+   A A97 | JAXB
+   A A98 | JPA
+  Q Q154 | JSF Implementations Used | mandatory=False
+     A A117 | Apache MyFaces
+     A A163 | Facelets
+Q Q147 | Third-Party Libraries Used | mandatory=False
+   A A164 | Struts
+   A A165 | Spring
+   A A726 | Apache Wicket
+   A A100 | RichFaces
+   A A101 | Hibernate
+Q Q150 | Java EE Container Used | mandatory=False
+   A A106 | WebSphere
+   A A107 | WebLogic
+   A A108 | Tomcat
+Q Q152 | Library Used for Cryptography | mandatory=False
+   A A114 | Bouncy Castle
+Q Q111 | Uses only Prepared Statements for Database Interaction | mandatory=False
+   A A76 | Yes
+## SUBSECTION Q523 | Low Code/No Code Technologies
+Q Q524 | Microsoft Power Platform | mandatory=False
+   A A2392 | Power Platform Administration
+   A A2368 | Power Platform Application Development
+  Q Q527 | Microsoft Power Platform Application Development | mandatory=False
+     A A2393 | Power Apps
+## SUBSECTION Q198 | .NET Technologies
+Q Q227 | .NET Application Framework Used | mandatory=False
+   A A1185 | ASP.NET Core Web Application Framework
+   A A767 | ASP.NET Web Application Framework
+   A A1090 | WCF Framework
+   A A766 | .NET WinForms
+  Q Q232 | ASP.NET Component Used | mandatory=False
+     A A755 | ASP.NET MVC Framework
+     A A176 | Uses ASP.NET ViewState
+     A A112 | Uses ASP.NET Membership provider for authentication
+Q Q170 | .NET Database Persistence Tools Used | mandatory=False
+   A A155 | Linq
+   A A156 | SqlClient
+   A A157 | OleDb
+   A A158 | ODBC
+   A A168 | ADO.NET
+   A A1211 | Entity
+Q Q209 | .NET Libraries/Components Used | mandatory=False
+   A A159 | Uses Microsoft Enterprise Libraries
+## SUBSECTION Q240 | C/C++ Technologies
+Q Q242 | What C/C++ Environment is Targeted? | mandatory=False
+   A A789 | POSIX
+   A A788 | ANSI C / ISO C++
+   A A790 | Windows (Microsoft C/C++)
+## SUBSECTION Q208 | Data Formats
+Q Q499 | Handles Data Files | mandatory=False
+   A A2302 | The application reads/writes data from/to files
+Q Q115 | Generates or reads data/files in the following formats: | mandatory=False
+   A A13 | XML
+   A A733 | JSON
+   A A1193 | CSV or Excel
+   A A1285 | YAML
+   A A1286 | SVG
+   A A2356 | Protocol Buffers (Protobuf)
+  Q Q175 | Uses XSLTs | mandatory=False
+     A A178 | Yes
+  Q Q149 | Uses XML Digital Signatures | mandatory=False
+     A A104 | Yes
+### SECTION S11 | Features and Functions
+## SUBSECTION Q271 | Interfaces and APIs
+Q Q270 | Interfaces and APIs Provided | mandatory=False
+   A A754 | Provides web services or external APIs
+   A A1155 | Provides UDDI web service registry
+   A A1593 | Uses API gateway for providing web APIs
+## SUBSECTION Q272 | Hardware and IoT
+Q Q278 | Hardware Features | mandatory=False
+   A A1134 | Physical protection of hardware is in-scope
+   A A1121 | Uses RFID or NFC transmissions
+   A A1300 | Hardware design and manufacturing is in scope
+   A A1305 | Hardware/firmware update is in scope
+   A A1306 | Hardware configuration is in scope
+  Q Q283 | Physical Protection | mandatory=False
+     A A1133 | Protecting DMA interfaces is in-scope
+     A A1132 | Protecting hardware debugging interfaces is in-scope
+     A A2403 | Peripherals, integrated buses, and external interconnects are in scope
+  Q Q536 | Hardware design and manufacturing | mandatory=False
+     A A2401 | Has microprocessor
+     A A2402 | Contains memory and storage components
+  Q Q279 | RFID/NFC Features | mandatory=False
+     A A1123 | Modifying physical or hardware features is in-scope
+     A A1124 | System design or RF parameter adjustment is in-scope
+Q Q268 | Internet of Things (IoT) Features | mandatory=False
+   A A1114 | Device registration and discovery
+Q Q534 | System Software & Firmware | mandatory=False
+   A A2404 | Has bootloader
+   A A2405 | Has software debugging functions
+   A A2406 | Has operating system
+   A A2407 | Has isolation and virtualization
+   A A2408 | Has root of trust
+   A A2409 | Has firmware update functionality
+   A A2410 | Has on-device system logging
+   A A1302 | Implements cryptographic algorithms
+   A A1304 | Has Access Control settings
+   A A2411 | Has network features
+Q Q535 | Device Application Software | mandatory=False
+   A A2412 | Device Application Software is in scope
+## SUBSECTION Q199 | Authentication
+Q Q508 | Secrets Management Software | mandatory=False
+   A A2323 | HashiCorp Vault
+   A A2396 | CyberArk Secret Management
+Q Q120 | Authentication Features | mandatory=False
+   A A758 | Has direct or third party authentication for end users, devices or nodes
+  Q Q121 | Authentication Method | mandatory=False
+     A A19 | Uses passwords
+     A A1092 | Generates one-time password
+     A A1062 | Generates API tokens
+     A A1097 | Uses symmetric key authentication
+     A A1073 | Uses public key authentication
+     A A1162 | Uses Phone Authentication
+     A A167 | Uses database authentication
+     A A55 | Uses LDAP repository
+     A A54 | Uses SSO or federated authentication
+     A CA9 | ACME Authentication Microservices v2.0
+  Q Q509 | Identity-as-a-Service (IDaaS) Providers Used | mandatory=False
+     A A2325 | Okta Deployment
+     A A2326 | Integration with Okta
+Q Q129 | Requires Server-to-Server Authentication | mandatory=False
+   A A17 | Yes
+Q CQ3 | Does this application use the My Auth Service v1.1? | mandatory=False
+   A CA5 | Yes
+   A CA4 | No
+   A CA12 | ACME Webapp v1.03
+## SUBSECTION Q203 | Password Management
+Q Q213 | Password Management Features | mandatory=False
+   A A43 | Has change existing password function
+   A A182 | Has forgot password function
+   A A184 | Auto-generates passwords for new users
+## SUBSECTION Q201 | Authorization
+Q Q127 | Authorizes Subjects | mandatory=False
+   A A23 | Yes
+## SUBSECTION Q200 | Session Management
+Q Q126 | Has Session Management | mandatory=False
+   A A37 | Yes
+  Q Q218 | Session Management Configuration | mandatory=False
+     A A66 | Accesses session cookie in client side JavaScript
+## SUBSECTION Q262 | External Dependencies
+Q Q263 | Software Updates | mandatory=False
+   A A1104 | Has software/firmware update functionality
+   A A1144 | This is an update server
+  Q Q373 | Customer Relationship Management (CRM) | mandatory=False
+     A A1594 | Uses Salesforce CRM
+Q Q259 | External Code/Data | mandatory=False
+   A A1102 | Uses dynamic code/library loading
+   A A1157 | Uses remote procedure calls (RPC) or object serialization/deserialization
+Q Q288 | Service Chaining | mandatory=False
+   A A1140 | Forwards user requests to remote services
+   A A1141 | Receives user requests through remote services
+Q Q281 | Webhooks | mandatory=False
+   A A1128 | Sends webhook notifications
+   A A1135 | Receives webhook notifications
+## SUBSECTION Q461 | AI and Machine Learning
+Q Q357 | Artificial Intelligence/Machine Learning | mandatory=False
+   A A1362 | Uses Large Language Models (LLMs)
+   A A1367 | Builds and deploys machine learning (ML) models
+   A A1363 | AI governance tasks are in scope (based on NIST AI RMF)
+   A A1504 | LLM-based Code Generation
+   A A1505 | EU AI Act
+   A A2223 | Agentic AI
+   A A2359 | Internal/External AI Marketplace
+  Q Q457 | AI Content Organization | mandatory=False
+     A A1629 | Role-based AI content
+     A A2007 | Role-agnostic AI content
+  Q Q368 | Classification of AI Systems (EU AI Act) | mandatory=False
+     A A1506 | High Risk
+     A A1507 | Limited/low risk
+     A A1508 | General purpose AI models
+     A A1509 | General Purpose AI Models with Systemic Risk
+  Q Q376 | AI/ML Usecases | mandatory=False
+     A A1622 | Fine-tuning
+     A A1623 | Prompt engineering
+     A A1624 | Retrieval augmented generation
+     A A1625 | Vector databases
+  Q Q455 | US State-Specific AI Regulation | mandatory=False
+     A A2004 | Utah AIPA
+     A A2005 | Colorado CPAI
+Q Q458 | AI/ML Frameworks | mandatory=False
+   A A2012 | TensorFlow/Keras
+Q Q513 | Model Context Protocol (MCP) | mandatory=False
+   A A2344 | MCP Client
+   A A2345 | MCP Server
+  Q Q514 | MCP Client Transport | mandatory=False
+     A A2346 | STDIO
+     A A2347 | Streamable HTTP
+  Q Q515 | MCP Server Transport | mandatory=False
+     A A2348 | STDIO
+     A A2349 | Streamable HTTP
+## SUBSECTION Q202 | More Features
+Q Q215 | Input Validation | mandatory=False
+   A A2307 | Receives text input from users
+   A A174 | Uses regular expressions on end-user input
+Q Q303 | OS Interactions | mandatory=False
+   A A9 | OS shell commands
+   A A1194 | System calls
+Q Q131 | Encryption | mandatory=False
+   A A21 | Passwords stored in configuration files
+   A A27 | Uses encryption functions (not including SSL)
+   A A102 | Uses WS-Security standards
+Q Q214 | Miscellaneous | mandatory=False
+   A A33 | Uses multi-threaded programming
+   A A35 | Generates temporary files
+   A A39 | Has file upload or file transfer functions
+   A A90 | Performs diagnostic/debug logging
+   A A1143 | Generates random numbers
+   A A1186 | Installs other applications on the user's device or gets updated in the background
+   A A1260 | Requires certificate or public key pinning
+   A A1288 | Sends electronic messages and/or emails
+   A A2367 | Utilizes cron jobs
+   A A1122 | Requires non-repudiation
+### SECTION S23 | Protocols
+## SUBSECTION Q207 | Application Layer
+Q Q186 | Application Layer Protocols Used | mandatory=False
+   A A195 | Uses an HTTP-based protocol
+   A A1112 | Uses an XMPP-based protocol
+   A A1127 | Uses Hypercat protocol 
+   A A2357 | Uses HTTP/2 protocol
+   A A1125 | Uses MQTT protocol
+   A A2327 | Server Message Block (SMB)
+   A A1573 | File Transfer Protocol (FTP)
+   A A1583 | Modbus
+   A A1584 | Advanced Message Queuing Protocol (AMQP)
+   A A2317 | gRPC
+  Q Q216 | HTTP-Based Protocols Used | mandatory=False
+     A A730 | SOAP web services
+     A A731 | RESTful web services
+  Q Q269 | XMPP-Based Protocols Used | mandatory=False
+     A A1115 | Uses XMPP-XEP-347 (IoT - Discovery)
+Q Q231 | Authentication and Identity Exchange Protocols | mandatory=False
+   A A762 | SAML
+   A A763 | OAuth
+   A A764 | OpenID
+## SUBSECTION Q276 | Network Layer
+Q Q371 | Virtual Private Network (VPN) | mandatory=False
+   A A1574 | Virtual Private Network (VPN)
+Q Q282 | Low-Power Protocols Used | mandatory=False
+   A A1130 | ZigBee
+   A A1131 | Thread protocol
+Q Q349 | Broadband cellular networks | mandatory=False
+   A A1579 | 3G
+   A A1580 | 4G/LTE
+   A A1581 | 5G
+Q Q332 | Microcontroller Protocols Used | mandatory=False
+   A A1282 | CAN
+Q Q339 | Wireless Protocols Used | mandatory=False
+   A A1314 | Bluetooth
+   A A1316 | WiFi
+   A A1582 | LoRa
+  Q Q338 | Bluetooth Persona | mandatory=False
+     A A1312 | Developer
+     A A1313 | Manufacturer
+  Q Q340 | WiFi Persona | mandatory=False
+     A A1317 | Client
+     A A1318 | Provider
+## SUBSECTION Q517 | Transport Layer
+Q Q518 | Transport Layer Protocols Used | mandatory=False
+   A A2358 | QUIC
+### SECTION S15 | Compliance Requirements
+## SUBSECTION Q205 | Geography
+Q Q159 | Organization is Subject to Laws of: | mandatory=False
+   A A128 | Canada
+   A A127 | USA
+   A A129 | European Union
+   A A1326 | United Kingdom
+   A A1334 | France
+   A A1253 | Asia Pacific
+   A A1257 | Latin America
+## SUBSECTION Q204 | Financial Systems
+Q Q229 | Financial Regulations | mandatory=False
+   A A1094 | In-scope for the EBA's security of Internet payments
+   A A149 | In-scope for GLBA compliance
+   A A1246 | In-scope for NYDFS Cybersecurity Regulation
+   A A1254 | In-scope for MAS-TRMG Guidelines
+   A A2351 | In-scope for Central Bank of Brazil (BACEN)'s Regulations
+  Q Q449 | In-Scope for EU Digital Operational Resilience Act (DORA) | mandatory=False
+     A A1972 | Yes
+Q Q161 | Payment Components | mandatory=False
+   A A132 | In-scope for PCI-DSS 3.2
+   A A1357 | In-scope for PCI-DSS 4.0
+   A A1327 | In-scope for PCI-SSS
+   A A784 | In-scope for PA-DSS
+  Q Q342 | Is this a terminal software? | mandatory=False
+     A A1328 | Yes
+## SUBSECTION Q254 | Health Care Systems
+Q Q223 | Health Regulations | mandatory=False
+   A A145 | In-scope for HIPAA compliance
+Q Q520 | In-scope for MDS2 | mandatory=False
+   A A1083 | Yes
+Q Q528 | In-Scope for FDA Cybersecurity Guideline | mandatory=False
+   A A2397 | Yes
+Q Q533 | In-Scope for France Health Data Hosting (HDS) Certification | mandatory=False
+   A A2400 | Yes
+Q Q530 | In-Scope for Germany BSI TR-03161 (Healthcare) | mandatory=False
+   A A2399 | Yes
+## SUBSECTION Q249 | Industrial Control Systems
+Q Q273 | In-Scope for NIST 800-82 Compliance | mandatory=False
+   A A1116 | Yes
+  Q Q274 | NIST 800-82 Impact Level | mandatory=False
+     A A1117 | Low
+     A A1118 | Moderate
+     A A1119 | High
+  Q Q275 | NIST 800-82 Optional Controls | mandatory=False
+     A A1120 | Include optional controls from NIST 800-82
+Q Q250 | In-Scope for ANSI/ISA 62443 or CSA/SSA-311 | mandatory=False
+   A A1320 | ANSI/ISA 62443-3-3 or SSA 311
+   A A1374 | ANSI/ISA 62443-4-1 or SDLA 312
+   A A1319 | ANSI/ISA 62443-4-2 or CSA/ICSA 311
+  Q Q341 | Component Type | mandatory=False
+     A A1321 | Software Application
+     A A1322 | Embedded Device
+     A A1323 | Host Device
+     A A1324 | Network Device
+  Q Q251 | Security Level (SL) | mandatory=False
+     A A1069 | Security Level 1 (SL1)
+     A A1070 | Security Level 2 (SL2)
+     A A1071 | Security Level 3 (SL3)
+     A A1072 | Security Level 4 (SL4)
+## SUBSECTION Q330 | Cloud
+Q Q319 | In-Scope for FedRAMP Compliance | mandatory=False
+   A A1247 | Yes
+  Q Q320 | FedRAMP Control Baseline | mandatory=False
+     A A1248 | Low
+     A A1249 | Moderate
+     A A1250 | High
+Q Q326 | In-Scope for Cloud Controls Matrix (CCM) | mandatory=False
+   A A1268 | Yes
+## SUBSECTION Q206 | Privacy
+Q Q160 | Handles Personal Data | mandatory=False
+   A A130 | Yes
+  Q Q224 | Privacy Regulations | mandatory=False
+     A A747 | GAPP
+     A A746 | PIPEDA
+     A A750 | ECPA
+     A A1148 | GDPR
+     A A1273 | NY SHIELD
+     A A1258 | Brazil LGPD
+     A A1995 | China PIPL
+     A A2131 | India DPDPA
+  Q Q481 | Privacy Standards | mandatory=False
+     A A2120 | ISO 27701
+  Q Q454 | US State-Specific Privacy Legislation | mandatory=False
+     A A1255 | California Civil Code (CCPA and CPRA)
+     A A1256 | CalOPPA
+     A A1997 | Colorado PA
+     A A1998 | Connecticut PDPOM
+     A A2214 | Delaware PDPA
+     A A2215 | Iowa CDPA
+     A A2002 | Montana CDPA
+     A A2216 | Nebraska DPA
+     A A2217 | New Hampshire DPA
+     A A2218 | New Jersey DPA
+     A A2000 | Oregon PL
+     A A2001 | Texas DPSA
+     A A1999 | Utah CPA
+     A A1996 | Virginia CDPA
+Q Q236 | In-Scope with Children's Privacy Compliance | mandatory=False
+   A A779 | Yes
+  Q Q238 | In-Scope for COPPA Compliance | mandatory=False
+     A A780 | Yes
+## SUBSECTION Q352 | Automotive
+Q Q353 | In-scope for Automotive Cybersecurity Regulations | mandatory=False
+   A A1358 | ISO/SAE 21434
+   A A1359 | WP.29 R155
+## SUBSECTION Q532 | Australia
+Q Q525 | In scope for Australian Information Security Manual (ISM) | mandatory=False
+   A A2369 | Australian ISM
+  Q Q526 | AUS ISM Guidelines in scope | mandatory=False
+     A A2370 | Guidelines for communications infrastructure
+     A A2371 | Guidelines for communications systems
+     A A2372 | Guidelines for cryptography
+     A A2373 | Guidelines for cyber security documentation
+     A A2374 | Guidelines for cyber security incidents
+     A A2375 | Guidelines for cyber security roles
+     A A2376 | Guidelines for data transfers
+     A A2377 | Guidelines for database systems
+     A A2378 | Guidelines for email
+     A A2379 | Guidelines for enterprise mobility
+     A A2380 | Guidelines for evaluated products
+     A A2381 | Guidelines for gateways
+     A A2382 | Guidelines for information technology equipment
+     A A2383 | Guidelines for media
+     A A2384 | Guidelines for networking
+     A A2385 | Guidelines for personnel security
+     A A2386 | Guidelines for physical security
+     A A2387 | Guidelines for procurement and outsourcing
+     A A2388 | Guidelines for software development
+     A A2389 | Guidelines for system hardening
+     A A2390 | Guidelines for system management
+     A A2391 | Guidelines for system monitoring
+## SUBSECTION Q331 | US Federal and NIST
+Q Q265 | In-Scope for NIST 800-53 Compliance | mandatory=False
+   A A1107 | Yes
+  Q Q267 | NIST 800-53 Impact Level | mandatory=False
+     A A1109 | Low
+     A A1110 | Moderate
+     A A1111 | High
+  Q Q266 | NIST 800-53 Optional Controls | mandatory=False
+     A A1108 | Include optional controls from NIST 800-53
+  Q Q321 | NIST 800-53 Privacy Controls | mandatory=False
+     A A1259 | Include privacy controls from NIST 800-53 (Appendix J)
+Q Q348 | In-Scope for EO 14028 compliance | mandatory=False
+   A A1340 | NIST EO Critical Software
+   A A1341 | NIST EO Software-Verification
+Q Q333 | In-Scope for NIST Cybersecurity Framework | mandatory=False
+   A A1290 | Yes
+Q Q347 | In-Scope for NIST SSDF compliance | mandatory=False
+   A A1339 | Yes
+Q Q328 | In-Scope for CMMC | mandatory=False
+   A A1275 | CMMC V1
+   A A1356 | CMMC V2
+  Q Q329 | CMMC V1 Maturity Level | mandatory=False
+     A A1276 | Level 1
+     A A1277 | Level 2
+     A A1278 | Level 3
+     A A1279 | Level 4
+     A A1280 | Level 5
+  Q Q351 | CMMC V2 Maturity Level | mandatory=False
+     A A1354 | Level 1
+     A A1355 | Level 2
+Q Q255 | In-Scope for DIACAP | mandatory=False
+   A A1086 | Yes
+Q Q302 | In-Scope for ASD-STIG | mandatory=False
+   A A1189 | Yes
+Q Q337 | In-Scope for CNSSI Controls | mandatory=False
+   A A1309 | Baseline
+   A A1310 | Overlays
+## SUBSECTION Q531 | European Union (EU)
+Q Q473 | In-Scope for EU Data Act | mandatory=False
+   A A2028 | Yes
+Q Q485 | In scope for EU RED | mandatory=False
+   A A2127 | Yes
+Q Q378 | In-Scope for EU Cyber Resilience Act | mandatory=False
+   A A1609 | Yes
+   A A1610 | Open-source software steward
+Q Q456 | In scope for EU NIS2 | mandatory=False
+   A A2006 | Yes
+Q Q345 | In-Scope for Regulation (EU) 910/2014 (eIDAS Regulation) | mandatory=False
+   A A1335 | Yes
+Q Q489 | Select the EN 18031 standard that you are required to comply with | mandatory=False
+   A A2258 | In scope for EN 18031-1
+   A A2334 | In scope for EN 18031-2
+   A A2335 | In scope for EN 18031-3
+  Q Q490 | Specific details about your device (Related to 18031) | mandatory=False
+     A A2259 | Legal restrictions prevent implementing access control or authentication mechanisms.
+     A A2260 | Device design and/or deployment environment includes physical or logical measures that make unauthorized access to sensitive/confidential information in transit impossible.
+     A A2261 | Device design and/or deployment environment includes physical or logical measures that make unauthorized access to sensitive/confidential information at rest impossible.
+     A A2262 | Absence of authentication is required for the device’s intended functionality.
+     A A2263 | The device cannot support software updates due to functional safety.
+     A A2264 | The device’s software is immutable.
+     A A2267 | Conflicting security goals prevent implementing functionality to change authenticator information.
+     A A2268 | Other devices in the device’s network provide sufficient protection against DoS attacks and loss of essential network operation functions.
+     A A2269 | Alternative measures to software updates adequately protect the affected security and network or privacy or financial assets throughout the device’s lifecycle.
+     A A2270 | The device is intended to be publicly accessed.
+     A A2271 | The device’s software affects network or security or privacy or financial assets.
+     A A2272 | The device requires deviation from secure‑communication best practices for integrity/authenticity for interoperability reasons.
+     A A2273 | The device manages access to network/security/privacy/financial objects via user interfaces in environments where physical or logical measures provide confidence in the correctness of the entity’s claim.
+     A A2274 | Managed access is used only for reading personal information, privacy functions, or privacy function configuration where access without authentication is needed to enable intended equipment functionality.
+     A A2275 | Managed access is used only for reading personal information, privacy functions, or privacy function configuration where legal implications do not allow authentication mechanisms.
+     A A2276 | Temporary exposure of network assets or security or privacy or financial assets is required to establish or manage a connection.
+     A A2277 | Deviation from confidentiality best practices is unavoidable for interoperability reasons.
+     A A2278 | Duplicate transfer of information to the device’s network interface does not constitute a replay attack.
+     A A2279 | Deviation from best practices against replay attacks is unavoidable for interoperability reasons.
+     A A2280 | The device uses pre‑installed confidential cryptographic keys to establish initial trust relationships under conditions controlled by an authorized entity.
+     A A2281 | The device uses pre‑installed confidential cryptographic keys as shared parameters required for the equipment’s intended functionality.
+     A A2282 | The device currently has publicly known, exploitable hardware or software vulnerabilities that affect security or network assets and have not been risk‑addressed.
+     A A2283 | The device exposes a network interface or services in its factory‑default state that affect security or network assets.
+     A A2284 | The device has an external interface capable of receiving input.
+     A A2285 | The device uses or generates confidential cryptographic keys.
+     A A2265 | The device’s network interfaces are used solely on a local network that does not interoperate with other networks.
+     A A2266 | The device exchanges data between different networks to permanently connect other devices directly to the Internet.
+     A A2336 | The device is a toy or childcare equipment.
+     A A2337 | There are user‑notification methods that do not involve the device.
+     A A2338 | The device has non‑network external interfaces with sensing capabilities that can affect the user’s privacy.
+     A A2339 | The device’s intended functionality includes processing personal information of special categories.
+     A A2340 | The device is Internet‑connected radio equipment.
+     A A2341 | Legal restrictions prohibit logging of events affecting the device.
+     A A2342 | The related log data is stored outside the device.
+     A A2343 | The device processes financial information.
+## SUBSECTION Q237 | Compliance Scope: Other
+Q Q360 | In scope for EN 303 645 | mandatory=False
+   A A1364 | Yes
+Q Q324 | In-Scope for AICPA Trust Services Criteria (SOC2) | mandatory=False
+   A A1266 | Yes
+Q Q374 | In scope for UK PSTI | mandatory=False
+   A A1595 | Yes
+Q Q325 | In-Scope for ISO 27001 Compliance | mandatory=False
+   A A1267 | Yes
+Q Q529 | In-Scope for Cyber Trust Mark | mandatory=False
+   A A2398 | Yes
+Q Q225 | Types of Emails Sent by the Application | mandatory=False
+   A A752 | Advertisement or other solicitation emails
+Q Q334 | MASVS Level | mandatory=False
+   A A1295 | Level 1
+   A A1296 | Level 2
+   A A1297 | R
+Q Q336 | In-Scope for China Cybersecurity Law | mandatory=False
+   A A1308 | Yes
+### SECTION S19 | Development/Test Tools
+## SUBSECTION Q211 | Development Tools
+Q Q364 | Version Control Platforms | mandatory=False
+   A A1390 | GitHub
+Q Q235 | Uses Static or Dynamic Security Code Analysis | mandatory=False
+   A A777 | Yes
+Q Q105 | Open Source Security Library Use Permitted | mandatory=False
+   A A56 | Yes
+  Q Q106 | OWASP Development Tools Used | mandatory=False
+     A A58 | ESAPI
+     A A1184 | AppSensor
+  Q Q144 | Other Open Source Security Libraries Used | mandatory=False
+     A A92 | Jasypt
+## SUBSECTION Q210 | Test Tools
+Q Q212 | Test Tools Permitted | mandatory=False
+   A A188 | Burp Suite
+### SECTION S24 | Deployment
+## SUBSECTION Q299 | General
+Q Q375 | CI/CD Tools | mandatory=False
+   A A1596 | CircleCI
+   A A2257 | JFrog
+Q Q346 | IaC Tools | mandatory=False
+   A A1338 | Terraform
+   A A1342 | Ansible
+Q Q296 | Assurance Level | mandatory=False
+   A A1161 | Include more in-depth controls
+## SUBSECTION Q289 | Cloud Computing
+Q Q343 | Generic Cloud Content | mandatory=False
+   A A1332 | Include generic, story-driven cloud countermeasures
+Q Q290 | Cloud Providers | mandatory=False
+   A A1333 | Story-Driven Amazon Web Services (AWS) Content
+   A A1159 | Non-Story-Driven Amazon Web Services (AWS) Content
+   A A1336 | Story-Driven Google Cloud Content
+   A A1212 | Non-Story-Driven Google Cloud Content
+   A A1190 | Microsoft Azure
+   A A2121 | Oracle
+   A CA8 | ACME Secure AWS
+   A A2308 | IBM Cloud
+   A A2328 | Alibaba Cloud
+## SUBSECTION Q361 | Amazon Web Services (AWS)
+Q Q366 | AWS Cloud Configuration | mandatory=False
+   A A1392 | AWS Cloud Configuration
+Q Q298 | AWS Services | mandatory=False
+   A A1167 | AWS AMI
+   A A1345 | AWS API Gateway
+   A A1510 | AWS App Mesh
+   A A1598 | AWS Athena
+   A A1251 | AWS Aurora
+   A A1172 | AWS Auto Scaling
+   A A1599 | AWS Backup
+   A A1511 | AWS Bedrock
+   A A1375 | AWS Certificate Manager
+   A A1376 | AWS CloudFormation
+   A A1175 | AWS CloudFront
+   A A2111 | AWS CloudShell
+   A A2299 | AWS CloudTrail
+   A A1174 | AWS CloudWatch
+   A A1608 | AWS CodeArtifact
+   A A1588 | AWS CodePipeline
+   A A1346 | AWS Cognito
+   A A1176 | AWS Config
+   A A1600 | AWS DataSync
+   A A1601 | AWS Direct Connect
+   A A1271 | AWS DynamoDB
+   A A1166 | AWS EBS
+   A A1171 | AWS EC2
+   A A1377 | AWS ECR
+   A A1270 | AWS ECS
+   A A1378 | AWS EFS
+   A A1331 | AWS EKS
+   A A1379 | AWS ElastiCache
+   A A1168 | AWS ELB
+   A A1602 | AWS EventBridge
+   A A1603 | AWS Fargate
+   A A1627 | AWS FSx for Lustre
+  Q Q379 | More AWS Services | mandatory=False
+     A A1628 | AWS FSx for Windows File Server
+     A A1513 | AWS Glue
+     A A1604 | AWS GuardDuty
+     A A1170 | AWS IAM
+     A A1605 | AWS Inspector
+     A A1348 | AWS Kinesis Data Firehose
+     A A1347 | AWS Kinesis Data Streams
+     A A1178 | AWS KMS
+     A A1514 | AWS Lake Formation
+     A A1226 | AWS Lambda
+     A A1381 | AWS MQ
+     A A1380 | AWS MSK
+     A A1606 | AWS Neptune
+     A A1382 | AWS OpenSearch
+     A A1165 | AWS RDS
+     A A1383 | AWS RedShift
+     A A1607 | AWS Rekognition
+     A A1179 | AWS Route53
+     A A1169 | AWS S3
+     A A1512 | AWS S3 Glacier
+     A A1366 | AWS SageMaker
+     A A1384 | AWS Secrets Manager
+     A A2354 | AWS Security Hub
+     A A1385 | AWS SES
+     A A1173 | AWS SNS
+     A A1227 | AWS SQS
+     A A1386 | AWS Step Functions
+     A A1387 | AWS Systems Manager
+     A A1388 | AWS Transfer Family
+     A A1177 | AWS VPC
+     A A1349 | AWS WAF
+     A A1597 | AWS X-Ray
+## SUBSECTION Q307 | Containerization
+Q Q308 | Containerization Technologies | mandatory=False
+   A A2015 | Containerd
+   A A1208 | Docker
+   A A1235 | Swarm
+   A A1209 | Unmanaged Kubernetes
+   A A1329 | Managed Kubernetes
+   A A1245 | OpenShift
+   A A1591 | Podman
+   A A1926 | Singularity (Apptainer)
+  Q Q506 | Kubernetes Profiles | mandatory=False
+     A A2310 | Master Node
+     A A2311 | Worker Node
+## SUBSECTION Q362 | Microsoft Azure
+Q Q365 | Azure Cloud Configuration | mandatory=False
+   A A1391 | Azure Cloud Configuration
+   A A2132 | Azure Subscriptions
+Q Q306 | Azure Services | mandatory=False
+   A A1197 | Azure Active Directory (Entra ID)
+   A A1427 | Azure Active Directory External Identities
+   A A1394 | Azure AI Bot Service
+   A A1351 | Azure AKS
+   A A1398 | Azure Analysis Services
+   A A1428 | Azure API Management
+   A A1423 | Azure App Configuration
+   A A1404 | Azure App Service
+   A A1452 | Azure Application Gateway
+   A A1425 | Azure Arc
+   A A1470 | Azure Attestation
+   A A1436 | Azure Automation
+   A A1476 | Azure Backup
+   A A1453 | Azure Bastion
+   A A1405 | Azure Batch
+   A A1536 | Azure Blob Storage
+   A A1416 | Azure Cache for Redis
+   A A1437 | Azure Cloud Shell
+   A A1482 | Azure Communication Services
+   A A1454 | Azure Communications Gateway
+   A A1412 | Azure Container Apps
+   A A1413 | Azure Container Instances
+   A A1414 | Azure Container Registry
+   A A1455 | Azure Content Delivery Network
+   A A1417 | Azure Cosmos DB
+   A A1438 | Azure Cost Management
+   A A2112 | Azure CycleCloud
+   A A1477 | Azure Data Box
+   A A1399 | Azure Data Explorer
+   A A1418 | Azure Data Factory
+   A A1400 | Azure Data Lake Analytics
+   A A1537 | Azure Data Lake Storage
+   A A1478 | Azure Data Share
+   A A1419 | Azure Database for MariaDB
+   A A1420 | Azure Database for MySQL
+   A A1446 | Azure Database Migration Service
+   A A1395 | Azure Databricks
+   A A1456 | Azure DDoS Protection
+   A A1471 | Azure Dedicated HSM
+   A A1472 | Azure Defender for Cloud
+   A A1424 | Azure DevTest Labs
+   A A1449 | Azure Digital Twins
+   A A1457 | Azure DNS
+   A A1429 | Azure Event Grid
+   A A1401 | Azure Event Hubs
+   A A1458 | Azure Firewall
+   A A1459 | Azure Firewall Manager
+   A A1460 | Azure Front Door
+   A A1210 | Azure Functions
+   A A1479 | Azure HPC Cache
+   A A1473 | Azure Information Protection
+   A A1433 | Azure IoT Central
+   A A1434 | Azure IoT Hub
+   A A1204 | Azure Key Vault
+  Q Q370 | More Azure Services | mandatory=False
+     A A1474 | Azure Key Vault Managed HSM
+     A A1439 | Azure Lighthouse
+     A A1406 | Azure Linux Virtual Machines
+     A A1461 | Azure Load Balancer
+     A A1430 | Azure Logic Apps
+     A A1396 | Azure Machine Learning
+     A A1440 | Azure Managed Applications
+     A A1421 | Azure Managed Instance for Apache Cassandra
+     A A1480 | Azure Managed Lustre
+     A A1445 | Azure Media Services
+     A A1447 | Azure Migrate
+     A A1203 | Azure Monitor
+     A A1462 | Azure NAT Gateway
+     A A1481 | Azure NetApp Files
+     A A1463 | Azure Network Watcher
+     A A1435 | Azure Notification Hubs
+     A A1397 | Azure OpenAI Service
+     A A2324 | Azure Pipelines
+     A A1441 | Azure Policy
+     A A1469 | Azure PostgreSQL Database
+     A A1464 | Azure Private Link
+     A A1442 | Azure Purview
+     A A1415 | Azure Red Hat OpenShift
+     A A1450 | Azure Remote Rendering
+     A A2394 | Azure Repos
+     A A1206 | Azure Resource Manager
+     A A1443 | Azure Resource Manager templates
+     A A1444 | Azure Resource Mover
+     A A1199 | Azure Security Center
+     A A1475 | Azure Sentinel
+     A A1431 | Azure Service Bus
+     A A1483 | Azure SignalR Service
+     A A1448 | Azure Site Recovery
+     A A1451 | Azure Spatial Anchors
+     A A1407 | Azure Spring Apps
+     A A1422 | Azure SQL
+     A A1201 | Azure SQL Database
+     A A1589 | Azure SQL Managed Instance
+     A A1426 | Azure Stack Edge
+     A A1590 | Azure Static Web Apps
+     A A1200 | Azure Storage
+     A A1402 | Azure Stream Analytics
+     A A1403 | Azure Synapse Analytics
+     A A1465 | Azure Traffic Manager
+     A A1408 | Azure Virtual Desktop
+     A A1409 | Azure Virtual Machine Scale Sets
+     A A1198 | Azure Virtual Machines
+     A A1202 | Azure Virtual Network
+     A A1466 | Azure Virtual WAN
+     A A1410 | Azure VMware Solution
+     A A1467 | Azure VPN Gateway
+     A A1468 | Azure Web Application Firewall
+     A A1432 | Azure Web PubSub
+     A A1411 | Azure Windows Virtual Machines
+  Q Q502 | Azure Windows Profiles | mandatory=False
+     A A2315 | Domain Controller
+     A A2314 | Member Server
+## SUBSECTION Q503 | IBM Cloud
+Q Q488 | IBM Cloud Services | mandatory=False
+   A A2255 | IBM Cloud Activity Tracker
+   A A2254 | IBM Cloud Block Storage
+   A A2249 | IBM Cloud Container Registry
+   A A2250 | IBM Cloud Database
+   A A2252 | IBM Cloud Internet Services
+   A A2256 | IBM Cloud Kubernetes Service
+   A A2247 | IBM Cloud Object Storage
+   A A2246 | IBM Cloud VPC
+   A A2251 | IBM Cloudant
+   A A2248 | IBM Key Management Services
+   A A2253 | IBM Key Protect
+## SUBSECTION Q363 | Google Cloud Platform (GCP)
+Q Q367 | GCP Cloud Configuration | mandatory=False
+   A A1393 | GCP Cloud Configuration
+Q Q309 | Google Cloud Services | mandatory=False
+   A A1337 | Google BigQuery
+   A A1241 | Google Cloud Audit Logs
+   A A1242 | Google Cloud DNS
+   A A1236 | Google Cloud IAM
+   A A1238 | Google Cloud Key Management Service
+   A A1243 | Google Cloud SQL
+   A A1240 | Google Cloud Storage
+   A A1237 | Google Compute Engine
+   A A1213 | Google Kubernetes Engine
+   A A1244 | Google Stackdriver
+   A A1592 | Google Vertex AI Platform
+   A A1239 | Google Virtual Private Cloud (VPC)
+## SUBSECTION Q482 | Oracle Cloud
+Q Q483 | Oracle Cloud Configuration | mandatory=False
+   A A2122 | Oracle Cloud Configuration
+Q Q484 | Oracle Cloud Services | mandatory=False
+   A A2125 | Block Volume
+   A A2123 | Compute Instance
+   A A2126 | File Storage
+   A A2124 | Object Storage
+## SUBSECTION Q510 | Alibaba Cloud
+Q Q511 | Alibaba Cloud Configuration | mandatory=False
+   A A2329 | Alibaba Cloud Configuration
+Q Q512 | Alibaba Cloud Services | mandatory=False
+   A A2330 | Virtual Machine
+   A A2331 | Object Storage Service (OSS)
+   A A2332 | Relational Database Service (RDS)
+   A A2333 | Alibaba Cloud Kubernetes (ACK)
+### SECTION S21 | Changes Since Last Release
+## SUBSECTION Q219 | General Changes
+Q Q220 | Changes Since Last Release | mandatory=False
+   A A1307 | Changes to hardware design
+   A A1626 | Changes to AI
+   A A739 | Changes to servers/frameworks and/or configuration
+   A A734 | Changes to authentication
+   A A735 | Changes to session management
+   A A736 | New transactions / use cases
+   A A738 | Changes to inbound/outbound interfaces
+   A A1294 | Changes to processes/activities
+## SUBSECTION Q221 | User Input/Output Changes
+Q Q222 | Changes to User Input/Output Since Last Release | mandatory=False
+   A A737 | Changes to user output
+   A A742 | New/modified user input OR changes to how user input is used
