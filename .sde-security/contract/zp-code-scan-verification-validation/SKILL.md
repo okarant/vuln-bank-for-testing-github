@@ -318,17 +318,17 @@ Ask via `ask_question`:
 - **Options:**
   - `{"id": "handoff", "label": "From handoff file (.sde-apply-handoff.json in the repo) — use after apply-security-fixes"}`
   - `{"id": "standalone", "label": "From SD Elements project (no handoff needed — use after setup-security-plan, create-security-plan, or manual fixes)"}`
-  - `{"id": "enter_project", "label": "Enter an SD Elements project ID directly (fast path for ZeroPath/Hybrid when you only need the project id)"}`
+  - `{"id": "enter_project", "label": "Enter an SD Elements project ID directly (fast path for any engine when you already know the project id)"}`
 
 Store `verification_mode = "handoff" | "standalone" | "enter_project"`.
 
-> **`enter_project` (orthogonal fast path):** **Only present this option when `scan_engine in {"zeropath","hybrid"}`.** When `scan_engine == "ai"`, do NOT show `enter_project`; if it is somehow selected under `ai`, treat it as `standalone` (full Step A1-S project selection + CM fetch + filters). Follow-up text prompt for the numeric SDE project id; validate via `project_countermeasures op=list project_id={id} page_size=1` (on 403/404 → HARD STOP). Store `project_id`, `project_name` (from `project op=get`). For **ZeroPath-Only** this is sufficient (CM list is only used to scope the report). For **Hybrid** the AI loop still needs a CM source — if the user picked `enter_project`, fetch the CM list exactly as Step A1-S.2/A1-S.3 (CM fetch + status filters) using this `project_id`.
+> **`enter_project` (direct-id fast path — first-class under ALL engines):** Present this option for every `scan_engine` (`ai` / `zeropath` / `hybrid`). It is identical to `standalone` EXCEPT the project is entered by **numeric id directly** instead of being picked from the `project op=list` menu — do NOT silently rewrite it to `standalone`; it is a first-class `verification_mode` everywhere. Follow-up text prompt for the numeric SDE project id; validate via `project_countermeasures op=list project_id={id} page_size=1` (on 403/404 → HARD STOP). Store `project_id`, `project_name` (from `project op=get`). Then: for `ai`/`hybrid`, fetch the CM list and apply the SDE status filters exactly as Step A1-S.2/A1-S.3 (so `enter_project` gathers the SAME inputs as `standalone`, just with a typed id). For `zeropath` (ZeroPath-Only) the CM list only scopes the report, so the 2 status filters are NOT gathered.
 
 **[CHECKPOINT]** `Mode: {verification_mode}; repository: {repository_path}`
 
 If `verification_mode == "handoff"` → proceed to **Step A1** (handoff validation).
 If `verification_mode == "standalone"` → proceed to **Step A1-S** (SDE project selection).
-If `verification_mode == "enter_project"` → resolve `project_id` as above, then (hybrid) run the A1-S.2/A1-S.3 CM fetch+filters, and proceed to **Step A1.6** (Risk Policy Check + Confirm), then **Step A1.5+A3**.
+If `verification_mode == "enter_project"` → resolve `project_id` as above, then (ai/hybrid) run the A1-S.2/A1-S.3 CM fetch+filters, and proceed to **Step A1.6** (Risk Policy Check + Confirm), then **Step A1.5+A3**.
 
 ### Step A1. Detect and Validate Handoff (handoff mode only)
 
@@ -479,20 +479,25 @@ Check whether a `.sde-verification-handoff.json` already exists at `{repository_
 
 1. **Load and validate** it (must have `source_skill == "code-scan-verification-validation"` and a valid `verification_results[]`).
 2. **Extract the set of already-verified CM IDs** — all entries in `verification_results[]` that have `status` in `{pass, partial, fail}` (i.e., CMs where a verdict was derived, regardless of whether the POST succeeded).
-3. **Reconcile against the canonical CM source** using set subtraction. The canonical source depends on the mode:
+3. **Reconcile against the canonical CM source** using set subtraction. The canonical source depends on the mode AND the selected scope:
    - **Handoff mode:** `handoff["countermeasures"]` where `cm["status"] == "Applied"`
    - **Standalone mode:** the filtered CM list from Step A1-S.3
+   - **When `scope == "selected_cms"`:** the canonical set is exactly the user-SELECTED `cm_ids` (NOT the full filtered list). Otherwise a CM the prior run verified that is outside the current selection would be mis-counted (carried forward or flagged spurious) and corrupt a narrower-scope handoff.
    ```python
    # Handoff mode:
    canonical_cm_ids = {cm["full_id"] for cm in handoff["countermeasures"] if cm["status"] == "Applied"}
    # Standalone mode:
    canonical_cm_ids = {cm["full_id"] for cm in standalone_cm_list}
+   # selected_cms (either mode): narrow the canonical set to exactly the selected IDs
+   if scope == "selected_cms":
+       canonical_cm_ids = set(scope_args["cm_ids"])
 
    prior_verified_ids = {r["full_cm_id"] for r in prior["verification_results"] if r["status"] in ("pass", "partial", "fail")}
    already_done = canonical_cm_ids & prior_verified_ids
    still_todo = canonical_cm_ids - prior_verified_ids
    spurious = prior_verified_ids - canonical_cm_ids
    ```
+   **Resume with a narrower/different scope than the prior run:** `already_done` / `still_todo`, the per-CM disk artifacts, and the Layer-2 / tri-source checks are ALL scoped to THIS run's `canonical_cm_ids` (the current scope), never the prior run's. CMs the prior run verified that fall outside the current scope are `spurious` (warned + ignored), and the disk-count check counts only the current run's in-scope CMs — so resuming with a smaller or different CM set does NOT break the disk-vs-expected tri-source identity.
 4. **Warn about spurious entries** (CMs in the prior verification results that are NOT in the canonical set):
    ```
    [WARN] Prior verification contains {len(spurious)} entries not in canonical CM set: {list(spurious)[:10]}
@@ -563,12 +568,16 @@ Before ANY `git checkout`:
 
 ```bash
 cd {repository_path}
-git status --porcelain
+# Scope the cleanliness check to TRACKED SOURCE changes only. The skill's OWN
+# artifacts are expected to differ and MUST NOT trip this gate: `.sde-security/`
+# scratch (regenerable) and `.sde-verification-handoff.json` (a tracked file that
+# B0 deletes on a fresh run). Excluding them prevents a false HARD STOP.
+git status --porcelain -- . ':(exclude).sde-security/' ':(exclude).sde-verification-handoff.json'
 ```
 
-- If output is **non-empty** → **HARD STOP** with:
-  > "Working tree is dirty. Stash or commit your changes before running code-scan-verification-validation."
-- If output is **empty** → proceed.
+- If output is **non-empty** (real source/tracked changes outside the skill's own paths) → **HARD STOP** with:
+  > "Working tree is dirty (uncommitted source changes). Stash or commit your changes before running code-scan-verification-validation."
+- If output is **empty** → proceed. (Differences confined to `.sde-security/` scratch or `.sde-verification-handoff.json` are the skill's own artifacts and are intentionally ignored — a genuine source change still HARD STOPs.)
 
 **Branch checkout (mode-dependent):**
 
@@ -675,7 +684,7 @@ Batch size forced to 1; parallel dispatch disabled.
      - **Prompt:** "Which branch should ZeroPath scan? (ZeroPath scans the remote `{vcs.url}`. Default = the checked-out branch `{branch_name}`.)"
      - **Options:** `{"id":"checked_out","label":"The checked-out branch ({branch_name}) — recommended"}`, `{"id":"default","label":"Repository default branch ({repo.defaultScanTargetBranch or 'main'})"}`, `{"id":"other","label":"Enter a different branch name"}`. Store `scan_branch`.
    - **6a-HYBRID coherence gate (R-ZP11) — `hybrid` only:** the Hybrid AI loop reads the LOCAL files on A2's checked-out branch (`branch_name`), while ZeroPath scans `scan_branch` on the remote. These MUST be the same branch or the merge compares mismatched code. If `scan_engine == "hybrid"` AND `scan_branch != branch_name` → **HARD STOP**: "Hybrid requires the ZeroPath scan branch and the locally-verified (AI-loop) branch to match. You picked `{scan_branch}` but the checked-out branch is `{branch_name}`. Either choose the checked-out branch, or re-run A2 to check out `{scan_branch}` first." (ZeroPath-Only has no AI loop, so any `scan_branch` is allowed there.)
-   - **6b. Verify committed:** if a local clone exists at `repository_path`, run `git -C {repository_path} status --porcelain`. If non-empty (uncommitted changes on `scan_branch`) → **HARD STOP**: "Uncommitted changes on `{scan_branch}`. Commit them, then push the branch — ZeroPath can only scan committed+pushed code. (No PR needed.)"
+   - **6b. Verify committed:** if a local clone exists at `repository_path`, run `git -C {repository_path} status --porcelain -- . ':(exclude).sde-security/' ':(exclude).sde-verification-handoff.json'` (the skill's OWN scratch/handoff are expected to differ and MUST NOT trip this gate; scope the check to tracked SOURCE changes). If non-empty (uncommitted SOURCE changes on `scan_branch`) → **HARD STOP**: "Uncommitted source changes on `{scan_branch}`. Commit them, then push the branch — ZeroPath can only scan committed+pushed code. (No PR needed.)"
    - **6c. Verify pushed to the ZeroPath remote:** capture `local_sha = git -C {repository_path} rev-parse {scan_branch}` and `remote_sha = git ls-remote --heads {vcs.url} {scan_branch}` (first column).
      - If `scan_branch` is **absent on the remote** → **HARD STOP**: "Branch `{scan_branch}` is not on the ZeroPath remote `{vcs.url}` (it only has the branches ZeroPath can see). You MUST push it first: `git push -u origin {scan_branch}`. ZeroPath cannot scan an unpushed branch. (No PR required — just push the branch.)"
      - If present but `remote_sha != local_sha` (unpushed local commits) → **HARD STOP**: "`{scan_branch}` on the remote is at `{remote_sha}` but your local HEAD is `{local_sha}` — you have unpushed commits. Run `git push origin {scan_branch}` so ZeroPath scans your latest work."
@@ -744,12 +753,12 @@ assert scope_was_user_selected, \
 If `scope` is not set or was not gathered via an explicit `ask_question` call in Step A1.5+A3, the MATCH check below MUST fail. Do NOT infer a default scope to make it pass.
 
 **Expected input count (computed dynamically per `scan_engine` × `verification_mode`):**
-- Base AI inputs: handoff = 10 (MCP, mode+repo, handoff confirm, risk-policy confirm, resume, git, scope, fail-rollback, batch size, subagent probe); standalone = 12 (adds project selection + SDE status filters); `enter_project` = 11 (project-id entry replaces handoff-confirm/standalone-select; +1 for the id entry). The Step A1.6 risk-policy confirm is gathered in ALL modes/engines (included in base).
+- Base AI inputs: handoff = 10 (MCP, mode+repo, handoff confirm, risk-policy confirm, resume, git, scope, fail-rollback, batch size, subagent probe); standalone = 12 (adds project selection + the 2 SDE status filters); `enter_project` = **12 for `ai`/`hybrid`** (identical inputs to `standalone` — a typed project-id entry replaces the project-list pick, and the 2 SDE status filters ARE gathered per A0.5) and **= 10 for `zeropath`** (ZeroPath-Only gathers no status filters; the typed id just replaces the project pick). The Step A1.6 risk-policy confirm is gathered in ALL modes/engines (included in base).
 - `scan_engine == "ai"`: use the base count unchanged (resume + scope ARE gathered in A1.5+A3).
 - For `zeropath`/`hybrid`, **A1.5+A3 is skipped (R-ZP10)** so its inputs are NOT gathered: subtract `resume` and `scope` from the base. The A-ZP2 scan-timeout question is removed for BOTH engines (replaced by a fixed 30-min default cap + 1-min polling), so it is NOT a gathered input. The A5 batch question is additionally skipped for `zeropath` (no AI loop). Then add the engine inputs:
   - `scan_engine == "zeropath"`: (base - 3) [drop resume, scope, batch] + 1 (A0.0 engine) + 1 (A0-ZP preflight) + 1 (A-ZP1 setup).
   - `scan_engine == "hybrid"`: (base - 2) [drop resume, scope] + 1 (A0.0) + 1 (A0-ZP) + 1 (A-ZP1) + 1 (A-ZP2 authoritative source).
-Compute `expected` from this formula for the active engine×mode; MATCH compares the dynamically computed `expected`. `scope` is force-set to `all` for zeropath/hybrid and is NOT counted as a gathered input. (A2 git, A4 fail-rollback, A6 probe are still gathered for ALL engines; **A5 batch is SKIPPED and not counted for `zeropath`** (no AI loop) but gathered for `ai`/`hybrid`; the **A-ZP2 scan-timeout question is removed for both engines** and not counted.)
+Compute `expected` from this formula for the active engine×mode; MATCH compares the dynamically computed `expected`. `scope` is force-set to `all` for zeropath/hybrid and is NOT counted as a gathered input. (A2 git, A4 fail-rollback, A6 probe are still gathered for ALL engines; **A5 batch is SKIPPED and not counted for `zeropath`** (no AI loop) but gathered for `ai`/`hybrid`; the **A-ZP2 scan-timeout question is removed for both engines** and not counted.) The formula is a guide: MATCH ultimately compares the count of inputs ACTUALLY gathered this run; if a difference is solely due to how `enter_project`'s CM-fetch + status-filter inputs are bundled vs counted separately, treat the gathered count as authoritative and do NOT fail MATCH on that ambiguity.
 
 **If MATCH = NO:** return to the first missing Phase A step and re-collect. Do NOT proceed until YES.
 
@@ -941,13 +950,17 @@ for cm in in_scope:
             print(f"[SKIP-USER] {done}/{in_scope_total} | {cm.full_id} | user skipped")
             continue
         if resp == "stop":
+            # `stop` halts COLLECTION only. Any pre-stop "yes" CMs already in
+            # subagent_eligible MUST still be verified in Phase 2 — do NOT set
+            # `aborted` (that flag is reserved for the involuntary auth-failure
+            # abort, which alone must skip Phase 2). Record the stop CM + every
+            # unreached CM as user-stopped, then break out of Phase-1 collection.
             results.append(record_skipped(cm, reason="user stopped (loop terminated at this CM)"))
             for c in in_scope[done:]:
                 results.append(record_skipped(c, reason="user stopped (loop terminated; not reached)"))
             remaining_recorded = 1 + (in_scope_total - done)
-            print(f"[STOP] User stopped at {done}/{in_scope_total}; recorded {remaining_recorded} CMs as user-stopped to preserve Sum-check identity")
-            aborted = True
-            break
+            print(f"[STOP] User stopped at {done}/{in_scope_total}; recorded {remaining_recorded} CMs as user-stopped (pre-stop 'yes' CMs still verified in Phase 2) to preserve Sum-check identity")
+            break   # halt collection; Phase 2 still runs for the already-collected subagent_eligible
 
     subagent_eligible.append(cm)
 
@@ -1092,7 +1105,7 @@ When `execution_mode == "subagent"`: each batch is dispatched to a `generalPurpo
   - `cm.id` (numeric task id)
   - `cm.status` — in handoff mode will be `"Applied"` (the `Skipped` and `Documented` lanes are handled by parent short-circuits); in standalone mode this field carries the SDE task status (`DONE` / `TODO`)
   - `cm.files_modified[]` — absolute paths (handoff mode); empty `[]` (standalone mode — file discovery happens in B1.7)
-- `verification_mode` — `"handoff"` or `"standalone"` (controls whether B1.5 short-circuits and B1.7 file discovery apply)
+- `verification_mode` — `"handoff"` or `"standalone"` (controls whether B1.5 short-circuits and B1.7 file discovery apply). **`enter_project` is rendered to the subagent as `"standalone"`** (the parent maps it when substituting this placeholder): for per-CM verification `enter_project` behaves identically to standalone — empty `files_modified[]` → B1.7 file discovery. This mapping is explicit, not implicit.
 - `repository_path` — absolute path to the repo root (used by B1.7 in standalone mode for file discovery)
 - `repo_name` — basename of `repository_path` (e.g., `my-app`); used in `finding_ref`
 - `project_id`
@@ -1331,7 +1344,7 @@ For a `fail` verdict, the same payload but with aggregated negative findings:
 - `"fail": "TODO"` is included **only if** the user chose `yes_rollback` in Step A4 AND the current verdict is `fail`.
 - `partial` never maps to a workflow status.
 
-`behaviour: "combine"` is the SDE spec's "combine with all previous results" mode. It preserves prior verification notes (the audit trail) while adding the new one. SDE's derived `verification_status` on the task reflects the most-recent note, so state remains correct and re-runs preserve history.
+`behaviour: "combine"` is the SDE spec's "combine with all previous results" mode. It preserves prior verification notes (the audit trail) while adding the new one. NOTE: with `combine`, SDE's derived `verification_status` is computed across the COMBINED set of notes and is **fail-dominant** — a single prior `fail` keeps the derived status `fail` even after a newer `combine` note says `pass` (a later pass does NOT clear an earlier fail). It is therefore NOT simply "the most-recent note wins"; a `behaviour=replace` note (e.g. ZeroPath's per-scan push) is what resets the baseline so the latest scan wins. Re-runs preserve history; reason about re-run/resume status with this in mind.
 
 `finding_ref` is the SDE UI's "Report Reference" field — it's expected to point at a retrievable artefact where a viewer can find more detail. The subagent writes the `finding_ref` using the format `Agent: code-scan-verification-validation | Model: {model} | Repo: {repo_name} | CM: {full_cm_id} | Run: {iso8601_utc} | Handoff: .sde-verification-handoff.json` — the primary fields (Agent, Model, Repo) are immediately visible in the SDE UI's Report Reference column. The CM and Run fields let a human locate the full reasoning in `.sde-verification-handoff.json` and distinguish per-CM, per-run notes. `{repo_name}` is the basename of `repository_path` (e.g., `my-app` from `/home/user/my-app`), captured in Phase A and forwarded to subagents.
 
@@ -1795,7 +1808,7 @@ Rework candidates: {F} (see .sde-verification-handoff.json → failed_cms_for_re
 ## Numbered Enforcement Rules
 
 1. **Handoff is a hard requirement in handoff mode.** Missing, wrong `source_skill`, or declined by user → HARD STOP. No manual fallback. In standalone mode, SDE project selection (Step A1-S) replaces the handoff requirement. Missing SDE project selection in standalone mode → HARD STOP.
-2. **Git tree must be clean BEFORE any checkout.** `git status --porcelain` empty or HARD STOP.
+2. **Git tree must be clean of SOURCE changes BEFORE any checkout.** `git status --porcelain` — scoped to exclude the skill's OWN `.sde-security/` scratch and `.sde-verification-handoff.json` (e.g. `git status --porcelain -- . ':(exclude).sde-security/' ':(exclude).sde-verification-handoff.json'`) — must be empty, or HARD STOP. A genuine uncommitted source change still HARD STOPs; the skill's own regenerable artifacts never trip this gate.
 3. **Upstream `.sde-apply-handoff.json` MUST NOT be modified or deleted by this skill.** Write only to `.sde-verification-handoff.json`.
 4. **"In-scope" has one canonical meaning: whatever `filter_by_scope` returned.** Filter behaviour: under `all` / `one_by_one` the filter excludes Documented and Skipped CMs (nothing on disk to scan or no mitigation to verify); under `selected_cms` the filter includes whatever IDs the user explicitly listed (subject to the Step A1.5+A3 warning prompts for Documented and Skipped). `in_scope_total = len(in_scope)` is computed after the filter and used everywhere (loop bound, Sum check, completion block). Every in-scope CM has a recorded result entry: CMs that pass through per-CM verification (B-Subagent or inline) receive a POST attempt and any failure is logged (not silently dropped); user-skipped CMs (`one_by_one`), Documented CMs (under `selected_cms`), non-code CMs with empty `files_modified[]` (parent B0b3 for v2, subagent L-OOS-sub for v1, recorded as `skipped_out_of_scope`), and run-aborted CMs after a subagent auth failure are recorded without an API call (`note_post_status` set to `NOT_SENT` / `NOT_SENT_OUT_OF_SCOPE` / `NOT_SENT_AUTH_FAILURE` respectively) — no POST, but the audit-trail entry is still written. Forced-fail CMs — upstream-Skipped (parent B0b), empty-files-modified code CMs (parent B0b2 for v2, subagent L-FF2-sub for v1) — now receive a B4+B5 POST (inline for parent, inside subagent for L-FF2-sub) with `note_post_status` set to `POSTED` on success or `FAILED:{reason}` on failure. (User-`skip` and user-`stop` in `one_by_one` mode are explicit user choices, not agent-initiated early exits — see Rule 10 for the loop-termination contract.) CMs with `cm.status == "Documented"` are filtered out under `all` / `one_by_one`; they can only enter the loop via `selected_cms` after an explicit user decision, in which case Step B0a short-circuits them as `skipped_out_of_scope` — no subagent dispatch, no SDE fetch, no file reads, no API call, no `task_status_mapping` touch. Pure `PROCESS` CMs never reach this skill (filtered upstream).
 5. **No false positives. Negative signal is canonical; positive signal is corroborative.** *(See the verbatim "No-False-Positives Invariant" callout in Phase B.)* If Q1 is `absent_high_confidence` and the marker scan is clean, the verdict is `pass` — regardless of Q2 and Q3. **Q2 is OPTIONAL** — it runs only when `ctx.how_tos[]` is non-empty AND has at least one language-applicable entry; an empty/inapplicable `how_tos[]` is a normal path, not a degraded one. **Never default to `pass` or `fail` on uncertainty.** Uncertainty maps to `partial` with `low` confidence. `fail` is allowed from exactly four cited evidence sources: (1) cited `residual-vulnerable-pattern`, (2) cited `residual-marker`, (3) upstream `Skipped` audit status (parent B0b) **(handoff mode only)**, (4) empty `files_modified[]` for CODE_FIX/ML_CODE (parent B0b2 when `handoff_version == "2"`, subagent L-FF2-sub when v1) **(handoff mode only)**. Standalone mode uses only sources (1) and (2). Failure to recognise the developer's mitigation style is NEVER a `fail` or `partial` source.
@@ -1838,7 +1851,7 @@ These apply ONLY when `scan_engine in {"zeropath","hybrid"}` and are **strictly 
 - **R-ZP8 — No `api_request` (both):** never use `api_request` (client double-prefixes `/api/v2/` → SPA HTML; CHANGELOG beta-3.6.0 F10); dedicated tools only; curl+token is a shell-only fallback for reference endpoints.
 - **R-ZP9 — Weak-pass (pass-by-absence) WARN gate (zeropath; also hybrid when a ZeroPath pass-by-absence sets `final`):** for every CM where ZeroPath marked DONE with 0 issues mapped, emit the plain-English `[WARN] Weak pass — {full_cm_id} "{title}": ZeroPath scanned and found no violation, but "no violation found" is NOT proof the control is in place ...` line and surface the count in the completion block. In hybrid this fires only when `authoritative_source == "zeropath"` (i.e. the weak ZeroPath pass actually sets the verdict; when AI is authoritative the AI verdict governs). Run still completes (loud label, not a block).
 - **R-ZP10 — Force all CMs (zeropath|hybrid):** these engines ALWAYS verify all mapped/Applicable CMs. Step A1.5+A3 (resume + scope) is SKIPPED; `scope` is forced to `"all"`, `scope_args={}`, `has_prior_run=false`. Narrow scopes (`one_cm`/`selected_cms`/`one_by_one`) and the B0c `one_by_one` prompt are AI-engine-only and never reached under zeropath/hybrid. To scope a subset, use `scan_engine=ai`.
-- **R-ZP11 — Scan branch committed + pushed to the ZeroPath remote (zeropath|hybrid):** ZeroPath scans a branch on the remote it clones (`vcs.url`), defaulting to `main` — not the local working branch. A-ZP1.6 MUST ask `scan_branch` and verify it is committed (`git status` clean) AND pushed (`git ls-remote --heads {vcs.url} {scan_branch}` present, remote tip == local HEAD). If missing/unpushed → HARD STOP telling the user to `git push -u origin {scan_branch}` (no PR). The skill never pushes for the user. `scans_start` passes `branch=scan_branch`; after the scan assert `scanTargetBranch==scan_branch` and `scanTargetBranchCommitSha==scan_branch_remote_sha`. **Hybrid coherence:** for `hybrid`, `scan_branch` MUST equal A2's checked-out `branch_name` (the AI loop reads local files on that branch) — HARD STOP on mismatch so AI and ZeroPath verify the same code.
+- **R-ZP11 — Scan branch committed + pushed to the ZeroPath remote (zeropath|hybrid):** ZeroPath scans a branch on the remote it clones (`vcs.url`), defaulting to `main` — not the local working branch. A-ZP1.6 MUST ask `scan_branch` and verify it is committed (`git status` clean of SOURCE changes — the skill's own `.sde-security/` scratch + `.sde-verification-handoff.json` are excluded) AND pushed (`git ls-remote --heads {vcs.url} {scan_branch}` present, remote tip == local HEAD). If missing/unpushed → HARD STOP telling the user to `git push -u origin {scan_branch}` (no PR). The skill never pushes for the user. `scans_start` passes `branch=scan_branch`; after the scan assert `scanTargetBranch==scan_branch` and `scanTargetBranchCommitSha==scan_branch_remote_sha`. **Hybrid coherence:** for `hybrid`, `scan_branch` MUST equal A2's checked-out `branch_name` (the AI loop reads local files on that branch) — HARD STOP on mismatch so AI and ZeroPath verify the same code.
 
 **Signal-source rule (hybrid):** read the per-CM ZeroPath verdict from ZeroPath's OWN SDE verification note (`verification op=list`, keyed by `task_id`), NOT from securitycompass aggregates; `count:0` = pass-by-absence. **The ZeroPath signal is the latest note whose `finding_ref == ""` (ZeroPath-native) — NEVER the skill's own `Agent: ...` note.** Using a bare `.latest()` is forbidden: on a re-run the skill's combined note is newest and would be misread as ZeroPath's signal. ZP issue link via `vulnerabilities_search`/`endpoints_search` → `issues_get.url` is LINK-ONLY.
 
@@ -1971,7 +1984,7 @@ INPUTS (substituted by parent)
 BATCH (array of CM descriptors — process each sequentially):
 {batch_json}
 
-verification_mode             = {verification_mode}  ("handoff" or "standalone")
+verification_mode             = {verification_mode}  ("handoff" or "standalone"; parent maps enter_project -> standalone, i.e. B1.7 file discovery)
 repository_path               = {repository_path}
 repo_name                     = {repo_name}  (basename of repository_path; used in finding_ref)
 project_id                    = {project_id}
