@@ -1,0 +1,368 @@
+CT435 | P10 | Development | Bind variables in SQL statements - Oleg Test
+T10 | P6 | Stories | Use server-to-server authentication
+T101 | P10 | QA | Test that application is not vulnerable to SQL injection
+T105 | P7 | QA | Verify that your application does not have unnecessary debug capability or leftover test/debug code
+T106 | P8 | QA | Test that site is not vulnerable to direct object access attacks
+T113 | P6 | QA | Test that site is not vulnerable to HTTP verb tampering
+T114 | P8 | QA | Test system-to-system authentication lockout or throttling
+T1144 | P8 | Development | Prevent Server-Side Template Injection (SSTI)
+T1145 | P8 | QA | Verify if web page template is vulnerable to SSTI
+T1148 | P6 | Stories | Validate JSON files
+T1149 | P6 | QA | Test if JSON files are validated against malicious inputs
+T1150 | P7 | Deployment | Configure container networks properly (Docker)
+T1151 | P7 | QA | Verify that container networks are configured properly (Docker)
+T1154 | P8 | Deployment | Secure Docker registries (Docker)
+T1155 | P8 | QA | Verify that Docker registries are secure (Docker)
+T1156 | P8 | Deployment | Do not use the aufs storage driver (Docker)
+T1157 | P8 | QA | Verify that the aufs storage driver is not used (Docker)
+T1158 | P8 | Deployment | Configure TLS authentication for the Docker daemon (Docker)
+T1159 | P8 | QA | Verify that TLS authentication is configured for the Docker daemon (Docker)
+T1160 | P6 | Deployment | Set ulimit appropriately (Docker)
+T1161 | P6 | QA | Verify that ulimit is set appropriately (Docker)
+T1166 | P8 | Deployment | Encrypt data exchanged between containers on different nodes on the overlay network (Docker)
+T1167 | P8 | QA | Verify that data exchanged between containers on different nodes on the overlay network is encrypted (Docker)
+T1172 | P8 | Deployment | Secure daemon configuration files (Docker)
+T1173 | P8 | QA | Verify that daemon configuration files are secured (Docker)
+T1174 | P9 | Deployment | Create non-root users for containers (Docker)
+T1175 | P9 | QA | Verify that containers are not run as root (Docker)
+T1176 | P7 | Deployment | Use trusted base images and include the latest security patches (Docker)
+T1177 | P7 | QA | Verify that secure and updated images are used (Docker)
+T1180 | P6 | Deployment | Check container health (Docker)
+T1181 | P6 | QA | Verify that container health is checked (Docker)
+T1186 | P10 | Deployment | Do not store secrets in Dockerfiles (Docker)
+T1187 | P10 | QA | Test if secrets are stored in Dockerfiles (Docker)
+T1188 | P8 | Deployment | Configure Linux Security Modules (Docker)
+T1189 | P8 | QA | Test if Linux Security Modules are securely configured (Docker)
+T119 | P7 | QA | Test for clickjacking
+T1190 | P8 | Deployment | Restrict Linux Kernel Capabilities within containers (Docker)
+T1191 | P8 | QA | Test if Linux Kernel Capabilities are restricted within containers (Docker)
+T1192 | P8 | Deployment | Do not expose unnecessary host resources (Docker)
+T1193 | P8 | QA | Test if unnecessary host resources are exposed (Docker)
+T1194 | P8 | Deployment | Do not run SSH within containers (Docker)
+T1195 | P8 | QA | Test if SSH is running within containers (Docker)
+T1196 | P8 | Deployment | Open only needed ports on the containers (Docker)
+T1197 | P8 | QA | Test if only needed ports are open on the containers (Docker)
+T1198 | P8 | Deployment | Do not share the host's network namespace (Docker)
+T1199 | P8 | QA | Test that the host's network namespace is not shared (Docker)
+T1200 | P8 | Deployment | Limit resources used by containers (Docker)
+T1201 | P8 | QA | Test that resources used by containers are limited (Docker)
+T1202 | P8 | Deployment | Set container CPU priority appropriately (Docker)
+T1203 | P8 | QA | Test if container CPU priority is appropriately set (Docker)
+T1204 | P8 | Deployment | Mount container's root file system as read-only (Docker)
+T1205 | P8 | QA | Test if the container's root file system is mounted as read-only (Docker)
+T1206 | P8 | Deployment | Set the 'on-failure' container restart policy to 5 (Docker)
+T1207 | P8 | QA | Test that the 'on-failure' container restart policy is set to 5 (Docker)
+T1208 | P7 | Deployment | Do not set mount propagation mode to 'shared' (Docker)
+T1209 | P7 | QA | Verify that mount propagation mode is not set to 'shared' (Docker)
+T1210 | P8 | Deployment | Configure seccomp profile (Docker)
+T1211 | P8 | QA | Verify that seccomp profile is enabled (Docker)
+T1212 | P7 | Deployment | Confirm cgroup usage (Docker)
+T1213 | P7 | QA | Verify that cgroup usage is confirmed (Docker)
+T1214 | P8 | Deployment | Restrict containers from acquiring additional privileges (Docker)
+T1215 | P8 | QA | Verify that containers are restricted from acquiring additional privileges (Docker)
+T122 | P10 | QA | Test for remote file include
+T1232 | P6 | Deployment | Create a separate partition for containers (Docker)
+T1233 | P6 | QA | Test that containers are on a separate partition (Docker)
+T1234 | P8 | Deployment | Only allow trusted users to control the Docker daemon (Docker)
+T1235 | P8 | QA | Test that only trusted users can control the Docker daemon (Docker)
+T1236 | P8 | Deployment | Audit the Docker daemon and its files (Docker)
+T1237 | P8 | QA | Test that the Docker daemon and its files are audited (Docker)
+T128 | P8 | QA | Test for access control bypass through user-controlled keys
+T129 | P6 | QA | Test for reliance on file name or extension of externally-supplied file
+T1362 | P8 | Stories | Perform message throttling in Web APIs
+T1363 | P8 | QA | Verify if message throttling is properly performed in Web APIs
+T1364 | P6 | QA | Verify that third party software libraries/modules and open source/COTS components are used securely
+T1365 | P8 | Development | Mitigate Server Side Request Forgery
+T1392 | P8 | QA | Test for Server Side Request Forgery
+T14 | P9 | Architecture | Enforce the principle of least privilege
+T1468 | P9 | Stories | Encrypt sensitive data at rest in the browser
+T15 | P9 | Architecture | Centralize authorization
+T151 | P7 | Stories | Use cryptographically secure random numbers
+T1539 | P8 | Stories | Clear browser data on user logout
+T1540 | P8 | QA | Verify that browser data is cleared upon user logout
+T1541 | P7 | Architecture | Decide on the best CSRF defense for your application
+T1542 | P7 | Architecture | Use the correct HTTP methods for making state-changing operations
+T156 | P7 | Stories | Validate certificate and its chain of trust properly
+T157 | P6 | Stories | Temporary files must be cleaned up after the resource is used
+T16 | P6 | Development | Authorize every non-public page
+T166 | P7 | Development | Protect against JSON hijacking
+T167 | P7 | QA | Test that the application is not vulnerable to JSON Hijacking
+T169 | P8 | QA | Test that the site is not vulnerable to DOM-based XSS
+T17 | P8 | Development | Do not only rely on client-side authorization
+T175 | P7 | QA | Test that the client validates digital certificates
+T176 | P9 | Architecture | Apply principles of privacy when handling personal information
+T177 | P6 | Stories | Allow users to review and update their personal information
+T178 | P10 | Stories | Obtain consent from users prior to collecting personal information
+T179 | P6 | Stories | Allow access for users to remove their personal information from the system
+T18 | P9 | Architecture | Make authorization decisions using full context
+T184 | P9 | Development | Perform authorization checks on RESTful web services
+T186 | P10 | Development | Use recommended settings and the latest patches for third party libraries and software
+T19 | P8 | Development | Restrict Application's Access to Database
+T1917 | P10 | Stories | Perform container security assessment
+T1918 | P9 | Stories | Integrate with SSO
+T1919 | P9 | Development | Use JSON Web Token (JWT) securely
+T1923 | P6 | Deployment | Disable swarm mode if not needed
+T1924 | P6 | QA | Verify that swarm mode is disabled
+T2 | P9 | Stories | Secure the password reset mechanism
+T20 | P9 | Stories | Generate unique session IDs and reset old IDs after authentication
+T21 | P8 | Stories | Ensure all data in transit is encrypted using a secure TLS channel
+T2105 | P7 | Deployment | Enforce the use of client certificate bundles for unprivileged users to access UCP (Docker)
+T2106 | P7 | QA | Verify that the use of client certificate bundles for unprivileged users is enforced (Docker)
+T2109 | P9 | Deployment | Enable signed image enforcement (Docker)
+T2110 | P9 | QA | Verify that signed image enforcement is enabled (Docker)
+T2115 | P7 | Deployment | Enable image vulnerability scanning (Docker)
+T2116 | P7 | QA | Verify that image vulnerability scanning is enabled (Docker)
+T2128 | P9 | Stories | Notify users and regulators of breaches of personal information
+T2139 | P7 | Development | Prevent information exposure through APIs
+T214 | P9 | Stories | Protect confidential files on operating system or server
+T2140 | P7 | QA | Test that APIs do not expose sensitive information
+T2141 | P8 | Architecture | Perform function level authorization in API
+T2142 | P8 | QA | Verify that function level authorization is implemented in API
+T2167 | P6 | Stories | Secure file storage
+T2170 | P9 | Stories | Ensure that personal information processed by the application meets data localization requirements
+T219 | P6 | Development | Avoid transmitting confidential data through URL parameters
+T220 | P6 | QA | Verify that user password is salted and hashed
+T222 | P6 | QA | Verify server-to-server authentication
+T2256 | P8 | Stories | Authenticate and log all access to registries containing sensitive or proprietary images
+T2257 | P10 | Deployment | Regularly update and patch containerization systems
+T2258 | P7 | Deployment | Minimize host OS attack surface
+T226 | P9 | QA | Verify that authorization is centralized
+T2269 | P8 | Development | Prevent batching attacks (GraphQL)
+T227 | P8 | QA | Verify that application's access to database is restricted
+T2274 | P9 | QA | Test to confirm that the principle of least privilege is strongly implemented
+T2276 | P7 | QA | Test to confirm that authorization and authentication controls are in place for access to resources
+T2277 | P7 | QA | Test to confirm the use of an account and identity management system
+T228 | P9 | QA | Test that application restricts HTTP message size
+T2281 | P8 | Development | Secure access control (GraphQL)
+T2282 | P8 | QA | Test to confirm that unauthenticated parts of the application are accessible
+T2283 | P9 | Development | Configure GraphQL correctly
+T2284 | P8 | Deployment | Prevent DoS attacks (GraphQL)
+T230 | P8 | QA | Test that server-to-server system accounts meet minimum password requirements
+T2324 | P9 | QA | Verify whether privacy principles are applied for handling personal data
+T2331 | P9 | QA | Verify whether any plan exists for data privacy incident response
+T2348 | P8 | Development | Perform code reviews
+T2349 | P8 | Deployment | Configure software to have secure settings by default
+T2356 | P8 | QA | Verify that code reviews are performed properly
+T2357 | P8 | QA | Verify that software is configured to have secure settings by default
+T238 | P6 | QA | Test that users can review and update their personal information
+T2388 | P9 | Architecture | Enforce the principle of separation of duties
+T239 | P10 | QA | Test that users provide consent prior to the collection of personal information
+T2393 | P9 | QA | Verify the principle of Separation of Duties is strongly implemented
+T240 | P6 | QA | Test whether users can remove their data from the system
+T241 | P10 | QA | Verify that third party libraries use secure settings and the latest patches
+T2477 | P6 | QA | Test the re-deployment routines
+T2478 | P6 | Deployment | Manage re-deployment routines
+T257 | P8 | Development | Secure cross origin resource sharing (CORS)
+T259 | P7 | Development | Follow best practices when storing data in Local or Session Storage
+T2596 | P9 | Architecture | Prevent HTTP Request Smuggling
+T2597 | P10 | Deployment | Implement RBAC instead of individual accounts
+T2598 | P8 | Development | Implement query-level access control
+T2599 | P9 | Development | Protect against connection string parameter pollution
+T26 | P6 | Stories | Expire sessions on logout
+T2600 | P7 | Development | Control the result set size returned by a query
+T2601 | P8 | Deployment | Use Transparent Data Encryption with Enterprise Databases
+T2602 | P8 | Development | Log typical database and server activities and related metadata
+T2603 | P7 | Deployment | Protect backup archive bits
+T2604 | P7 | Deployment | Follow best practices for data restoring operations
+T2605 | P9 | Deployment | Validate database traffic
+T2606 | P10 | QA | Verify RBAC implemented instead of individual accounts
+T2607 | P8 | QA | Verify query-level access control is implemented
+T2608 | P9 | QA | Verify that the connection string is protected against connection string parameter pollution
+T2609 | P7 | QA | Verify that the result set size returned by queries are controlled
+T2610 | P8 | QA | Verify that Transparent Data Encryption is utilized with Enterprise Databases
+T2611 | P8 | QA | Verify that typical database and server activities, along with related metadata, are logged
+T2612 | P7 | QA | Verify backup archive bits are protected
+T2613 | P7 | QA | Verify best practices for data-restoring operations are followed
+T2614 | P9 | QA | Verify database traffic is validated
+T2615 | P8 | Deployment | Limit network access by blocking connections from unknown IP addresses (PostgreSQL)
+T2616 | P9 | Deployment | Use a secure authentication mechanism for database connections (PostgreSQL)
+T2617 | P8 | Deployment | Create dedicated database user accounts with minimum privileges (PostgreSQL)
+T2618 | P6 | Deployment | Remove unnecessary superuser accounts (PostgreSQL)
+T2619 | P7 | Deployment | Ensure that row-level security is correctly configured (PostgreSQL)
+T2620 | P9 | Deployment | Protect data in transit with TLS (PostgreSQL)
+T2621 | P8 | Deployment | Use file volume encryption and consider in-database encryption with pgcrypto (PostgreSQL)
+T2623 | P6 | Deployment | Schedule regular database backups to protect availability (PostgreSQL)
+T2652 | P9 | Deployment | Consider adding plugins for stronger authentication protocols and stricter password complexity rules (MariaDB)
+T2661 | P9 | Deployment | Change insecure configuration defaults and remove unnecessary features
+T2662 | P10 | Deployment | Restrict network access to the database server
+T2663 | P9 | Deployment | Use a secure authentication mechanism for database connections
+T2664 | P8 | Deployment | Create dedicated database user accounts with minimum privileges (Database Server)
+T2665 | P8 | Deployment | Protect sensitive data at rest with encryption
+T2666 | P8 | Deployment | Protect data in transit with TLS (Database Server)
+T2667 | P6 | Deployment | Schedule regular database backups to protect availability (Database Server)
+T27 | P6 | Stories | Turn off session rewriting
+T279 | P8 | Development | Avoid dynamically loading any code without proper security considerations
+T281 | P8 | Development | Follow best practices when handling access tokens (API tokens)
+T284 | P7 | Development | Generate secure access tokens (API tokens)
+T285 | P6 | Stories | Restrict use of access tokens (API tokens)
+T29 | P7 | Development | Use anti-Cross-Site Request Forgery (CSRF) tokens
+T295 | P7 | Stories | Avoid storing unencrypted confidential data without access control mechanisms
+T296 | P7 | QA | Test that unencrypted confidential data is not stored without access control mechanisms
+T3 | P6 | Stories | Require old passwords when users change passwords
+T300 | P6 | QA | Test that temporary files are cleaned up after the resource is used
+T305 | P8 | QA | Verify that your application dynamically loads code only from secure locations
+T318 | P8 | QA | Verify security of cross origin resource sharing (CORS)
+T32 | P7 | Architecture | Always perform input validation on a server
+T321 | P7 | QA | Verify that Local and Session Storage are securely used
+T323 | P9 | QA | Test that default accounts are disabled or default passwords are changed
+T338 | P7 | Stories | Control access to resources through user authentication and authorization
+T340 | P7 | Architecture | Use an account and identity management system
+T349 | P7 | Stories | Protect audit information and logs against unauthorized access
+T35 | P9 | Stories | Fine-tune HTTP server settings
+T350 | P7 | QA | Verify that audit information is sufficiently protected
+T36 | P8 | Development | Escape untrusted data in HTML, HTML attributes, CSS, and JavaScript
+T364 | P6 | Stories | Enable secure backup and restore capabilities
+T365 | P6 | QA | Verify the security of backing up and restoring procedures
+T37 | P8 | Development | Avoid DOM-based Cross-Site Scripting (XSS)
+T370 | P6 | Architecture | Follow best practices for using third-party software libraries/modules and open source/COTS components
+T373 | P8 | Architecture | Design and regulate access to unauthenticated parts of the application
+T374 | P7 | Stories | Offload HTTP request handling to dedicated modules
+T375 | P6 | Development | Release resources when no longer needed
+T378 | P8 | Development | Authorize every request for data objects
+T38 | P10 | Development | Bind variables in SQL statements
+T3900 | P8 | Development | Implement and use code change management strategy (GitHub)
+T3901 | P8 | Development | Enforce repository management and security strategies (GitHub)
+T3902 | P8 | Development | Ensure regular review and inactive users removal (GitHub)
+T3903 | P8 | Development | Implement application and webhook security strategies (GitHub)
+T3905 | P8 | Development | Ensure pipeline efficiency and security (GitHub)
+T3906 | P8 | Development | Implement secure build worker management (GitHub)
+T3907 | P8 | Development | Ensure pipeline definition and security (GitHub)
+T3908 | P8 | Development | Enforce artifact signing (GitHub)
+T3909 | P8 | Development | Ensure third-party artifact security (GitHub)
+T3910 | P8 | Development | Implement dependency management strategy (GitHub)
+T3912 | P8 | Development | Enforce artifact certification and uploading rules (GitHub)
+T3913 | P8 | Development | Implement package registry security (GitHub)
+T3914 | P8 | Development | Implement artifact origin information policy (GitHub)
+T3915 | P8 | Deployment | Enforce separation of deployment configuration files (GitHub)
+T3916 | P8 | Deployment | Ensure automated and secure deployment (GitHub)
+T3917 | P8 | QA | Test code change management strategies (GitHub)
+T3918 | P8 | QA | Test repository management and security strategies (GitHub)
+T3919 | P8 | QA | Test regular review and inactive users removal (GitHub)
+T3920 | P8 | QA | Test application and webhook security strategies (GitHub)
+T3922 | P8 | QA | Test pipeline efficiency and security (GitHub)
+T3923 | P8 | QA | Test secure build worker management (GitHub)
+T3924 | P8 | QA | Test pipeline definition and security (GitHub)
+T3925 | P8 | QA | Test artifact signing (GitHub)
+T3926 | P8 | QA | Test third-party artifact security (GitHub)
+T3927 | P8 | QA | Test dependency management strategy (GitHub)
+T3929 | P8 | QA | Test artifact certification and uploading rules (GitHub)
+T3930 | P8 | QA | Test package registry security (GitHub)
+T3931 | P8 | QA | Test artifact origin information policy (GitHub)
+T3932 | P8 | QA | Test separation of deployment configuration files (GitHub)
+T3933 | P8 | QA | Test automated and secure deployment (GitHub)
+T394 | P7 | Stories | Secure one-time passwords (OTP)
+T395 | P7 | QA | Verify that one-time passwords (OTP) are securely used
+T3990 | P6 | Deployment | Schedule regular backups
+T42 | P10 | Development | Avoid relying on untrusted data for server-side selection
+T420 | P6 | Development | Prevent Client-Side Template Injection (CSTI)
+T421 | P6 | QA | Verify if web page template is vulnerable to client side template injection (CSTI)
+T445 | P8 | QA | Verify that only approved cryptographic algorithms and key lengths are used
+T4455 | P7 | Stories | Prevent prompt injection in Large Language Models (Project Manager)
+T4456 | P7 | Architecture | Prevent prompt injection in Large Language Models (MLOps Engineer)
+T4457 | P7 | Development | Prevent prompt injection in Large Language Models (AI/ML Developer)
+T4458 | P7 | Development | Prevent prompt injection in Large Language Models (Data Scientist)
+T4459 | P7 | Deployment | Prevent prompt injection in Large Language Models (QA Analyst)
+T446 | P8 | QA | Verify that only standard libraries are used for cryptography
+T4460 | P7 | Development | Handle insecure output in Large Language Models (AI/ML Developer)
+T4461 | P7 | Architecture | Handle insecure output in Large Language Models (MLOps Engineer)
+T4462 | P7 | Stories | Prevent training data poisoning in Large Language Models (Project Manager)
+T4463 | P7 | Architecture | Prevent training data poisoning in Large Language Models (MLOps Engineer)
+T4464 | P7 | Development | Prevent training data poisoning in Large Language Models (Data Scientist)
+T4465 | P7 | Development | Prevent training data poisoning in Large Language Models (AI/ML Developer)
+T4466 | P7 | Stories | Prevent Large Language Model denial of service (Project Manager)
+T4467 | P7 | Architecture | Prevent Large Language Model denial of service (MLOps Engineer)
+T4468 | P7 | Development | Prevent Large Language Models denial of service (AI/ML Developer)
+T4469 | P7 | Deployment | Prevent Large Language Model denial of service (QA Analyst)
+T4470 | P8 | Stories | Protect Large Language Models against supply chain vulnerabilities (Project Manager)
+T4471 | P8 | Architecture | Protect Large Language Models against supply chain vulnerabilities (MLOps Engineer)
+T4472 | P8 | Development | Protect Large Language Models against supply chain vulnerabilities (AI/ML Developer)
+T4473 | P8 | Development | Protect Large Language Models against supply chain vulnerabilities (Data Scientist)
+T4474 | P7 | Stories | Prevent sensitive information disclosure in Large Language Models (Project Manager)
+T4475 | P7 | Architecture | Prevent sensitive information disclosure in Large Language Models (MLOps Engineer)
+T4476 | P7 | Development | Prevent sensitive information disclosure in Large Language Models (AI/ML Developer)
+T4477 | P7 | Development | Prevent sensitive information disclosure in Large Language Models (Data Scientist)
+T4478 | P6 | Stories | Design secure plugins for Large Language Models (Project Manager)
+T4479 | P6 | Development | Design secure plugins for Large Language Models (AI/ML Developer)
+T4480 | P6 | Architecture | Design secure plugins for Large Language Models (MLOps Engineer)
+T4481 | P6 | Deployment | Design secure plugins for Large Language Models (QA Analyst)
+T4482 | P7 | Stories | Mitigate excessive agency in Large Language Models (Project Manager)
+T4483 | P7 | Architecture | Mitigate excessive agency in Large Language Models (MLOps Engineer)
+T4484 | P7 | Development | Mitigate excessive agency in Large Language Models (AI/ML Developer)
+T4485 | P7 | Deployment | Mitigate excessive agency in Large Language Models (QA Analyst)
+T4486 | P6 | Stories | Mitigate overreliance in Large Language Models (Project Manager)
+T4487 | P6 | Architecture | Mitigate overreliance in Large Language Models (MLOps Engineer)
+T4488 | P6 | Development | Mitigate overreliance in Large Language Models (AI/ML Developer)
+T4489 | P6 | Development | Mitigate overreliance in Large Language Models (Data Scientist)
+T4490 | P6 | Deployment | Mitigate overreliance in Large Language Models (QA Analyst)
+T4491 | P7 | Stories | Prevent model theft in Large Language Models (Project Manager)
+T4492 | P7 | Architecture | Prevent model theft in Large Language Models (MLOps Engineer)
+T4493 | P7 | Development | Prevent model theft in Large Language Models (AI/ML Developer)
+T4494 | P7 | Development | Prevent model theft in Large Language Models (Data Scientist)
+T4495 | P7 | Deployment | Prevent model theft in Large Language Models (QA Analyst)
+T456 | P6 | Deployment | Change default security settings to the most stringent ones and disable unnecessary services and modules
+T457 | P6 | QA | Verify that unnecessary services and capabilities are disabled
+T4597 | P6 | Development | Break and inspect SSL/TLS sessions
+T4600 | P10 | Architecture | Establish Out-of-Band Communications Channel
+T4601 | P8 | Deployment | Prioritize static network configuration
+T4746 | P10 | Development | Ensure container images are secure
+T4747 | P10 | Deployment | Limit container privileges
+T4748 | P10 | Deployment | Implement Role-Based Access Control (RBAC) for container orchestration
+T4749 | P10 | Deployment | Monitor containers in real-time
+T4750 | P10 | Architecture | Isolate container networks
+T4751 | P10 | Development | Reduce the attack surface of container images
+T4830 | P8 | Architecture | Ensure aligned training of generative AI models
+T4833 | P8 | QA | Test fine-tuning alignement of generative AI models
+T4834 | P8 | Architecture | Implement protection against system prompt leakage
+T4835 | P8 | Architecture | Implement defenses against vector and embedding weaknesses
+T4836 | P8 | Architecture | Implement verification and fact-checking to mitigate misinformation
+T4837 | P8 | QA | Test effectiveness of protections against system prompt leakage
+T4838 | P8 | QA | Test effectiveness of defenses against vector and embedding weaknesses
+T4839 | P8 | QA | Test effectiveness of misinformation mitigatation
+T49 | P7 | Stories | Disable and remove debug capabilities and code/data, and prepare application for release
+T50 | P8 | Stories | Use indirect object reference maps if accessing files
+T517 | P6 | Stories | Protect user registration and account modification pages against user enumeration
+T518 | P6 | QA | Test that registration and account modification pages are protected against user enumeration
+T536 | P8 | Stories | Restrict the size of incoming messages in services
+T537 | P8 | QA | Test that the size of incoming messages in services is restricted
+T54 | P6 | Stories | Validate file contents
+T544 | P8 | Stories | Anonymize (de-identify) identifying information before using it for a secondary purpose
+T545 | P8 | QA | Verify that personal information is anonymized before being reused for secondary purposes
+T553 | P6 | Architecture | Design secure RESTful web services
+T554 | P6 | QA | Verify that REST web services are securely designed
+T558 | P9 | Stories | Authenticate all other components before any network communication with them
+T572 | P6 | Development | Check for symlinks before opening files
+T573 | P8 | Stories | Prevent UDDI/ebXML spoofing
+T576 | P8 | QA | Verify that UDDI/ebXML spoofing is prevented
+T587 | P7 | QA | Verify that cryptographically secure algorithms are used for random number generation
+T589 | P9 | QA | Verify that all the components are authenticated explicitly
+T59 | P8 | Stories | Use standard libraries for cryptography
+T595 | P6 | QA | Test that your application checks for symlinks before opening files
+T60 | P8 | Stories | Use correct and approved cryptographic algorithms, parameters, and key lengths
+T604 | P10 | Stories | Implement a consent withdrawal mechanism
+T605 | P10 | QA | Verify if consent is obtained prior to personal information collection (where applicable)
+T61 | P9 | Deployment | Disable default accounts or change all default passwords
+T62 | P6 | Stories | Protect passwords in property and configuration files
+T65 | P6 | Stories | Restrict accepted HTTP verbs
+T66 | P7 | Development | Prevent web pages from being loaded inside iFrame
+T69 | P8 | Stories | Strong password requirements for server-to-server system accounts
+T7 | P6 | Stories | Salt and hash stored passwords
+T70 | P8 | Stories | Implement account lockout or authentication throttling for system accounts
+T742 | P7 | Stories | Implement technical measures to ensure the accuracy of personal information
+T743 | P7 | QA | Verify accuracy of personal information
+T744 | P8 | Stories | Protect pseudonymized personal information
+T745 | P8 | QA | Verify if pseudonymized personal information is protected
+T754 | P8 | Stories | Enable the restriction of processing personal information of an individual for a specific purpose
+T755 | P10 | Stories | Maintain a Data Processing Register or Record of Business Processing Activities
+T756 | P10 | QA | Verify if personal data processing activities are recorded and maintained
+T757 | P8 | QA | Verify if personal information processing stops when user objects to it
+T76 | P10 | Development | Do not hardcode passwords
+T78 | P9 | QA | Test strength of password reset mechanism
+T79 | P6 | QA | Test password change functions
+T84 | P6 | QA | Test page-level authorization
+T85 | P8 | QA | Test server-side enforcement of authorization
+T87 | P8 | QA | Verify that all data in transit is encrypted using a secure TLS channel
+T89 | P8 | QA | Test that site is not vulnerable to XSS
+T93 | P6 | QA | Test that sessions expire upon logout
+T94 | P6 | QA | Test that session IDs are not leaked through URLs
+T96 | P7 | QA | Test if your site is vulnerable to CSRF
+T98 | P7 | QA | Test for input validation on a server

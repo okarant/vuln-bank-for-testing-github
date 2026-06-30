@@ -1,13 +1,19 @@
 import os
+import secrets
 import psycopg2
 from psycopg2 import pool
 from datetime import datetime
 import time
 
+from werkzeug.security import generate_password_hash
+
+# Database credentials are sourced exclusively from the environment. No plaintext
+# password is embedded as a default; a missing DB_PASSWORD fails fast at connect time
+# rather than silently falling back to a well-known value.
 DB_CONFIG = {
     'dbname': os.getenv('DB_NAME', 'vulnerable_bank'),
     'user': os.getenv('DB_USER', 'postgres'),
-    'password': os.getenv('DB_PASSWORD', 'postgres'),
+    'password': os.environ.get('DB_PASSWORD', ''),
     'host': os.getenv('DB_HOST', 'localhost'),
     'port': os.getenv('DB_PORT', '5432')
 }
@@ -112,6 +118,12 @@ def init_db():
                 cursor.execute("ALTER TABLE users ADD COLUMN IF NOT EXISTS is_suspended BOOLEAN DEFAULT FALSE")
             except Exception:
                 pass  # Column already exists or error adding it
+
+            # Expiry timestamp for password-reset PINs (one-time, short-lived).
+            try:
+                cursor.execute("ALTER TABLE users ADD COLUMN IF NOT EXISTS reset_pin_expiry TIMESTAMP")
+            except Exception:
+                pass  # Column already exists or error adding it
             
             # Create loans table
             cursor.execute('''
@@ -198,28 +210,37 @@ def init_db():
                 )
             ''')
 
-            seeded_merchants = [
-                ('graphQL bookstore', 'bookstore@vulnbank.org', 'bookstore123', 'vk_fe675fe7aaee830b6fed09b64e034f84dcbdaeb429d9cccd4ebb90e15af8dd71', True),
-                ('PwnShop', 'pwnshop@vulnbank.org', 'pwnshop123', 'vk_b281bc2c616cb3c3a097215fdc9397ae87e6e06b156cc34e656be7a1a9ce8839', True)
+            # Seed demo merchants WITHOUT hardcoded credentials. Each seeded account
+            # gets a salted+hashed password (sourced from the environment when
+            # provided, otherwise a strong random secret generated at install time)
+            # and a high-entropy random API key. Existing rows keep their stored
+            # credentials so secrets are not rotated/regenerated on every startup.
+            seeded_merchant_specs = [
+                ('graphQL bookstore', 'bookstore@vulnbank.org'),
+                ('PwnShop', 'pwnshop@vulnbank.org'),
             ]
-            for merchant in seeded_merchants:
-                cursor.execute("SELECT id FROM merchants WHERE email = %s", (merchant[1],))
+            for name, email in seeded_merchant_specs:
+                cursor.execute("SELECT id FROM merchants WHERE email = %s", (email,))
                 if cursor.fetchone():
                     cursor.execute(
                         """
                         UPDATE merchants
-                        SET name = %s, password = %s, api_key = %s, is_active = %s
+                        SET name = %s, is_active = %s
                         WHERE email = %s
                         """,
-                        (merchant[0], merchant[2], merchant[3], merchant[4], merchant[1])
+                        (name, True, email)
                     )
                 else:
+                    env_slug = email.split('@')[0].upper().replace('.', '_')
+                    raw_password = os.environ.get(f"MERCHANT_{env_slug}_PASSWORD") or secrets.token_urlsafe(18)
+                    hashed_password = generate_password_hash(raw_password, method='pbkdf2:sha256', salt_length=16)
+                    api_key = f"vk_{secrets.token_hex(32)}"
                     cursor.execute(
                         """
                         INSERT INTO merchants (name, email, password, api_key, is_active)
                         VALUES (%s, %s, %s, %s, %s)
                         """,
-                        merchant
+                        (name, email, hashed_password, api_key, True)
                     )
 
             try:
@@ -234,15 +255,31 @@ def init_db():
             except Exception:
                 pass
             
-            # Create default admin account if it doesn't exist
+            # Create the admin account if it doesn't exist, WITHOUT a hardcoded default
+            # password. The password is taken from ADMIN_PASSWORD when set; otherwise a
+            # strong random secret is generated at install time and stored salted+hashed.
+            # The plaintext is never persisted or printed.
             cursor.execute("SELECT * FROM users WHERE username='admin'")
             if not cursor.fetchone():
+                admin_password = os.environ.get('ADMIN_PASSWORD')
+                if not admin_password:
+                    admin_password = secrets.token_urlsafe(24)
+                    print(
+                        "WARNING: ADMIN_PASSWORD not set. Generated a random admin password "
+                        "(not printed). Use the password-reset flow to set a known credential."
+                    )
                 cursor.execute(
                     """
                     INSERT INTO users (username, password, account_number, balance, is_admin) 
                     VALUES (%s, %s, %s, %s, %s)
                     """,
-                    ('admin', 'admin123', 'ADMIN001', 1000000.0, True)
+                    (
+                        'admin',
+                        generate_password_hash(admin_password, method='pbkdf2:sha256', salt_length=16),
+                        'ADMIN001',
+                        1000000.0,
+                        True,
+                    )
                 )
             
             # Create bill categories table

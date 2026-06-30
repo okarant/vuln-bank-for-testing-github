@@ -1,0 +1,3349 @@
+{
+  "source_skill": "setup-security-plan-from-repo",
+  "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+  "project_id": 31909,
+  "project_name": "vuln-bank-for-testing-github-20260616-1404",
+  "business_unit_id": 2462,
+  "application_id": 9215,
+  "risk_policy_id": "160",
+  "agents_md": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/AGENTS.md",
+  "skill_files": [
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/CT435-bind-variables-in-sql-statements-oleg-test/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T10-use-server-to-server-authentication/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T101-test-that-application-is-not-vulnerable-to-sql-injection/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/logging-monitoring/T105-verify-that-your-application-does-not-have-unnecessary-debug/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T106-test-that-site-is-not-vulnerable-to-direct-object-access-att/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/csrf/T113-test-that-site-is-not-vulnerable-to-http-verb-tampering/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T114-test-system-to-system-authentication-lockout-or-throttling/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T1144-prevent-server-side-template-injection-ssti/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T1145-verify-if-web-page-template-is-vulnerable-to-ssti/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T1148-validate-json-files/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T1149-test-if-json-files-are-validated-against-malicious-inputs/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1150-configure-container-networks-properly-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1151-verify-that-container-networks-are-configured-properly-docke/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1154-secure-docker-registries-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1155-verify-that-docker-registries-are-secure-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1156-do-not-use-the-aufs-storage-driver-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1157-verify-that-the-aufs-storage-driver-is-not-used-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1158-configure-tls-authentication-for-the-docker-daemon-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1159-verify-that-tls-authentication-is-configured-for-the-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1160-set-ulimit-appropriately-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1161-verify-that-ulimit-is-set-appropriately-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1166-encrypt-data-exchanged-between-containers-on-different-nodes/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1167-verify-that-data-exchanged-between-containers-on-different-n/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1172-secure-daemon-configuration-files-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1173-verify-that-daemon-configuration-files-are-secured-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1174-create-non-root-users-for-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1175-verify-that-containers-are-not-run-as-root-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1176-use-trusted-base-images-and-include-the-latest-security-patc/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1177-verify-that-secure-and-updated-images-are-used-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1180-check-container-health-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1181-verify-that-container-health-is-checked-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1186-do-not-store-secrets-in-dockerfiles-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1187-test-if-secrets-are-stored-in-dockerfiles-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1188-configure-linux-security-modules-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1189-test-if-linux-security-modules-are-securely-configured-docke/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/xss/T119-test-for-clickjacking/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1190-restrict-linux-kernel-capabilities-within-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1191-test-if-linux-kernel-capabilities-are-restricted-within-cont/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1192-do-not-expose-unnecessary-host-resources-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1193-test-if-unnecessary-host-resources-are-exposed-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1194-do-not-run-ssh-within-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1195-test-if-ssh-is-running-within-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1196-open-only-needed-ports-on-the-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1197-test-if-only-needed-ports-are-open-on-the-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1198-do-not-share-the-host-s-network-namespace-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1199-test-that-the-host-s-network-namespace-is-not-shared-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1200-limit-resources-used-by-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1201-test-that-resources-used-by-containers-are-limited-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1202-set-container-cpu-priority-appropriately-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1203-test-if-container-cpu-priority-is-appropriately-set-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1204-mount-container-s-root-file-system-as-read-only-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1205-test-if-the-container-s-root-file-system-is-mounted-as-read/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1206-set-the-on-failure-container-restart-policy-to-5-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1207-test-that-the-on-failure-container-restart-policy-is-set-to/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1208-do-not-set-mount-propagation-mode-to-shared-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1209-verify-that-mount-propagation-mode-is-not-set-to-shared-dock/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1210-configure-seccomp-profile-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1211-verify-that-seccomp-profile-is-enabled-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1212-confirm-cgroup-usage-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1213-verify-that-cgroup-usage-is-confirmed-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1214-restrict-containers-from-acquiring-additional-privileges-doc/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1215-verify-that-containers-are-restricted-from-acquiring-additio/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T122-test-for-remote-file-include/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1232-create-a-separate-partition-for-containers-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1233-test-that-containers-are-on-a-separate-partition-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1234-only-allow-trusted-users-to-control-the-docker-daemon-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1235-test-that-only-trusted-users-can-control-the-docker-daemon-d/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1236-audit-the-docker-daemon-and-its-files-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1237-test-that-the-docker-daemon-and-its-files-are-audited-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T128-test-for-access-control-bypass-through-user-controlled-keys/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/file-handling/T129-test-for-reliance-on-file-name-or-extension-of-externally-su/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T1362-perform-message-throttling-in-web-apis/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T1363-verify-if-message-throttling-is-properly-performed-in-web-ap/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/dependency-management/T1364-verify-that-third-party-software-libraries-modules-and-open/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/ssrf/T1365-mitigate-server-side-request-forgery/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/ssrf/T1392-test-for-server-side-request-forgery/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T14-enforce-the-principle-of-least-privilege/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T1468-encrypt-sensitive-data-at-rest-in-the-browser/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T15-centralize-authorization/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T151-use-cryptographically-secure-random-numbers/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/data-protection/T1539-clear-browser-data-on-user-logout/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/data-protection/T1540-verify-that-browser-data-is-cleared-upon-user-logout/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/csrf/T1541-decide-on-the-best-csrf-defense-for-your-application/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/csrf/T1542-use-the-correct-http-methods-for-making-state-changing-opera/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T156-validate-certificate-and-its-chain-of-trust-properly/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/file-handling/T157-temporary-files-must-be-cleaned-up-after-the-resource-is-use/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T16-authorize-every-non-public-page/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T166-protect-against-json-hijacking/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T167-test-that-the-application-is-not-vulnerable-to-json-hijackin/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/xss/T169-test-that-the-site-is-not-vulnerable-to-dom-based-xss/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T17-do-not-only-rely-on-client-side-authorization/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T175-test-that-the-client-validates-digital-certificates/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T18-make-authorization-decisions-using-full-context/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T184-perform-authorization-checks-on-restful-web-services/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/dependency-management/T186-use-recommended-settings-and-the-latest-patches-for-third-pa/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T19-restrict-application-s-access-to-database/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T1918-integrate-with-sso/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T1919-use-json-web-token-jwt-securely/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1923-disable-swarm-mode-if-not-needed/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T1924-verify-that-swarm-mode-is-disabled/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T2-secure-the-password-reset-mechanism/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T20-generate-unique-session-ids-and-reset-old-ids-after-authenti/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T21-ensure-all-data-in-transit-is-encrypted-using-a-secure-tls-c/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2105-enforce-the-use-of-client-certificate-bundles-for-unprivileg/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2106-verify-that-the-use-of-client-certificate-bundles-for-unpriv/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2109-enable-signed-image-enforcement-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2110-verify-that-signed-image-enforcement-is-enabled-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2115-enable-image-vulnerability-scanning-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2116-verify-that-image-vulnerability-scanning-is-enabled-docker/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2139-prevent-information-exposure-through-apis/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/data-protection/T214-protect-confidential-files-on-operating-system-or-server/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2140-test-that-apis-do-not-expose-sensitive-information/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T2141-perform-function-level-authorization-in-api/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T2142-verify-that-function-level-authorization-is-implemented-in-a/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/file-handling/T2167-secure-file-storage/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/data-protection/T219-avoid-transmitting-confidential-data-through-url-parameters/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T220-verify-that-user-password-is-salted-and-hashed/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T222-verify-server-to-server-authentication/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2256-authenticate-and-log-all-access-to-registries-containing-sen/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2257-regularly-update-and-patch-containerization-systems/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T2258-minimize-host-os-attack-surface/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T226-verify-that-authorization-is-centralized/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2269-prevent-batching-attacks-graphql/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T227-verify-that-application-s-access-to-database-is-restricted/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T2274-test-to-confirm-that-the-principle-of-least-privilege-is-str/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T2276-test-to-confirm-that-authorization-and-authentication-contro/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T2277-test-to-confirm-the-use-of-an-account-and-identity-managemen/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T228-test-that-application-restricts-http-message-size/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T2281-secure-access-control-graphql/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T2282-test-to-confirm-that-unauthenticated-parts-of-the-applicatio/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2283-configure-graphql-correctly/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2284-prevent-dos-attacks-graphql/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T230-test-that-server-to-server-system-accounts-meet-minimum-pass/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/secrets-config/T2349-configure-software-to-have-secure-settings-by-default/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/secrets-config/T2357-verify-that-software-is-configured-to-have-secure-settings-b/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/secrets-config/T241-verify-that-third-party-libraries-use-secure-settings-and-th/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/backup-recovery/T2477-test-the-re-deployment-routines/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/backup-recovery/T2478-manage-re-deployment-routines/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/cors/T257-secure-cross-origin-resource-sharing-cors/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T259-follow-best-practices-when-storing-data-in-local-or-session/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/network-infra/T2596-prevent-http-request-smuggling/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2597-implement-rbac-instead-of-individual-accounts/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2598-implement-query-level-access-control/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2599-protect-against-connection-string-parameter-pollution/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T26-expire-sessions-on-logout/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2600-control-the-result-set-size-returned-by-a-query/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2601-use-transparent-data-encryption-with-enterprise-databases/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2602-log-typical-database-and-server-activities-and-related-metad/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/backup-recovery/T2603-protect-backup-archive-bits/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2604-follow-best-practices-for-data-restoring-operations/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2605-validate-database-traffic/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2606-verify-rbac-implemented-instead-of-individual-accounts/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2607-verify-query-level-access-control-is-implemented/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2608-verify-that-the-connection-string-is-protected-against-conne/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2609-verify-that-the-result-set-size-returned-by-queries-are-cont/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2610-verify-that-transparent-data-encryption-is-utilized-with-ent/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2611-verify-that-typical-database-and-server-activities-along-wit/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/backup-recovery/T2612-verify-backup-archive-bits-are-protected/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2613-verify-best-practices-for-data-restoring-operations-are-foll/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2614-verify-database-traffic-is-validated/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2615-limit-network-access-by-blocking-connections-from-unknown-ip/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2616-use-a-secure-authentication-mechanism-for-database-connectio/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2617-create-dedicated-database-user-accounts-with-minimum-privile/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2618-remove-unnecessary-superuser-accounts-postgresql/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2619-ensure-that-row-level-security-is-correctly-configured-postg/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2620-protect-data-in-transit-with-tls-postgresql/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2621-use-file-volume-encryption-and-consider-in-database-encrypti/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2623-schedule-regular-database-backups-to-protect-availability-po/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T2652-consider-adding-plugins-for-stronger-authentication-protocol/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/secrets-config/T2661-change-insecure-configuration-defaults-and-remove-unnecessar/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2662-restrict-network-access-to-the-database-server/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2663-use-a-secure-authentication-mechanism-for-database-connectio/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2664-create-dedicated-database-user-accounts-with-minimum-privile/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T2665-protect-sensitive-data-at-rest-with-encryption/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2666-protect-data-in-transit-with-tls-database-server/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/database-security/T2667-schedule-regular-database-backups-to-protect-availability-da/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T27-turn-off-session-rewriting/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T279-avoid-dynamically-loading-any-code-without-proper-security-c/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T281-follow-best-practices-when-handling-access-tokens-api-tokens/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T284-generate-secure-access-tokens-api-tokens/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T285-restrict-use-of-access-tokens-api-tokens/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/csrf/T29-use-anti-cross-site-request-forgery-csrf-tokens/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T295-avoid-storing-unencrypted-confidential-data-without-access-c/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T296-test-that-unencrypted-confidential-data-is-not-stored-withou/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T3-require-old-passwords-when-users-change-passwords/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/file-handling/T300-test-that-temporary-files-are-cleaned-up-after-the-resource/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T305-verify-that-your-application-dynamically-loads-code-only-fro/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/cors/T318-verify-security-of-cross-origin-resource-sharing-cors/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/input-validation/T32-always-perform-input-validation-on-a-server/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T321-verify-that-local-and-session-storage-are-securely-used/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T323-test-that-default-accounts-are-disabled-or-default-passwords/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T338-control-access-to-resources-through-user-authentication-and/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T340-use-an-account-and-identity-management-system/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T349-protect-audit-information-and-logs-against-unauthorized-acce/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/network-infra/T35-fine-tune-http-server-settings/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/logging-monitoring/T350-verify-that-audit-information-is-sufficiently-protected/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/xss/T36-escape-untrusted-data-in-html-html-attributes-css-and-javasc/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T364-enable-secure-backup-and-restore-capabilities/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T365-verify-the-security-of-backing-up-and-restoring-procedures/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/xss/T37-avoid-dom-based-cross-site-scripting-xss/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T373-design-and-regulate-access-to-unauthenticated-parts-of-the-a/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/network-infra/T374-offload-http-request-handling-to-dedicated-modules/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/general-hardening/T375-release-resources-when-no-longer-needed/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T378-authorize-every-request-for-data-objects/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T38-bind-variables-in-sql-statements/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T394-secure-one-time-passwords-otp/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T395-verify-that-one-time-passwords-otp-are-securely-used/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/backup-recovery/T3990-schedule-regular-backups/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/input-validation/T42-avoid-relying-on-untrusted-data-for-server-side-selection/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T420-prevent-client-side-template-injection-csti/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T421-verify-if-web-page-template-is-vulnerable-to-client-side-tem/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T445-verify-that-only-approved-cryptographic-algorithms-and-key-l/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4455-prevent-prompt-injection-in-large-language-models-project-ma/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4456-prevent-prompt-injection-in-large-language-models-mlops-engi/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4457-prevent-prompt-injection-in-large-language-models-ai-ml-deve/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4458-prevent-prompt-injection-in-large-language-models-data-scien/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4459-prevent-prompt-injection-in-large-language-models-qa-analyst/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T446-verify-that-only-standard-libraries-are-used-for-cryptograph/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4460-handle-insecure-output-in-large-language-models-ai-ml-develo/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4461-handle-insecure-output-in-large-language-models-mlops-engine/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4462-prevent-training-data-poisoning-in-large-language-models-pro/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4463-prevent-training-data-poisoning-in-large-language-models-mlo/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4464-prevent-training-data-poisoning-in-large-language-models-dat/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4465-prevent-training-data-poisoning-in-large-language-models-ai/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4466-prevent-large-language-model-denial-of-service-project-manag/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4467-prevent-large-language-model-denial-of-service-mlops-enginee/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4468-prevent-large-language-models-denial-of-service-ai-ml-develo/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4469-prevent-large-language-model-denial-of-service-qa-analyst/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4470-protect-large-language-models-against-supply-chain-vulnerabi/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4471-protect-large-language-models-against-supply-chain-vulnerabi/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4472-protect-large-language-models-against-supply-chain-vulnerabi/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4473-protect-large-language-models-against-supply-chain-vulnerabi/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4474-prevent-sensitive-information-disclosure-in-large-language-m/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4475-prevent-sensitive-information-disclosure-in-large-language-m/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4476-prevent-sensitive-information-disclosure-in-large-language-m/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4477-prevent-sensitive-information-disclosure-in-large-language-m/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4478-design-secure-plugins-for-large-language-models-project-mana/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4479-design-secure-plugins-for-large-language-models-ai-ml-develo/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4480-design-secure-plugins-for-large-language-models-mlops-engine/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4481-design-secure-plugins-for-large-language-models-qa-analyst/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4482-mitigate-excessive-agency-in-large-language-models-project-m/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4483-mitigate-excessive-agency-in-large-language-models-mlops-eng/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4484-mitigate-excessive-agency-in-large-language-models-ai-ml-dev/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4485-mitigate-excessive-agency-in-large-language-models-qa-analys/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4486-mitigate-overreliance-in-large-language-models-project-manag/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4487-mitigate-overreliance-in-large-language-models-mlops-enginee/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4488-mitigate-overreliance-in-large-language-models-ai-ml-develop/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4489-mitigate-overreliance-in-large-language-models-data-scientis/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4490-mitigate-overreliance-in-large-language-models-qa-analyst/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4491-prevent-model-theft-in-large-language-models-project-manager/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4492-prevent-model-theft-in-large-language-models-mlops-engineer/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4493-prevent-model-theft-in-large-language-models-ai-ml-developer/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4494-prevent-model-theft-in-large-language-models-data-scientist/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4495-prevent-model-theft-in-large-language-models-qa-analyst/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/secrets-config/T456-change-default-security-settings-to-the-most-stringent-ones/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/secrets-config/T457-verify-that-unnecessary-services-and-capabilities-are-disabl/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T4597-break-and-inspect-ssl-tls-sessions/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/network-infra/T4600-establish-out-of-band-communications-channel/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/network-infra/T4601-prioritize-static-network-configuration/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T4746-ensure-container-images-are-secure/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T4747-limit-container-privileges/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T4748-implement-role-based-access-control-rbac-for-container-orche/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T4749-monitor-containers-in-real-time/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T4750-isolate-container-networks/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T4751-reduce-the-attack-surface-of-container-images/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4830-ensure-aligned-training-of-generative-ai-models/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4833-test-fine-tuning-alignement-of-generative-ai-models/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4834-implement-protection-against-system-prompt-leakage/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4835-implement-defenses-against-vector-and-embedding-weaknesses/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4836-implement-verification-and-fact-checking-to-mitigate-misinfo/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4837-test-effectiveness-of-protections-against-system-prompt-leak/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4838-test-effectiveness-of-defenses-against-vector-and-embedding/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4839-test-effectiveness-of-misinformation-mitigatation/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/logging-monitoring/T49-disable-and-remove-debug-capabilities-and-code-data-and-prep/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T50-use-indirect-object-reference-maps-if-accessing-files/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T517-protect-user-registration-and-account-modification-pages-aga/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T518-test-that-registration-and-account-modification-pages-are-pr/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T536-restrict-the-size-of-incoming-messages-in-services/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T537-test-that-the-size-of-incoming-messages-in-services-is-restr/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/file-handling/T54-validate-file-contents/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T553-design-secure-restful-web-services/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T554-verify-that-rest-web-services-are-securely-designed/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/network-infra/T558-authenticate-all-other-components-before-any-network-communi/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/file-handling/T572-check-for-symlinks-before-opening-files/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T573-prevent-uddi-ebxml-spoofing/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T576-verify-that-uddi-ebxml-spoofing-is-prevented/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T587-verify-that-cryptographically-secure-algorithms-are-used-for/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/network-infra/T589-verify-that-all-the-components-are-authenticated-explicitly/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T59-use-standard-libraries-for-cryptography/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/file-handling/T595-test-that-your-application-checks-for-symlinks-before-openin/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T60-use-correct-and-approved-cryptographic-algorithms-parameters/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T61-disable-default-accounts-or-change-all-default-passwords/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T62-protect-passwords-in-property-and-configuration-files/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/csrf/T65-restrict-accepted-http-verbs/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/xss/T66-prevent-web-pages-from-being-loaded-inside-iframe/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T69-strong-password-requirements-for-server-to-server-system-acc/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T7-salt-and-hash-stored-passwords/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T70-implement-account-lockout-or-authentication-throttling-for-s/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T76-do-not-hardcode-passwords/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T78-test-strength-of-password-reset-mechanism/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T79-test-password-change-functions/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T84-test-page-level-authorization/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T85-test-server-side-enforcement-of-authorization/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T87-verify-that-all-data-in-transit-is-encrypted-using-a-secure/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/xss/T89-test-that-site-is-not-vulnerable-to-xss/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T93-test-that-sessions-expire-upon-logout/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/session-management/T94-test-that-session-ids-are-not-leaked-through-urls/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/csrf/T96-test-if-your-site-is-vulnerable-to-csrf/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/input-validation/T98-test-for-input-validation-on-a-server/SKILL.md"
+  ],
+  "total_countermeasures": 368,
+  "code_fix_count": 178,
+  "documentation_count": 95,
+  "process_count": 59,
+  "git_enabled": true,
+  "security_branch": "security-hardening/vuln-bank-for-testing-github-20260616-1404",
+  "ai_backup_archive": null,
+  "library_sourced_cms": [
+    {
+      "cm_id": "T1150",
+      "amendment_id": "TA8476",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1151",
+      "amendment_id": "TA8469",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1154",
+      "amendment_id": "TA8474",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1156",
+      "amendment_id": "TA8473",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1158",
+      "amendment_id": "TA8472",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1160",
+      "amendment_id": "TA8471",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1166",
+      "amendment_id": "TA8467",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1174",
+      "amendment_id": "TA8448",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1176",
+      "amendment_id": "TA8447",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1177",
+      "amendment_id": "TA8477",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1180",
+      "amendment_id": "TA8445",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1181",
+      "amendment_id": "TA8465",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1186",
+      "amendment_id": "TA8441",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1187",
+      "amendment_id": "TA8466",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1188",
+      "amendment_id": "TA8458",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1189",
+      "amendment_id": "TA8462",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1190",
+      "amendment_id": "TA8457",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1191",
+      "amendment_id": "TA8461",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1192",
+      "amendment_id": "TA8439",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1194",
+      "amendment_id": "TA8460",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1196",
+      "amendment_id": "TA8442",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1198",
+      "amendment_id": "TA8456",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1200",
+      "amendment_id": "TA8455",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1202",
+      "amendment_id": "TA8454",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1204",
+      "amendment_id": "TA8453",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1206",
+      "amendment_id": "TA8452",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1208",
+      "amendment_id": "TA8451",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1210",
+      "amendment_id": "TA8450",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1212",
+      "amendment_id": "TA8440",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1214",
+      "amendment_id": "TA8449",
+      "matched_technology": "Docker"
+    },
+    {
+      "cm_id": "T1365",
+      "amendment_id": "TA8521",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T19",
+      "amendment_id": "TA8571",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T2",
+      "amendment_id": "TA8478",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T21",
+      "amendment_id": "TA8620",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T2141",
+      "amendment_id": "TA8555",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T2281",
+      "amendment_id": "TA8570",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T2609",
+      "amendment_id": "TA8583",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T36",
+      "amendment_id": "TA8479",
+      "matched_technology": "JavaScript"
+    },
+    {
+      "cm_id": "T37",
+      "amendment_id": "TA8540",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T4457",
+      "amendment_id": "TA8621",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T49",
+      "amendment_id": "TA8625",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T54",
+      "amendment_id": "TA8493",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T572",
+      "amendment_id": "TA8484",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T59",
+      "amendment_id": "TA8547",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T69",
+      "amendment_id": "TA8615",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T7",
+      "amendment_id": "TA8548",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T76",
+      "amendment_id": "TA8509",
+      "matched_technology": "Python"
+    }
+  ],
+  "library_lookup_audit": [
+    {
+      "cm_id": "CT435",
+      "endpoint": "library/tasks/CT435/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T10",
+      "endpoint": "library/tasks/T10/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T101",
+      "endpoint": "library/tasks/T101/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T105",
+      "endpoint": "library/tasks/T105/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T106",
+      "endpoint": "library/tasks/T106/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T113",
+      "endpoint": "library/tasks/T113/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T114",
+      "endpoint": "library/tasks/T114/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1144",
+      "endpoint": "library/tasks/T1144/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1145",
+      "endpoint": "library/tasks/T1145/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1148",
+      "endpoint": "library/tasks/T1148/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1149",
+      "endpoint": "library/tasks/T1149/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1150",
+      "endpoint": "library/tasks/T1150/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": "TA8476"
+    },
+    {
+      "cm_id": "T1151",
+      "endpoint": "library/tasks/T1151/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": "TA8469"
+    },
+    {
+      "cm_id": "T1154",
+      "endpoint": "library/tasks/T1154/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": "TA8474"
+    },
+    {
+      "cm_id": "T1155",
+      "endpoint": "library/tasks/T1155/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1156",
+      "endpoint": "library/tasks/T1156/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": "TA8473"
+    },
+    {
+      "cm_id": "T1157",
+      "endpoint": "library/tasks/T1157/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1158",
+      "endpoint": "library/tasks/T1158/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": "TA8472"
+    },
+    {
+      "cm_id": "T1159",
+      "endpoint": "library/tasks/T1159/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1160",
+      "endpoint": "library/tasks/T1160/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": "TA8471"
+    },
+    {
+      "cm_id": "T1161",
+      "endpoint": "library/tasks/T1161/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1166",
+      "endpoint": "library/tasks/T1166/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": "TA8467"
+    },
+    {
+      "cm_id": "T1167",
+      "endpoint": "library/tasks/T1167/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1172",
+      "endpoint": "library/tasks/T1172/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1173",
+      "endpoint": "library/tasks/T1173/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.000610",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1174",
+      "endpoint": "library/tasks/T1174/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8448"
+    },
+    {
+      "cm_id": "T1175",
+      "endpoint": "library/tasks/T1175/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1176",
+      "endpoint": "library/tasks/T1176/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8447"
+    },
+    {
+      "cm_id": "T1177",
+      "endpoint": "library/tasks/T1177/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8477"
+    },
+    {
+      "cm_id": "T1180",
+      "endpoint": "library/tasks/T1180/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8445"
+    },
+    {
+      "cm_id": "T1181",
+      "endpoint": "library/tasks/T1181/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8465"
+    },
+    {
+      "cm_id": "T1186",
+      "endpoint": "library/tasks/T1186/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8441"
+    },
+    {
+      "cm_id": "T1187",
+      "endpoint": "library/tasks/T1187/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8466"
+    },
+    {
+      "cm_id": "T1188",
+      "endpoint": "library/tasks/T1188/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8458"
+    },
+    {
+      "cm_id": "T1189",
+      "endpoint": "library/tasks/T1189/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8462"
+    },
+    {
+      "cm_id": "T119",
+      "endpoint": "library/tasks/T119/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1190",
+      "endpoint": "library/tasks/T1190/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8457"
+    },
+    {
+      "cm_id": "T1191",
+      "endpoint": "library/tasks/T1191/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8461"
+    },
+    {
+      "cm_id": "T1192",
+      "endpoint": "library/tasks/T1192/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8439"
+    },
+    {
+      "cm_id": "T1193",
+      "endpoint": "library/tasks/T1193/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1194",
+      "endpoint": "library/tasks/T1194/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8460"
+    },
+    {
+      "cm_id": "T1195",
+      "endpoint": "library/tasks/T1195/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1196",
+      "endpoint": "library/tasks/T1196/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8442"
+    },
+    {
+      "cm_id": "T1197",
+      "endpoint": "library/tasks/T1197/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1198",
+      "endpoint": "library/tasks/T1198/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8456"
+    },
+    {
+      "cm_id": "T1199",
+      "endpoint": "library/tasks/T1199/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1200",
+      "endpoint": "library/tasks/T1200/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8455"
+    },
+    {
+      "cm_id": "T1201",
+      "endpoint": "library/tasks/T1201/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1202",
+      "endpoint": "library/tasks/T1202/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": "TA8454"
+    },
+    {
+      "cm_id": "T1203",
+      "endpoint": "library/tasks/T1203/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.023897",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1204",
+      "endpoint": "library/tasks/T1204/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": "TA8453"
+    },
+    {
+      "cm_id": "T1205",
+      "endpoint": "library/tasks/T1205/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1206",
+      "endpoint": "library/tasks/T1206/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": "TA8452"
+    },
+    {
+      "cm_id": "T1207",
+      "endpoint": "library/tasks/T1207/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1208",
+      "endpoint": "library/tasks/T1208/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": "TA8451"
+    },
+    {
+      "cm_id": "T1209",
+      "endpoint": "library/tasks/T1209/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1210",
+      "endpoint": "library/tasks/T1210/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": "TA8450"
+    },
+    {
+      "cm_id": "T1211",
+      "endpoint": "library/tasks/T1211/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1212",
+      "endpoint": "library/tasks/T1212/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": "TA8440"
+    },
+    {
+      "cm_id": "T1213",
+      "endpoint": "library/tasks/T1213/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1214",
+      "endpoint": "library/tasks/T1214/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": "TA8449"
+    },
+    {
+      "cm_id": "T1215",
+      "endpoint": "library/tasks/T1215/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T122",
+      "endpoint": "library/tasks/T122/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1232",
+      "endpoint": "library/tasks/T1232/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1233",
+      "endpoint": "library/tasks/T1233/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1234",
+      "endpoint": "library/tasks/T1234/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1235",
+      "endpoint": "library/tasks/T1235/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1236",
+      "endpoint": "library/tasks/T1236/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1237",
+      "endpoint": "library/tasks/T1237/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T128",
+      "endpoint": "library/tasks/T128/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T129",
+      "endpoint": "library/tasks/T129/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1362",
+      "endpoint": "library/tasks/T1362/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1363",
+      "endpoint": "library/tasks/T1363/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1364",
+      "endpoint": "library/tasks/T1364/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1365",
+      "endpoint": "library/tasks/T1365/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.044904",
+      "amendment_id": "TA8521"
+    },
+    {
+      "cm_id": "T1392",
+      "endpoint": "library/tasks/T1392/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T14",
+      "endpoint": "library/tasks/T14/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1468",
+      "endpoint": "library/tasks/T1468/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T15",
+      "endpoint": "library/tasks/T15/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T151",
+      "endpoint": "library/tasks/T151/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1539",
+      "endpoint": "library/tasks/T1539/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1540",
+      "endpoint": "library/tasks/T1540/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1541",
+      "endpoint": "library/tasks/T1541/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1542",
+      "endpoint": "library/tasks/T1542/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T156",
+      "endpoint": "library/tasks/T156/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T157",
+      "endpoint": "library/tasks/T157/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T16",
+      "endpoint": "library/tasks/T16/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T166",
+      "endpoint": "library/tasks/T166/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T167",
+      "endpoint": "library/tasks/T167/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T169",
+      "endpoint": "library/tasks/T169/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T17",
+      "endpoint": "library/tasks/T17/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T175",
+      "endpoint": "library/tasks/T175/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T18",
+      "endpoint": "library/tasks/T18/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T184",
+      "endpoint": "library/tasks/T184/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T186",
+      "endpoint": "library/tasks/T186/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T19",
+      "endpoint": "library/tasks/T19/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": "TA8571"
+    },
+    {
+      "cm_id": "T1918",
+      "endpoint": "library/tasks/T1918/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1919",
+      "endpoint": "library/tasks/T1919/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1923",
+      "endpoint": "library/tasks/T1923/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T1924",
+      "endpoint": "library/tasks/T1924/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:32:32.067959",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2",
+      "endpoint": "library/tasks/T2/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": "TA8478"
+    },
+    {
+      "cm_id": "T20",
+      "endpoint": "library/tasks/T20/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T21",
+      "endpoint": "library/tasks/T21/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": "TA8620"
+    },
+    {
+      "cm_id": "T2105",
+      "endpoint": "library/tasks/T2105/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2106",
+      "endpoint": "library/tasks/T2106/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2109",
+      "endpoint": "library/tasks/T2109/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2110",
+      "endpoint": "library/tasks/T2110/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2115",
+      "endpoint": "library/tasks/T2115/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2116",
+      "endpoint": "library/tasks/T2116/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2139",
+      "endpoint": "library/tasks/T2139/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T214",
+      "endpoint": "library/tasks/T214/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2140",
+      "endpoint": "library/tasks/T2140/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2141",
+      "endpoint": "library/tasks/T2141/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": "TA8555"
+    },
+    {
+      "cm_id": "T2142",
+      "endpoint": "library/tasks/T2142/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2167",
+      "endpoint": "library/tasks/T2167/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T219",
+      "endpoint": "library/tasks/T219/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T220",
+      "endpoint": "library/tasks/T220/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T222",
+      "endpoint": "library/tasks/T222/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2256",
+      "endpoint": "library/tasks/T2256/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2257",
+      "endpoint": "library/tasks/T2257/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2258",
+      "endpoint": "library/tasks/T2258/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T226",
+      "endpoint": "library/tasks/T226/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2269",
+      "endpoint": "library/tasks/T2269/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T227",
+      "endpoint": "library/tasks/T227/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2274",
+      "endpoint": "library/tasks/T2274/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.677779",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2276",
+      "endpoint": "library/tasks/T2276/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2277",
+      "endpoint": "library/tasks/T2277/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T228",
+      "endpoint": "library/tasks/T228/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2281",
+      "endpoint": "library/tasks/T2281/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": "TA8570"
+    },
+    {
+      "cm_id": "T2282",
+      "endpoint": "library/tasks/T2282/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2283",
+      "endpoint": "library/tasks/T2283/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2284",
+      "endpoint": "library/tasks/T2284/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T230",
+      "endpoint": "library/tasks/T230/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2349",
+      "endpoint": "library/tasks/T2349/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2357",
+      "endpoint": "library/tasks/T2357/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T241",
+      "endpoint": "library/tasks/T241/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2477",
+      "endpoint": "library/tasks/T2477/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2478",
+      "endpoint": "library/tasks/T2478/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T257",
+      "endpoint": "library/tasks/T257/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T259",
+      "endpoint": "library/tasks/T259/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2596",
+      "endpoint": "library/tasks/T2596/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2597",
+      "endpoint": "library/tasks/T2597/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2598",
+      "endpoint": "library/tasks/T2598/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2599",
+      "endpoint": "library/tasks/T2599/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T26",
+      "endpoint": "library/tasks/T26/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2600",
+      "endpoint": "library/tasks/T2600/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2601",
+      "endpoint": "library/tasks/T2601/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2602",
+      "endpoint": "library/tasks/T2602/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2603",
+      "endpoint": "library/tasks/T2603/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2604",
+      "endpoint": "library/tasks/T2604/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.700355",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2605",
+      "endpoint": "library/tasks/T2605/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2606",
+      "endpoint": "library/tasks/T2606/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2607",
+      "endpoint": "library/tasks/T2607/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2608",
+      "endpoint": "library/tasks/T2608/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2609",
+      "endpoint": "library/tasks/T2609/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": "TA8583"
+    },
+    {
+      "cm_id": "T2610",
+      "endpoint": "library/tasks/T2610/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2611",
+      "endpoint": "library/tasks/T2611/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2612",
+      "endpoint": "library/tasks/T2612/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2613",
+      "endpoint": "library/tasks/T2613/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2614",
+      "endpoint": "library/tasks/T2614/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2615",
+      "endpoint": "library/tasks/T2615/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2616",
+      "endpoint": "library/tasks/T2616/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2617",
+      "endpoint": "library/tasks/T2617/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2618",
+      "endpoint": "library/tasks/T2618/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2619",
+      "endpoint": "library/tasks/T2619/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2620",
+      "endpoint": "library/tasks/T2620/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2621",
+      "endpoint": "library/tasks/T2621/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2623",
+      "endpoint": "library/tasks/T2623/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2652",
+      "endpoint": "library/tasks/T2652/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2661",
+      "endpoint": "library/tasks/T2661/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2662",
+      "endpoint": "library/tasks/T2662/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2663",
+      "endpoint": "library/tasks/T2663/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2664",
+      "endpoint": "library/tasks/T2664/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2665",
+      "endpoint": "library/tasks/T2665/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2666",
+      "endpoint": "library/tasks/T2666/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.655680",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T2667",
+      "endpoint": "library/tasks/T2667/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T27",
+      "endpoint": "library/tasks/T27/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T279",
+      "endpoint": "library/tasks/T279/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T281",
+      "endpoint": "library/tasks/T281/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T284",
+      "endpoint": "library/tasks/T284/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T285",
+      "endpoint": "library/tasks/T285/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T29",
+      "endpoint": "library/tasks/T29/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T295",
+      "endpoint": "library/tasks/T295/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T296",
+      "endpoint": "library/tasks/T296/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T3",
+      "endpoint": "library/tasks/T3/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T300",
+      "endpoint": "library/tasks/T300/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T305",
+      "endpoint": "library/tasks/T305/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T318",
+      "endpoint": "library/tasks/T318/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T32",
+      "endpoint": "library/tasks/T32/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T321",
+      "endpoint": "library/tasks/T321/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T323",
+      "endpoint": "library/tasks/T323/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T338",
+      "endpoint": "library/tasks/T338/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T340",
+      "endpoint": "library/tasks/T340/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T349",
+      "endpoint": "library/tasks/T349/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T35",
+      "endpoint": "library/tasks/T35/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T350",
+      "endpoint": "library/tasks/T350/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T36",
+      "endpoint": "library/tasks/T36/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": "TA8479"
+    },
+    {
+      "cm_id": "T364",
+      "endpoint": "library/tasks/T364/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T365",
+      "endpoint": "library/tasks/T365/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T37",
+      "endpoint": "library/tasks/T37/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:34:07.724433",
+      "amendment_id": "TA8540"
+    },
+    {
+      "cm_id": "T373",
+      "endpoint": "library/tasks/T373/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T374",
+      "endpoint": "library/tasks/T374/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T375",
+      "endpoint": "library/tasks/T375/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T378",
+      "endpoint": "library/tasks/T378/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T38",
+      "endpoint": "library/tasks/T38/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T394",
+      "endpoint": "library/tasks/T394/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T395",
+      "endpoint": "library/tasks/T395/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T3990",
+      "endpoint": "library/tasks/T3990/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T42",
+      "endpoint": "library/tasks/T42/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T420",
+      "endpoint": "library/tasks/T420/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T421",
+      "endpoint": "library/tasks/T421/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T445",
+      "endpoint": "library/tasks/T445/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4455",
+      "endpoint": "library/tasks/T4455/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4456",
+      "endpoint": "library/tasks/T4456/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4457",
+      "endpoint": "library/tasks/T4457/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": "TA8621"
+    },
+    {
+      "cm_id": "T4458",
+      "endpoint": "library/tasks/T4458/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4459",
+      "endpoint": "library/tasks/T4459/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T446",
+      "endpoint": "library/tasks/T446/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4460",
+      "endpoint": "library/tasks/T4460/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4461",
+      "endpoint": "library/tasks/T4461/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4462",
+      "endpoint": "library/tasks/T4462/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4463",
+      "endpoint": "library/tasks/T4463/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4464",
+      "endpoint": "library/tasks/T4464/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4465",
+      "endpoint": "library/tasks/T4465/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4466",
+      "endpoint": "library/tasks/T4466/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.762005",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4467",
+      "endpoint": "library/tasks/T4467/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4468",
+      "endpoint": "library/tasks/T4468/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4469",
+      "endpoint": "library/tasks/T4469/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4470",
+      "endpoint": "library/tasks/T4470/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4471",
+      "endpoint": "library/tasks/T4471/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4472",
+      "endpoint": "library/tasks/T4472/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4473",
+      "endpoint": "library/tasks/T4473/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4474",
+      "endpoint": "library/tasks/T4474/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4475",
+      "endpoint": "library/tasks/T4475/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4476",
+      "endpoint": "library/tasks/T4476/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4477",
+      "endpoint": "library/tasks/T4477/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4478",
+      "endpoint": "library/tasks/T4478/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4479",
+      "endpoint": "library/tasks/T4479/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4480",
+      "endpoint": "library/tasks/T4480/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4481",
+      "endpoint": "library/tasks/T4481/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4482",
+      "endpoint": "library/tasks/T4482/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4483",
+      "endpoint": "library/tasks/T4483/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4484",
+      "endpoint": "library/tasks/T4484/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4485",
+      "endpoint": "library/tasks/T4485/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4486",
+      "endpoint": "library/tasks/T4486/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4487",
+      "endpoint": "library/tasks/T4487/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4488",
+      "endpoint": "library/tasks/T4488/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4489",
+      "endpoint": "library/tasks/T4489/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4490",
+      "endpoint": "library/tasks/T4490/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4491",
+      "endpoint": "library/tasks/T4491/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.783272",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4492",
+      "endpoint": "library/tasks/T4492/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4493",
+      "endpoint": "library/tasks/T4493/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4494",
+      "endpoint": "library/tasks/T4494/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4495",
+      "endpoint": "library/tasks/T4495/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T456",
+      "endpoint": "library/tasks/T456/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T457",
+      "endpoint": "library/tasks/T457/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4597",
+      "endpoint": "library/tasks/T4597/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4600",
+      "endpoint": "library/tasks/T4600/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4601",
+      "endpoint": "library/tasks/T4601/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4746",
+      "endpoint": "library/tasks/T4746/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4747",
+      "endpoint": "library/tasks/T4747/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4748",
+      "endpoint": "library/tasks/T4748/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4749",
+      "endpoint": "library/tasks/T4749/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4750",
+      "endpoint": "library/tasks/T4750/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4751",
+      "endpoint": "library/tasks/T4751/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4830",
+      "endpoint": "library/tasks/T4830/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4833",
+      "endpoint": "library/tasks/T4833/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4834",
+      "endpoint": "library/tasks/T4834/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4835",
+      "endpoint": "library/tasks/T4835/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4836",
+      "endpoint": "library/tasks/T4836/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4837",
+      "endpoint": "library/tasks/T4837/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4838",
+      "endpoint": "library/tasks/T4838/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T4839",
+      "endpoint": "library/tasks/T4839/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T49",
+      "endpoint": "library/tasks/T49/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": "TA8625"
+    },
+    {
+      "cm_id": "T50",
+      "endpoint": "library/tasks/T50/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.805211",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T517",
+      "endpoint": "library/tasks/T517/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T518",
+      "endpoint": "library/tasks/T518/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T536",
+      "endpoint": "library/tasks/T536/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T537",
+      "endpoint": "library/tasks/T537/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T54",
+      "endpoint": "library/tasks/T54/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": "TA8493"
+    },
+    {
+      "cm_id": "T553",
+      "endpoint": "library/tasks/T553/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T554",
+      "endpoint": "library/tasks/T554/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T558",
+      "endpoint": "library/tasks/T558/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T572",
+      "endpoint": "library/tasks/T572/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": "TA8484"
+    },
+    {
+      "cm_id": "T573",
+      "endpoint": "library/tasks/T573/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T576",
+      "endpoint": "library/tasks/T576/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T587",
+      "endpoint": "library/tasks/T587/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T589",
+      "endpoint": "library/tasks/T589/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T59",
+      "endpoint": "library/tasks/T59/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": "TA8547"
+    },
+    {
+      "cm_id": "T595",
+      "endpoint": "library/tasks/T595/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T60",
+      "endpoint": "library/tasks/T60/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T61",
+      "endpoint": "library/tasks/T61/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T62",
+      "endpoint": "library/tasks/T62/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T65",
+      "endpoint": "library/tasks/T65/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T66",
+      "endpoint": "library/tasks/T66/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T69",
+      "endpoint": "library/tasks/T69/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": "TA8615"
+    },
+    {
+      "cm_id": "T7",
+      "endpoint": "library/tasks/T7/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": "TA8548"
+    },
+    {
+      "cm_id": "T70",
+      "endpoint": "library/tasks/T70/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T76",
+      "endpoint": "library/tasks/T76/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": "TA8509"
+    },
+    {
+      "cm_id": "T78",
+      "endpoint": "library/tasks/T78/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.826879",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T79",
+      "endpoint": "library/tasks/T79/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T84",
+      "endpoint": "library/tasks/T84/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T85",
+      "endpoint": "library/tasks/T85/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T87",
+      "endpoint": "library/tasks/T87/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T89",
+      "endpoint": "library/tasks/T89/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T93",
+      "endpoint": "library/tasks/T93/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T94",
+      "endpoint": "library/tasks/T94/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T96",
+      "endpoint": "library/tasks/T96/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    },
+    {
+      "cm_id": "T98",
+      "endpoint": "library/tasks/T98/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-06-16T14:35:22.848682",
+      "amendment_id": null
+    }
+  ],
+  "created_at": "2026-06-16T14:48:21.585897"
+}

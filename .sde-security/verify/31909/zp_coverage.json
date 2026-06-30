@@ -1,0 +1,1482 @@
+{
+ "mappingId": "a3070513-554e-4f00-976f-93468da3b8ff",
+ "sdeProjectId": "31909",
+ "repositoryId": "236b41c7-d68e-48d4-a0ce-70748740ade8",
+ "supportedCount": 293,
+ "totalCount": 368,
+ "lastSyncAt": "2026-06-23T14:04:18.920Z",
+ "coverage": [
+  {
+   "taskId": "31909-T3990",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T94",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4495",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4490",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4457",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2613",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T544",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T545",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2619",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T743",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T38",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T20",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4465",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1167",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T370",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T364",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T122",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T241",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4469",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3924",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T744",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1364",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2110",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3931",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3919",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T105",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1155",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1237",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4486",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1181",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1215",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T257",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1365",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1166",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T169",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3932",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2666",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1158",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T87",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2141",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2618",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2331",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1235",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4462",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4749",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4482",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2477",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4601",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4600",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4833",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2257",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4597",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T756",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4836",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4494",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1191",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2348",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2662",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2128",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2478",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3901",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1207",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3900",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3914",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3918",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2282",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1172",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T553",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2274",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1542",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4481",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1392",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T36",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T214",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4492",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4458",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T79",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T558",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1159",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2665",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T184",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1176",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2284",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T420",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4834",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2258",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2281",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4837",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2611",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T49",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1540",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1189",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2623",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T219",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1161",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T17",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1187",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2596",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3905",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1188",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2616",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1186",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2142",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T50",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T59",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2663",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4835",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4455",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2357",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1150",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4467",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2599",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T576",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T42",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1924",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2256",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T300",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2614",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2601",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1200",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1196",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1177",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T113",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T85",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T226",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1208",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2167",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2115",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4485",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4479",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T26",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T374",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T14",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1236",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4747",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T742",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T395",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2612",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2269",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1156",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T589",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4472",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2608",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T32",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T572",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T179",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1541",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4476",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1211",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2610",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2109",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1202",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2283",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4484",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2602",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1148",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2349",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4839",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4491",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4830",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T373",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4480",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T446",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1205",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T15",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T554",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T37",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T129",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T186",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T318",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T573",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T536",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T305",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1199",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2598",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T178",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1160",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2356",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T321",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3908",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1180",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T175",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1157",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T227",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1233",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1234",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4468",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T96",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4748",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4475",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1175",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T259",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3933",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-CT435",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2388",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1232",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T239",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3902",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3903",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1468",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4463",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4460",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T157",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3909",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2620",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3923",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4746",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2615",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3926",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T350",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T517",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2664",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1213",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T16",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T35",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2621",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T457",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4466",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T93",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2170",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T2324",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1195",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3906",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3912",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3916",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3917",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T537",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1204",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2607",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T745",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2661",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T421",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1201",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T21",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T18",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4461",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T604",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1198",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1539",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T84",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4489",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T365",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2617",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T60",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4464",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T61",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T456",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4483",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T128",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1144",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2140",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3913",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2603",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T605",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T156",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T240",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2597",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T65",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1145",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2139",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1203",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T167",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3907",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T375",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1173",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2605",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T279",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1214",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T587",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1212",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T101",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T27",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2606",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T106",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1149",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4838",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T66",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2600",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2609",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2667",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1190",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2116",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1194",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T378",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1151",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T54",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2604",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T296",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1919",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4478",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4488",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T222",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4459",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T151",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1206",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3925",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3927",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T98",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1923",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3929",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T166",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T338",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4470",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T595",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T89",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T119",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1192",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1154",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T754",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T349",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1193",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T757",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T445",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T518",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1209",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T228",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T295",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T394",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4751",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T62",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T76",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2105",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T29",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4750",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4487",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1197",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T1362",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4456",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T177",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1174",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T78",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T323",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2393",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T4474",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2652",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T114",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4493",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3910",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T3915",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T755",
+   "coverage": "unsupported"
+  },
+  {
+   "taskId": "31909-T19",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T230",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4477",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3930",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1363",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T70",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2106",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3922",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4471",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T3920",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T220",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T4473",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1210",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T284",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T285",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T69",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T176",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T238",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T10",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T340",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1918",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2277",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T1917",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T281",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T2276",
+   "coverage": "sast"
+  },
+  {
+   "taskId": "31909-T7",
+   "coverage": "sast"
+  }
+ ]
+}

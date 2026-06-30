@@ -5,8 +5,23 @@ import string
 import html
 import os
 from dotenv import load_dotenv
-from auth import generate_token, token_required, verify_token, init_auth_routes
+from auth import (
+    generate_token,
+    token_required,
+    verify_token,
+    init_auth_routes,
+    hash_password,
+    verify_password,
+    validate_password_policy,
+    generate_secure_pin,
+    hash_token,
+    verify_hashed_token,
+    is_locked_out,
+    record_failed_auth,
+    reset_failed_auth,
+)
 import auth
+import secrets as _secrets
 from werkzeug.utils import secure_filename 
 from flask_swagger_ui import get_swaggerui_blueprint
 from flask_cors import CORS
@@ -53,7 +68,9 @@ app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 init_auth_routes(app)
 init_merchant_payment_routes(app)
 
-app.secret_key = "secret123"
+# Flask session signing key is loaded from the environment; if absent, a strong
+# ephemeral key is generated at startup instead of using a hardcoded value.
+app.secret_key = os.environ.get("FLASK_SECRET_KEY") or _secrets.token_hex(32)
 
 # Rate limiting configuration
 RATE_LIMIT_WINDOW = 3 * 60 * 60  # 3 hours in seconds
@@ -318,50 +335,45 @@ def register():
                     'tried_at': str(datetime.now())
                 }), 400
             
-            # Build dynamic query based on user input fields
+            # Enforce the shared password policy before creating the account.
+            ok, msg = validate_password_policy(user_data.get('password'))
+            if not ok:
+                return jsonify({'status': 'error', 'message': msg}), 400
+
+            # Only a fixed allowlist of columns may be set at registration. This
+            # prevents mass-assignment (e.g. self-granting is_admin or balance) and
+            # the password is stored salted+hashed, never in plaintext.
             fields = ['username', 'password', 'account_number']
-            values = [user_data.get('username'), user_data.get('password'), account_number]
-            
-            for key, value in user_data.items():
-                if key not in ['username', 'password']:
-                    fields.append(key)
-                    values.append(value)
-            
-            # Build the SQL query dynamically
-            query = f"""
-                INSERT INTO users ({', '.join(fields)})
-                VALUES ({', '.join(['%s'] * len(fields))})
+            values = [
+                user_data.get('username'),
+                hash_password(user_data.get('password')),
+                account_number,
+            ]
+
+            query = """
+                INSERT INTO users (username, password, account_number)
+                VALUES (%s, %s, %s)
                 RETURNING id, username, account_number, balance, is_admin
             """
-            
+
             result = execute_query(query, values, fetch=True)
             
             if not result or not result[0]:
                 raise Exception("Failed to create user")
                 
             user = result[0]
-            
-            sensitive_data = {
+
+            # Return only non-sensitive account details; no raw request data,
+            # credentials, admin flags, or balances are leaked back to the client.
+            return jsonify({
                 'status': 'success',
                 'message': 'Registration successful! Proceed to login',
-                'debug_data': {
+                'user': {
                     'user_id': user[0],
                     'username': user[1],
-                    'account_number': user[2],
-                    'balance': float(user[3]) if user[3] else 1000.0,
-                    'is_admin': user[4],
-                    'registration_time': str(datetime.now()),
-                    'server_info': request.headers.get('User-Agent'),
-                    'raw_data': user_data,
-                    'fields_registered': fields
+                    'account_number': user[2]
                 }
-            }
-            
-            response = jsonify(sensitive_data)
-            response.headers['X-Debug-Info'] = str(sensitive_data['debug_data'])
-            response.headers['X-User-Info'] = f"id={user[0]};admin={user[4]};balance={user[3]}"
-            
-            return response
+            })
                 
         except Exception as e:
             print(f"Registration error: {str(e)}")
@@ -381,75 +393,67 @@ def login():
             username = data.get('username')
             password = data.get('password')
             suspension_message = 'Your account has been suspended, contact support or walk in to any of our branch to resolve the issue'
-            
-            print(f"Login attempt - Username: {username}")
-            
-            query = f"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
-            print(f"Debug - Login query: {query}")
-            
-            user = execute_query(query)
-            print(f"Debug - Query result: {user}")
-            
-            if user and len(user) > 0:
-                user = user[0]  # Get first row
-                print(f"Debug - Found user: {user}")
 
-                if len(user) > 9 and user[9]:
-                    return jsonify({
-                        'status': 'error',
-                        'message': suspension_message
-                    }), 403
-                
-                # Generate JWT token instead of using session
-                token = generate_token(user[0], user[1], user[5])
-                print(f"Debug - Generated token: {token}")
-                
-                response = make_response(jsonify({
-                    'status': 'success',
-                    'message': 'Login successful',
-                    'token': token,
-                    'accountNumber': user[3],
-                    'isAdmin':       user[5],
-                    'debug_info': {
-                        'user_id': user[0],
-                        'username': user[1],
-                        'account_number': user[3],
-                        'is_admin': user[5],
-                        'login_time': str(datetime.now())
-                    }
-                }))
-                response.set_cookie('token', token, httponly=True)
-                return response
-            
+            lock_key = f"login:{username}"
+            if is_locked_out(lock_key):
+                return jsonify({
+                    'status': 'error',
+                    'message': 'Account temporarily locked due to repeated failed attempts. Try again later.'
+                }), 429
+
+            # Parameterized lookup by username, then verify against the salted PBKDF2
+            # hash. Credentials, queries, and tokens are never written to logs.
+            rows = execute_query("SELECT * FROM users WHERE username = %s", (username,))
+            user = rows[0] if rows else None
+
+            if not user or not verify_password(user[2], password):
+                record_failed_auth(lock_key)
+                return jsonify({
+                    'status': 'error',
+                    'message': 'Invalid credentials'
+                }), 401
+
+            if len(user) > 9 and user[9]:
+                return jsonify({
+                    'status': 'error',
+                    'message': suspension_message
+                }), 403
+
+            reset_failed_auth(lock_key)
+            token = generate_token(user[0], user[1], user[5])
+
+            response = make_response(jsonify({
+                'status': 'success',
+                'message': 'Login successful',
+                'token': token,
+                'accountNumber': user[3],
+                'isAdmin':       user[5]
+            }))
+            response.set_cookie('token', token, httponly=True, secure=request.is_secure, samesite='Lax')
+            return response
+
+        except Exception:
+            print("Login error")
             return jsonify({
                 'status': 'error',
-                'message': 'Invalid credentials',
-                'debug_info': {
-                    'attempted_username': username,
-                    'time': str(datetime.now())
-                }
-            }), 401
-            
-        except Exception as e:
-            print(f"Login error: {str(e)}")
-            return jsonify({
-                'status': 'error',
-                'message': 'Login failed',
-                'error': str(e)
+                'message': 'Login failed'
             }), 500
         
     return render_template('login.html')
 
 @app.route('/debug/users')
-def debug_users():
-    users = execute_query("SELECT id, username, password, account_number, is_admin FROM users")
+@token_required
+def debug_users(current_user):
+    # Requires authentication AND admin authorization; password hashes are never exposed.
+    if not current_user.get('is_admin'):
+        return jsonify({'error': 'Access Denied'}), 403
+    users = execute_query("SELECT id, username, account_number, is_admin FROM users")
     return jsonify({'users': [
         {
             'id': u[0],
             'username': u[1],
-            'password': u[2],
-            'account_number': u[3],
-            'is_admin': u[4]
+            'account_number': u[2],
+            'is_admin': u[3]
         } for u in users
     ]})
 
@@ -745,19 +749,18 @@ def internal_secret():
     if not _is_loopback_request():
         return jsonify({'error': 'Internal resource. Loopback only.'}), 403
 
-    demo_env = {k: os.getenv(k) for k in [
-        'DB_NAME','DB_USER','DB_PASSWORD','DB_HOST','DB_PORT','DEEPSEEK_API_KEY'
-    ]}
-    if demo_env.get('DEEPSEEK_API_KEY'):
-        demo_env['DEEPSEEK_API_KEY'] = demo_env['DEEPSEEK_API_KEY'][:8] + '...'
+    # Never expose secret material (signing keys, DB passwords, API keys). Report
+    # only whether each secret is configured, not its value.
+    secret_presence = {
+        'app_secret_key_configured': bool(app.secret_key),
+        'jwt_secret_configured': bool(getattr(auth, 'JWT_SECRET', None)),
+        'db_password_configured': bool(os.getenv('DB_PASSWORD')),
+        'deepseek_api_key_configured': bool(os.getenv('DEEPSEEK_API_KEY')),
+    }
 
     return jsonify({
         'status': 'internal',
-        'secrets': {
-            'app_secret_key': app.secret_key,
-            'jwt_secret': getattr(auth, 'JWT_SECRET', None),
-            'env_preview': demo_env
-        },
+        'secrets': secret_presence,
         'system': {
             'platform': platform.platform(),
             'python_version': platform.python_version()
@@ -1088,9 +1091,16 @@ def create_admin(current_user):
         username = data.get('username')
         password = data.get('password')
         account_number = generate_account_number()
-        
+
+        # Enforce the shared strong password policy for privileged accounts.
+        ok, msg = validate_password_policy(password)
+        if not ok:
+            return jsonify({'status': 'error', 'message': msg}), 400
+
+        # Parameterized query (no SQL injection); password stored salted+hashed.
         execute_query(
-            f"INSERT INTO users (username, password, account_number, is_admin) VALUES ('{username}', '{password}', '{account_number}', true)",
+            "INSERT INTO users (username, password, account_number, is_admin) VALUES (%s, %s, %s, true)",
+            (username, hash_password(password), account_number),
             fetch=False
         )
         
@@ -1107,51 +1117,90 @@ def create_admin(current_user):
         }), 500
 
 
+# ---- Hardened password-reset helpers (shared by web + API endpoints) ----
+RESET_PIN_TTL_MINUTES = 15
+GENERIC_RESET_MESSAGE = 'If an account exists for that username, a reset PIN has been sent.'
+
+
+def _issue_reset_pin(username):
+    """Generate a CSPRNG reset PIN, store ONLY its hash plus a short expiry, and
+    return nothing about account existence (anti-enumeration). The PIN is delivered
+    out-of-band (email/SMS) in production and is never returned in the HTTP response."""
+    rows = execute_query("SELECT id FROM users WHERE username = %s", (username,))
+    if rows:
+        pin = generate_secure_pin(6)
+        expiry = datetime.now() + timedelta(minutes=RESET_PIN_TTL_MINUTES)
+        execute_query(
+            "UPDATE users SET reset_pin = %s, reset_pin_expiry = %s WHERE username = %s",
+            (hash_token(pin), expiry, username),
+            fetch=False
+        )
+        # Out-of-band delivery point: send `pin` to the user's verified email/phone.
+
+
+def _consume_reset_pin(username, reset_pin, new_password):
+    """Validate a reset PIN (hashed compare + expiry + one-time use) under lockout,
+    enforce the password policy, and set a new salted/hashed password.
+    Returns (ok, message) with generic messaging to avoid enumeration."""
+    lock_key = f"reset:{username}"
+    if is_locked_out(lock_key):
+        return False, 'Too many invalid attempts. Try again later.'
+
+    ok, msg = validate_password_policy(new_password)
+    if not ok:
+        return False, msg
+
+    rows = execute_query(
+        "SELECT reset_pin, reset_pin_expiry FROM users WHERE username = %s",
+        (username,)
+    )
+    if not rows:
+        record_failed_auth(lock_key)
+        return False, 'Invalid or expired reset PIN'
+
+    stored_hash, expiry = rows[0][0], rows[0][1]
+    if (not stored_hash
+            or not verify_hashed_token(stored_hash, str(reset_pin))
+            or (expiry is not None and datetime.now() > expiry)):
+        record_failed_auth(lock_key)
+        return False, 'Invalid or expired reset PIN'
+
+    reset_failed_auth(lock_key)
+    execute_query(
+        "UPDATE users SET password = %s, reset_pin = NULL, reset_pin_expiry = NULL WHERE username = %s",
+        (hash_password(new_password), username),
+        fetch=False
+    )
+    return True, 'Password has been reset successfully'
+
+
+def _reset_flow_rate_limited():
+    """Anti-automation throttle for password-reset endpoints (per client IP)."""
+    allowed, _, _ = check_rate_limit(f"pwreset:{get_client_ip()}", 10)
+    return not allowed
+
+
 # Forgot password endpoint
 @app.route('/forgot-password', methods=['GET', 'POST'])
 def forgot_password():
     if request.method == 'POST':
         try:
-            data = request.get_json()  # Changed to get_json()
+            if _reset_flow_rate_limited():
+                return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+
+            data = request.get_json() or {}
             username = data.get('username')
-            
-            user = execute_query(
-                f"SELECT id FROM users WHERE username='{username}'"
-            )
-            
-            if user:
-                # Using only 3 digits makes it easily guessable
-                reset_pin = str(random.randint(100, 999))
-                
-                execute_query(
-                    "UPDATE users SET reset_pin = %s WHERE username = %s",
-                    (reset_pin, username),
-                    fetch=False
-                )
-                
-                return jsonify({
-                    'status': 'success',
-                    'message': 'Reset PIN has been sent to your email.',
-                    'debug_info': {
-                        'timestamp': str(datetime.now()),
-                        'username': username,
-                        'pin_length': len(reset_pin),
-                        'pin': reset_pin
-                    }
-                })
-            else:
-                return jsonify({
-                    'status': 'error',
-                    'message': 'User not found'
-                }), 404
-                
-        except Exception as e:
-            print(f"Forgot password error: {str(e)}")
-            return jsonify({
-                'status': 'error',
-                'message': str(e)
-            }), 500
-            
+
+            # Issue the PIN out-of-band and ALWAYS return a generic response so the
+            # endpoint cannot be used to enumerate valid usernames. The PIN is never
+            # echoed back in the response.
+            _issue_reset_pin(username)
+            return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
+
+        except Exception:
+            print("Forgot password error")
+            return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
+
     return render_template('forgot_password.html')
 
 # Reset password endpoint
@@ -1159,165 +1208,98 @@ def forgot_password():
 def reset_password():
     if request.method == 'POST':
         try:
-            data = request.get_json()
+            if _reset_flow_rate_limited():
+                return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+
+            data = request.get_json() or {}
             username = data.get('username')
             reset_pin = data.get('reset_pin')
             new_password = data.get('new_password')
-            
-            user = execute_query(
-                "SELECT id FROM users WHERE username = %s AND reset_pin = %s",
-                (username, reset_pin)
-            )
-            
-            if user:
-                execute_query(
-                    "UPDATE users SET password = %s, reset_pin = NULL WHERE username = %s",
-                    (new_password, username),
-                    fetch=False
-                )
-                
-                return jsonify({
-                    'status': 'success',
-                    'message': 'Password has been reset successfully'
-                })
-            else:
-                return jsonify({
-                    'status': 'error',
-                    'message': 'Invalid reset PIN'
-                }), 400
-                
-        except Exception as e:
-            print(f"Reset password error: {str(e)}")
+
+            ok, message = _consume_reset_pin(username, reset_pin, new_password)
+            if ok:
+                return jsonify({'status': 'success', 'message': message})
+            return jsonify({'status': 'error', 'message': message}), 400
+
+        except Exception:
+            print("Reset password error")
             return jsonify({
                 'status': 'error',
-                'message': 'Password reset failed',
-                'error': str(e)
+                'message': 'Password reset failed'
             }), 500
-            
+
     return render_template('reset_password.html')
+
+# Authenticated password change. Unlike the forgotten-password flow, this REQUIRES
+# the user's current password to prove identity before setting a new one (T3/T79).
+@app.route('/change-password', methods=['POST'])
+@token_required
+def change_password(current_user):
+    try:
+        data = request.get_json() or {}
+        old_password = data.get('old_password')
+        new_password = data.get('new_password')
+
+        if not old_password or not new_password:
+            return jsonify({'status': 'error', 'message': 'Both old_password and new_password are required'}), 400
+
+        rows = execute_query(
+            "SELECT password FROM users WHERE id = %s",
+            (current_user['user_id'],)
+        )
+        if not rows or not verify_password(rows[0][0], old_password):
+            return jsonify({'status': 'error', 'message': 'Current password is incorrect'}), 403
+
+        ok, msg = validate_password_policy(new_password)
+        if not ok:
+            return jsonify({'status': 'error', 'message': msg}), 400
+
+        execute_query(
+            "UPDATE users SET password = %s WHERE id = %s",
+            (hash_password(new_password), current_user['user_id']),
+            fetch=False
+        )
+        return jsonify({'status': 'success', 'message': 'Password changed successfully'})
+
+    except Exception:
+        print("Change password error")
+        return jsonify({'status': 'error', 'message': 'Password change failed'}), 500
 
 @app.route('/api/v1/forgot-password', methods=['POST'])
 def api_v1_forgot_password():
     try:
-        data = request.get_json()
-        username = data.get('username')
-        
-        user = execute_query(
-            f"SELECT id FROM users WHERE username='{username}'"
-        )
-        
-        if user:
-            # Using only 3 digits makes it easily guessable
-            reset_pin = str(random.randint(100, 999))
-            
-            execute_query(
-                "UPDATE users SET reset_pin = %s WHERE username = %s",
-                (reset_pin, username),
-                fetch=False
-            )
-            
-            return jsonify({
-                'status': 'success',
-                'message': 'Reset PIN has been sent to your email.',
-                'debug_info': {
-                    'timestamp': str(datetime.now()),
-                    'username': username,
-                    'pin_length': len(reset_pin),
-                    'pin': reset_pin
-                }
-            })
-        else:
-            return jsonify({
-                'status': 'error',
-                'message': 'User not found'
-            }), 404
-                
-    except Exception as e:
-        print(f"Forgot password error: {str(e)}")
-        return jsonify({
-            'status': 'error',
-            'message': str(e)
-        }), 500
+        if _reset_flow_rate_limited():
+            return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+        data = request.get_json() or {}
+        _issue_reset_pin(data.get('username'))
+        return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
+    except Exception:
+        print("Forgot password error")
+        return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
 
 @app.route('/api/v2/forgot-password', methods=['POST'])
 def api_v2_forgot_password():
     try:
-        data = request.get_json()
-        username = data.get('username')
-        
-        user = execute_query(
-            f"SELECT id FROM users WHERE username='{username}'"
-        )
-        
-        if user:
-            reset_pin = str(random.randint(100, 999))
-            
-            execute_query(
-                "UPDATE users SET reset_pin = %s WHERE username = %s",
-                (reset_pin, username),
-                fetch=False
-            )
-            
-            return jsonify({
-                'status': 'success',
-                'message': 'Reset PIN has been sent to your email.',
-                'debug_info': {
-                    'timestamp': str(datetime.now()),
-                    'username': username
-                }
-            })
-        else:
-            return jsonify({
-                'status': 'error',
-                'message': 'User not found'
-            }), 404
-                
-    except Exception as e:
-        print(f"Forgot password error: {str(e)}")
-        return jsonify({
-            'status': 'error',
-            'message': str(e)
-        }), 500
+        if _reset_flow_rate_limited():
+            return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+        data = request.get_json() or {}
+        _issue_reset_pin(data.get('username'))
+        return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
+    except Exception:
+        print("Forgot password error")
+        return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
 
 @app.route('/api/v3/forgot-password', methods=['POST'])
 def api_v3_forgot_password():
     try:
-        data = request.get_json()
-        username = data.get('username')
-        
-        user = execute_query(
-            f"SELECT id FROM users WHERE username='{username}'"
-        )
-        
-        if user:
-            reset_pin = str(random.randint(1000, 9999))
-            
-            execute_query(
-                "UPDATE users SET reset_pin = %s WHERE username = %s",
-                (reset_pin, username),
-                fetch=False
-            )
-            
-            return jsonify({
-                'status': 'success',
-                'message': 'Reset PIN has been sent to your email.',
-                'debug_info': {
-                    'timestamp': str(datetime.now()),
-                    'username': username
-                }
-            })
-        else:
-            return jsonify({
-                'status': 'error',
-                'message': 'User not found'
-            }), 404
-                
-    except Exception as e:
-        print(f"Forgot password error: {str(e)}")
-        return jsonify({
-            'status': 'error',
-            'message': str(e)
-        }), 500
+        if _reset_flow_rate_limited():
+            return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+        data = request.get_json() or {}
+        _issue_reset_pin(data.get('username'))
+        return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
+    except Exception:
+        print("Forgot password error")
+        return jsonify({'status': 'success', 'message': GENERIC_RESET_MESSAGE})
 
 # API endpoint to get user details (for admin modal)
 @app.route('/api/v3/user/<int:user_id>', methods=['GET'])
@@ -1358,86 +1340,37 @@ def api_v3_get_user(current_user, user_id):
 @app.route('/api/v1/reset-password', methods=['POST'])
 def api_v1_reset_password():
     try:
-        data = request.get_json()
-        username = data.get('username')
-        reset_pin = data.get('reset_pin')
-        new_password = data.get('new_password')
-        
-        user = execute_query(
-            "SELECT id FROM users WHERE username = %s AND reset_pin = %s",
-            (username, reset_pin)
+        if _reset_flow_rate_limited():
+            return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+        data = request.get_json() or {}
+        ok, message = _consume_reset_pin(
+            data.get('username'), data.get('reset_pin'), data.get('new_password')
         )
-        
-        if user:
-            execute_query(
-                "UPDATE users SET password = %s, reset_pin = NULL WHERE username = %s",
-                (new_password, username),
-                fetch=False
-            )
-            
-            return jsonify({
-                'status': 'success',
-                'message': 'Password has been reset successfully',
-                'debug_info': {
-                    'timestamp': str(datetime.now()),
-                    'username': username,
-                    'reset_success': True,
-                    'reset_pin_used': reset_pin
-                }
-            })
-        else:
-            return jsonify({
-                'status': 'error',
-                'message': 'Invalid reset PIN',
-                'debug_info': {
-                    'timestamp': str(datetime.now()),
-                    'username': username,
-                    'reset_success': False,
-                    'attempted_pin': reset_pin
-                }
-            }), 400
-                
-    except Exception as e:
-        print(f"Reset password error: {str(e)}")
+        if ok:
+            return jsonify({'status': 'success', 'message': message})
+        return jsonify({'status': 'error', 'message': message}), 400
+    except Exception:
+        print("Reset password error")
         return jsonify({
             'status': 'error',
-            'message': 'Password reset failed',
-            'error': str(e)
+            'message': 'Password reset failed'
         }), 500
 
 # V2 API for reset password
 @app.route('/api/v2/reset-password', methods=['POST'])
 def api_v2_reset_password():
     try:
-        data = request.get_json()
-        username = data.get('username')
-        reset_pin = data.get('reset_pin')
-        new_password = data.get('new_password')
-        
-        user = execute_query(
-            "SELECT id FROM users WHERE username = %s AND reset_pin = %s",
-            (username, reset_pin)
+        if _reset_flow_rate_limited():
+            return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+        data = request.get_json() or {}
+        ok, message = _consume_reset_pin(
+            data.get('username'), data.get('reset_pin'), data.get('new_password')
         )
-        
-        if user:
-            execute_query(
-                "UPDATE users SET password = %s, reset_pin = NULL WHERE username = %s",
-                (new_password, username),
-                fetch=False
-            )
-            
-            return jsonify({
-                'status': 'success',
-                'message': 'Password has been reset successfully'
-            })
-        else:
-            return jsonify({
-                'status': 'error',
-                'message': 'Invalid reset PIN'
-            }), 400
-                
-    except Exception as e:
-        print(f"Reset password error: {str(e)}")
+        if ok:
+            return jsonify({'status': 'success', 'message': message})
+        return jsonify({'status': 'error', 'message': message}), 400
+    except Exception:
+        print("Reset password error")
         return jsonify({
             'status': 'error',
             'message': 'Password reset failed'
@@ -1446,35 +1379,17 @@ def api_v2_reset_password():
 @app.route('/api/v3/reset-password', methods=['POST'])
 def api_v3_reset_password():
     try:
-        data = request.get_json()
-        username = data.get('username')
-        reset_pin = data.get('reset_pin')
-        new_password = data.get('new_password')
-        
-        user = execute_query(
-            "SELECT id FROM users WHERE username = %s AND reset_pin = %s",
-            (username, reset_pin)
+        if _reset_flow_rate_limited():
+            return jsonify({'status': 'error', 'message': 'Too many requests. Try again later.'}), 429
+        data = request.get_json() or {}
+        ok, message = _consume_reset_pin(
+            data.get('username'), data.get('reset_pin'), data.get('new_password')
         )
-        
-        if user:
-            execute_query(
-                "UPDATE users SET password = %s, reset_pin = NULL WHERE username = %s",
-                (new_password, username),
-                fetch=False
-            )
-            
-            return jsonify({
-                'status': 'success',
-                'message': 'Password has been reset successfully'
-            })
-        else:
-            return jsonify({
-                'status': 'error',
-                'message': 'Invalid reset PIN'
-            }), 400
-                
-    except Exception as e:
-        print(f"Reset password error: {str(e)}")
+        if ok:
+            return jsonify({'status': 'success', 'message': message})
+        return jsonify({'status': 'error', 'message': message}), 400
+    except Exception:
+        print("Reset password error")
         return jsonify({
             'status': 'error',
             'message': 'Password reset failed'

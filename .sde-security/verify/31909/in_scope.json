@@ -1,0 +1,3689 @@
+{
+ "project_id": "31909",
+ "project_name": "vuln-bank-for-testing-github-20260616-1404",
+ "task_status_filter": "all_statuses",
+ "verification_status_filter": "no_filter",
+ "count": 368,
+ "cms": [
+  {
+   "full_id": "31909-T3990",
+   "task_id": "T3990",
+   "title": "Schedule regular backups",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T94",
+   "task_id": "T94",
+   "title": "Test that session IDs are not leaked through URLs",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4495",
+   "task_id": "T4495",
+   "title": "Prevent model theft in Large Language Models (QA Analyst)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4490",
+   "task_id": "T4490",
+   "title": "Mitigate overreliance in Large Language Models (QA Analyst)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4457",
+   "task_id": "T4457",
+   "title": "Prevent prompt injection in Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2613",
+   "task_id": "T2613",
+   "title": "Verify best practices for data-restoring operations are followed",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T544",
+   "task_id": "T544",
+   "title": "Anonymize (de-identify) identifying information before using it for a secondary purpose",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T545",
+   "task_id": "T545",
+   "title": "Verify that personal information is anonymized before being reused for secondary purposes",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2619",
+   "task_id": "T2619",
+   "title": "Ensure that row-level security is correctly configured (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T743",
+   "task_id": "T743",
+   "title": "Verify accuracy of personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T38",
+   "task_id": "T38",
+   "title": "Bind variables in SQL statements",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T20",
+   "task_id": "T20",
+   "title": "Generate unique session IDs and reset old IDs after authentication",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4465",
+   "task_id": "T4465",
+   "title": "Prevent training data poisoning in Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1167",
+   "task_id": "T1167",
+   "title": "Verify that data exchanged between containers on different nodes on the overlay network is encrypted (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T370",
+   "task_id": "T370",
+   "title": "Follow best practices for using third-party software libraries/modules and open source/COTS components",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T364",
+   "task_id": "T364",
+   "title": "Enable secure backup and restore capabilities",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T122",
+   "task_id": "T122",
+   "title": "Test for remote file include",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T241",
+   "task_id": "T241",
+   "title": "Verify that third party libraries use secure settings and the latest patches",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4469",
+   "task_id": "T4469",
+   "title": "Prevent Large Language Model denial of service (QA Analyst)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3",
+   "task_id": "T3",
+   "title": "Require old passwords when users change passwords",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3924",
+   "task_id": "T3924",
+   "title": "Test pipeline definition and security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T744",
+   "task_id": "T744",
+   "title": "Protect pseudonymized personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1364",
+   "task_id": "T1364",
+   "title": "Verify that third party software libraries/modules and open source/COTS components are used securely",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2110",
+   "task_id": "T2110",
+   "title": "Verify that signed image enforcement is enabled (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3931",
+   "task_id": "T3931",
+   "title": "Test artifact origin information policy (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3919",
+   "task_id": "T3919",
+   "title": "Test regular review and inactive users removal (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T105",
+   "task_id": "T105",
+   "title": "Verify that your application does not have unnecessary debug capability or leftover test/debug code",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1155",
+   "task_id": "T1155",
+   "title": "Verify that Docker registries are secure (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1237",
+   "task_id": "T1237",
+   "title": "Test that the Docker daemon and its files are audited (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4486",
+   "task_id": "T4486",
+   "title": "Mitigate overreliance in Large Language Models (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1181",
+   "task_id": "T1181",
+   "title": "Verify that container health is checked (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1215",
+   "task_id": "T1215",
+   "title": "Verify that containers are restricted from acquiring additional privileges (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T257",
+   "task_id": "T257",
+   "title": "Secure cross origin resource sharing (CORS)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1365",
+   "task_id": "T1365",
+   "title": "Mitigate Server Side Request Forgery",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1166",
+   "task_id": "T1166",
+   "title": "Encrypt data exchanged between containers on different nodes on the overlay network (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T169",
+   "task_id": "T169",
+   "title": "Test that the site is not vulnerable to DOM-based XSS",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3932",
+   "task_id": "T3932",
+   "title": "Test separation of deployment configuration files (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2666",
+   "task_id": "T2666",
+   "title": "Protect data in transit with TLS (Database Server)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1158",
+   "task_id": "T1158",
+   "title": "Configure TLS authentication for the Docker daemon (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T87",
+   "task_id": "T87",
+   "title": "Verify that all data in transit is encrypted using a secure TLS channel",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2141",
+   "task_id": "T2141",
+   "title": "Perform function level authorization in API",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2618",
+   "task_id": "T2618",
+   "title": "Remove unnecessary superuser accounts (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2331",
+   "task_id": "T2331",
+   "title": "Verify whether any plan exists for data privacy incident response",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1235",
+   "task_id": "T1235",
+   "title": "Test that only trusted users can control the Docker daemon (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4462",
+   "task_id": "T4462",
+   "title": "Prevent training data poisoning in Large Language Models (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4749",
+   "task_id": "T4749",
+   "title": "Monitor containers in real-time",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4482",
+   "task_id": "T4482",
+   "title": "Mitigate excessive agency in Large Language Models (Project Manager)",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2477",
+   "task_id": "T2477",
+   "title": "Test the re-deployment routines",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4601",
+   "task_id": "T4601",
+   "title": "Prioritize static network configuration",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4600",
+   "task_id": "T4600",
+   "title": "Establish Out-of-Band Communications Channel",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4833",
+   "task_id": "T4833",
+   "title": "Test fine-tuning alignement of generative AI models",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2257",
+   "task_id": "T2257",
+   "title": "Regularly update and patch containerization systems",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4597",
+   "task_id": "T4597",
+   "title": "Break and inspect SSL/TLS sessions",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T756",
+   "task_id": "T756",
+   "title": "Verify if personal data processing activities are recorded and maintained",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4836",
+   "task_id": "T4836",
+   "title": "Implement verification and fact-checking to mitigate misinformation",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4494",
+   "task_id": "T4494",
+   "title": "Prevent model theft in Large Language Models (Data Scientist)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1191",
+   "task_id": "T1191",
+   "title": "Test if Linux Kernel Capabilities are restricted within containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2348",
+   "task_id": "T2348",
+   "title": "Perform code reviews",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2662",
+   "task_id": "T2662",
+   "title": "Restrict network access to the database server",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2128",
+   "task_id": "T2128",
+   "title": "Notify users and regulators of breaches of personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2478",
+   "task_id": "T2478",
+   "title": "Manage re-deployment routines",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3901",
+   "task_id": "T3901",
+   "title": "Enforce repository management and security strategies (GitHub)",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "none",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1207",
+   "task_id": "T1207",
+   "title": "Test that the 'on-failure' container restart policy is set to 5 (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3900",
+   "task_id": "T3900",
+   "title": "Implement and use code change management strategy (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3914",
+   "task_id": "T3914",
+   "title": "Implement artifact origin information policy (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3918",
+   "task_id": "T3918",
+   "title": "Test repository management and security strategies (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2282",
+   "task_id": "T2282",
+   "title": "Test to confirm that unauthenticated parts of the application are accessible",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1172",
+   "task_id": "T1172",
+   "title": "Secure daemon configuration files (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T553",
+   "task_id": "T553",
+   "title": "Design secure RESTful web services",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2274",
+   "task_id": "T2274",
+   "title": "Test to confirm that the principle of least privilege is strongly implemented",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1542",
+   "task_id": "T1542",
+   "title": "Use the correct HTTP methods for making state-changing operations",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4481",
+   "task_id": "T4481",
+   "title": "Design secure plugins for Large Language Models (QA Analyst)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1392",
+   "task_id": "T1392",
+   "title": "Test for Server Side Request Forgery",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T36",
+   "task_id": "T36",
+   "title": "Escape untrusted data in HTML, HTML attributes, CSS, and JavaScript",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T214",
+   "task_id": "T214",
+   "title": "Protect confidential files on operating system or server",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4492",
+   "task_id": "T4492",
+   "title": "Prevent model theft in Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4458",
+   "task_id": "T4458",
+   "title": "Prevent prompt injection in Large Language Models (Data Scientist)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T79",
+   "task_id": "T79",
+   "title": "Test password change functions",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T558",
+   "task_id": "T558",
+   "title": "Authenticate all other components before any network communication with them",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1159",
+   "task_id": "T1159",
+   "title": "Verify that TLS authentication is configured for the Docker daemon (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2665",
+   "task_id": "T2665",
+   "title": "Protect sensitive data at rest with encryption",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T184",
+   "task_id": "T184",
+   "title": "Perform authorization checks on RESTful web services",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1176",
+   "task_id": "T1176",
+   "title": "Use trusted base images and include the latest security patches (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2284",
+   "task_id": "T2284",
+   "title": "Prevent DoS attacks (GraphQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T420",
+   "task_id": "T420",
+   "title": "Prevent Client-Side Template Injection (CSTI)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4834",
+   "task_id": "T4834",
+   "title": "Implement protection against system prompt leakage",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2258",
+   "task_id": "T2258",
+   "title": "Minimize host OS attack surface",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2281",
+   "task_id": "T2281",
+   "title": "Secure access control (GraphQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4837",
+   "task_id": "T4837",
+   "title": "Test effectiveness of protections against system prompt leakage",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2611",
+   "task_id": "T2611",
+   "title": "Verify that typical database and server activities, along with related metadata, are logged",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T49",
+   "task_id": "T49",
+   "title": "Disable and remove debug capabilities and code/data, and prepare application for release",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1540",
+   "task_id": "T1540",
+   "title": "Verify that browser data is cleared upon user logout",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1189",
+   "task_id": "T1189",
+   "title": "Test if Linux Security Modules are securely configured (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2623",
+   "task_id": "T2623",
+   "title": "Schedule regular database backups to protect availability (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T219",
+   "task_id": "T219",
+   "title": "Avoid transmitting confidential data through URL parameters",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1161",
+   "task_id": "T1161",
+   "title": "Verify that ulimit is set appropriately (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T17",
+   "task_id": "T17",
+   "title": "Do not only rely on client-side authorization",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1187",
+   "task_id": "T1187",
+   "title": "Test if secrets are stored in Dockerfiles (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2596",
+   "task_id": "T2596",
+   "title": "Prevent HTTP Request Smuggling",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3905",
+   "task_id": "T3905",
+   "title": "Ensure pipeline efficiency and security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1188",
+   "task_id": "T1188",
+   "title": "Configure Linux Security Modules (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2616",
+   "task_id": "T2616",
+   "title": "Use a secure authentication mechanism for database connections (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1186",
+   "task_id": "T1186",
+   "title": "Do not store secrets in Dockerfiles (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2142",
+   "task_id": "T2142",
+   "title": "Verify that function level authorization is implemented in API",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T50",
+   "task_id": "T50",
+   "title": "Use indirect object reference maps if accessing files",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T59",
+   "task_id": "T59",
+   "title": "Use standard libraries for cryptography",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2663",
+   "task_id": "T2663",
+   "title": "Use a secure authentication mechanism for database connections",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4835",
+   "task_id": "T4835",
+   "title": "Implement defenses against vector and embedding weaknesses",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4455",
+   "task_id": "T4455",
+   "title": "Prevent prompt injection in Large Language Models (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2357",
+   "task_id": "T2357",
+   "title": "Verify that software is configured to have secure settings by default",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1150",
+   "task_id": "T1150",
+   "title": "Configure container networks properly (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4467",
+   "task_id": "T4467",
+   "title": "Prevent Large Language Model denial of service (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2599",
+   "task_id": "T2599",
+   "title": "Protect against connection string parameter pollution",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T576",
+   "task_id": "T576",
+   "title": "Verify that UDDI/ebXML spoofing is prevented",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T42",
+   "task_id": "T42",
+   "title": "Avoid relying on untrusted data for server-side selection",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1924",
+   "task_id": "T1924",
+   "title": "Verify that swarm mode is disabled",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2256",
+   "task_id": "T2256",
+   "title": "Authenticate and log all access to registries containing sensitive or proprietary images",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T300",
+   "task_id": "T300",
+   "title": "Test that temporary files are cleaned up after the resource is used",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2614",
+   "task_id": "T2614",
+   "title": "Verify database traffic is validated",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2601",
+   "task_id": "T2601",
+   "title": "Use Transparent Data Encryption with Enterprise Databases",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1200",
+   "task_id": "T1200",
+   "title": "Limit resources used by containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1196",
+   "task_id": "T1196",
+   "title": "Open only needed ports on the containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1177",
+   "task_id": "T1177",
+   "title": "Verify that secure and updated images are used (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T113",
+   "task_id": "T113",
+   "title": "Test that site is not vulnerable to HTTP verb tampering",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T85",
+   "task_id": "T85",
+   "title": "Test server-side enforcement of authorization",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T226",
+   "task_id": "T226",
+   "title": "Verify that authorization is centralized",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1208",
+   "task_id": "T1208",
+   "title": "Do not set mount propagation mode to 'shared' (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2167",
+   "task_id": "T2167",
+   "title": "Secure file storage",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2115",
+   "task_id": "T2115",
+   "title": "Enable image vulnerability scanning (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4485",
+   "task_id": "T4485",
+   "title": "Mitigate excessive agency in Large Language Models (QA Analyst)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4479",
+   "task_id": "T4479",
+   "title": "Design secure plugins for Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T26",
+   "task_id": "T26",
+   "title": "Expire sessions on logout",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T374",
+   "task_id": "T374",
+   "title": "Offload HTTP request handling to dedicated modules",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T14",
+   "task_id": "T14",
+   "title": "Enforce the principle of least privilege",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1236",
+   "task_id": "T1236",
+   "title": "Audit the Docker daemon and its files (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4747",
+   "task_id": "T4747",
+   "title": "Limit container privileges",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T742",
+   "task_id": "T742",
+   "title": "Implement technical measures to ensure the accuracy of personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T395",
+   "task_id": "T395",
+   "title": "Verify that one-time passwords (OTP) are securely used",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2612",
+   "task_id": "T2612",
+   "title": "Verify backup archive bits are protected",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2269",
+   "task_id": "T2269",
+   "title": "Prevent batching attacks (GraphQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1156",
+   "task_id": "T1156",
+   "title": "Do not use the aufs storage driver (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T589",
+   "task_id": "T589",
+   "title": "Verify that all the components are authenticated explicitly",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4472",
+   "task_id": "T4472",
+   "title": "Protect Large Language Models against supply chain vulnerabilities (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2608",
+   "task_id": "T2608",
+   "title": "Verify that the connection string is protected against connection string parameter pollution",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T32",
+   "task_id": "T32",
+   "title": "Always perform input validation on a server",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T572",
+   "task_id": "T572",
+   "title": "Check for symlinks before opening files",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T179",
+   "task_id": "T179",
+   "title": "Allow access for users to remove their personal information from the system",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1541",
+   "task_id": "T1541",
+   "title": "Decide on the best CSRF defense for your application",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4476",
+   "task_id": "T4476",
+   "title": "Prevent sensitive information disclosure in Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1211",
+   "task_id": "T1211",
+   "title": "Verify that seccomp profile is enabled (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2610",
+   "task_id": "T2610",
+   "title": "Verify that Transparent Data Encryption is utilized with Enterprise Databases",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2109",
+   "task_id": "T2109",
+   "title": "Enable signed image enforcement (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1202",
+   "task_id": "T1202",
+   "title": "Set container CPU priority appropriately (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2283",
+   "task_id": "T2283",
+   "title": "Configure GraphQL correctly",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4484",
+   "task_id": "T4484",
+   "title": "Mitigate excessive agency in Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2602",
+   "task_id": "T2602",
+   "title": "Log typical database and server activities and related metadata",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1148",
+   "task_id": "T1148",
+   "title": "Validate JSON files",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2349",
+   "task_id": "T2349",
+   "title": "Configure software to have secure settings by default",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4839",
+   "task_id": "T4839",
+   "title": "Test effectiveness of misinformation mitigatation",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4491",
+   "task_id": "T4491",
+   "title": "Prevent model theft in Large Language Models (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4830",
+   "task_id": "T4830",
+   "title": "Ensure aligned training of generative AI models",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T373",
+   "task_id": "T373",
+   "title": "Design and regulate access to unauthenticated parts of the application",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4480",
+   "task_id": "T4480",
+   "title": "Design secure plugins for Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T446",
+   "task_id": "T446",
+   "title": "Verify that only standard libraries are used for cryptography",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1205",
+   "task_id": "T1205",
+   "title": "Test if the container's root file system is mounted as read-only (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T15",
+   "task_id": "T15",
+   "title": "Centralize authorization",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T554",
+   "task_id": "T554",
+   "title": "Verify that REST web services are securely designed",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T37",
+   "task_id": "T37",
+   "title": "Avoid DOM-based Cross-Site Scripting (XSS)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T129",
+   "task_id": "T129",
+   "title": "Test for reliance on file name or extension of externally-supplied file",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T186",
+   "task_id": "T186",
+   "title": "Use recommended settings and the latest patches for third party libraries and software",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T318",
+   "task_id": "T318",
+   "title": "Verify security of cross origin resource sharing (CORS)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T573",
+   "task_id": "T573",
+   "title": "Prevent UDDI/ebXML spoofing",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T536",
+   "task_id": "T536",
+   "title": "Restrict the size of incoming messages in services",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T305",
+   "task_id": "T305",
+   "title": "Verify that your application dynamically loads code only from secure locations",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1199",
+   "task_id": "T1199",
+   "title": "Test that the host's network namespace is not shared (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2598",
+   "task_id": "T2598",
+   "title": "Implement query-level access control",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T178",
+   "task_id": "T178",
+   "title": "Obtain consent from users prior to collecting personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1160",
+   "task_id": "T1160",
+   "title": "Set ulimit appropriately (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2356",
+   "task_id": "T2356",
+   "title": "Verify that code reviews are performed properly",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T321",
+   "task_id": "T321",
+   "title": "Verify that Local and Session Storage are securely used",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3908",
+   "task_id": "T3908",
+   "title": "Enforce artifact signing (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1180",
+   "task_id": "T1180",
+   "title": "Check container health (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T175",
+   "task_id": "T175",
+   "title": "Test that the client validates digital certificates",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1157",
+   "task_id": "T1157",
+   "title": "Verify that the aufs storage driver is not used (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T227",
+   "task_id": "T227",
+   "title": "Verify that application's access to database is restricted",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1233",
+   "task_id": "T1233",
+   "title": "Test that containers are on a separate partition (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1234",
+   "task_id": "T1234",
+   "title": "Only allow trusted users to control the Docker daemon (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4468",
+   "task_id": "T4468",
+   "title": "Prevent Large Language Models denial of service (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T96",
+   "task_id": "T96",
+   "title": "Test if your site is vulnerable to CSRF",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4748",
+   "task_id": "T4748",
+   "title": "Implement Role-Based Access Control (RBAC) for container orchestration",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4475",
+   "task_id": "T4475",
+   "title": "Prevent sensitive information disclosure in Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1175",
+   "task_id": "T1175",
+   "title": "Verify that containers are not run as root (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T259",
+   "task_id": "T259",
+   "title": "Follow best practices when storing data in Local or Session Storage",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3933",
+   "task_id": "T3933",
+   "title": "Test automated and secure deployment (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-CT435",
+   "task_id": "CT435",
+   "title": "Bind variables in SQL statements - Oleg Test",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2388",
+   "task_id": "T2388",
+   "title": "Enforce the principle of separation of duties",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1232",
+   "task_id": "T1232",
+   "title": "Create a separate partition for containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T239",
+   "task_id": "T239",
+   "title": "Test that users provide consent prior to the collection of personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3902",
+   "task_id": "T3902",
+   "title": "Ensure regular review and inactive users removal (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3903",
+   "task_id": "T3903",
+   "title": "Implement application and webhook security strategies (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1468",
+   "task_id": "T1468",
+   "title": "Encrypt sensitive data at rest in the browser",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4463",
+   "task_id": "T4463",
+   "title": "Prevent training data poisoning in Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4460",
+   "task_id": "T4460",
+   "title": "Handle insecure output in Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T157",
+   "task_id": "T157",
+   "title": "Temporary files must be cleaned up after the resource is used",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3909",
+   "task_id": "T3909",
+   "title": "Ensure third-party artifact security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2620",
+   "task_id": "T2620",
+   "title": "Protect data in transit with TLS (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3923",
+   "task_id": "T3923",
+   "title": "Test secure build worker management (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4746",
+   "task_id": "T4746",
+   "title": "Ensure container images are secure",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2615",
+   "task_id": "T2615",
+   "title": "Limit network access by blocking connections from unknown IP addresses (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3926",
+   "task_id": "T3926",
+   "title": "Test third-party artifact security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T350",
+   "task_id": "T350",
+   "title": "Verify that audit information is sufficiently protected",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T517",
+   "task_id": "T517",
+   "title": "Protect user registration and account modification pages against user enumeration",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2664",
+   "task_id": "T2664",
+   "title": "Create dedicated database user accounts with minimum privileges (Database Server)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1213",
+   "task_id": "T1213",
+   "title": "Verify that cgroup usage is confirmed (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T16",
+   "task_id": "T16",
+   "title": "Authorize every non-public page",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T35",
+   "task_id": "T35",
+   "title": "Fine-tune HTTP server settings",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2621",
+   "task_id": "T2621",
+   "title": "Use file volume encryption and consider in-database encryption with pgcrypto (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T457",
+   "task_id": "T457",
+   "title": "Verify that unnecessary services and capabilities are disabled",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4466",
+   "task_id": "T4466",
+   "title": "Prevent Large Language Model denial of service (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T93",
+   "task_id": "T93",
+   "title": "Test that sessions expire upon logout",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2170",
+   "task_id": "T2170",
+   "title": "Ensure that personal information processed by the application meets data localization requirements",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2324",
+   "task_id": "T2324",
+   "title": "Verify whether privacy principles are applied for handling personal data",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1195",
+   "task_id": "T1195",
+   "title": "Test if SSH is running within containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3906",
+   "task_id": "T3906",
+   "title": "Implement secure build worker management (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3912",
+   "task_id": "T3912",
+   "title": "Enforce artifact certification and uploading rules (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3916",
+   "task_id": "T3916",
+   "title": "Ensure automated and secure deployment (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3917",
+   "task_id": "T3917",
+   "title": "Test code change management strategies (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T537",
+   "task_id": "T537",
+   "title": "Test that the size of incoming messages in services is restricted",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1204",
+   "task_id": "T1204",
+   "title": "Mount container's root file system as read-only (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2607",
+   "task_id": "T2607",
+   "title": "Verify query-level access control is implemented",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T745",
+   "task_id": "T745",
+   "title": "Verify if pseudonymized personal information is protected",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2661",
+   "task_id": "T2661",
+   "title": "Change insecure configuration defaults and remove unnecessary features",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T421",
+   "task_id": "T421",
+   "title": "Verify if web page template is vulnerable to client side template injection (CSTI)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1201",
+   "task_id": "T1201",
+   "title": "Test that resources used by containers are limited (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T21",
+   "task_id": "T21",
+   "title": "Ensure all data in transit is encrypted using a secure TLS channel",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T18",
+   "task_id": "T18",
+   "title": "Make authorization decisions using full context",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4461",
+   "task_id": "T4461",
+   "title": "Handle insecure output in Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T604",
+   "task_id": "T604",
+   "title": "Implement a consent withdrawal mechanism",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1198",
+   "task_id": "T1198",
+   "title": "Do not share the host's network namespace (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1539",
+   "task_id": "T1539",
+   "title": "Clear browser data on user logout",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T84",
+   "task_id": "T84",
+   "title": "Test page-level authorization",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4489",
+   "task_id": "T4489",
+   "title": "Mitigate overreliance in Large Language Models (Data Scientist)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T365",
+   "task_id": "T365",
+   "title": "Verify the security of backing up and restoring procedures",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2617",
+   "task_id": "T2617",
+   "title": "Create dedicated database user accounts with minimum privileges (PostgreSQL)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T60",
+   "task_id": "T60",
+   "title": "Use correct and approved cryptographic algorithms, parameters, and key lengths",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4464",
+   "task_id": "T4464",
+   "title": "Prevent training data poisoning in Large Language Models (Data Scientist)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T61",
+   "task_id": "T61",
+   "title": "Disable default accounts or change all default passwords",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T456",
+   "task_id": "T456",
+   "title": "Change default security settings to the most stringent ones and disable unnecessary services and modules",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4483",
+   "task_id": "T4483",
+   "title": "Mitigate excessive agency in Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T128",
+   "task_id": "T128",
+   "title": "Test for access control bypass through user-controlled keys",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1144",
+   "task_id": "T1144",
+   "title": "Prevent Server-Side Template Injection (SSTI)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2140",
+   "task_id": "T2140",
+   "title": "Test that APIs do not expose sensitive information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3913",
+   "task_id": "T3913",
+   "title": "Implement package registry security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2603",
+   "task_id": "T2603",
+   "title": "Protect backup archive bits",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T605",
+   "task_id": "T605",
+   "title": "Verify if consent is obtained prior to personal information collection (where applicable)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T156",
+   "task_id": "T156",
+   "title": "Validate certificate and its chain of trust properly",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T240",
+   "task_id": "T240",
+   "title": "Test whether users can remove their data from the system",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2597",
+   "task_id": "T2597",
+   "title": "Implement RBAC instead of individual accounts",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T65",
+   "task_id": "T65",
+   "title": "Restrict accepted HTTP verbs",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1145",
+   "task_id": "T1145",
+   "title": "Verify if web page template is vulnerable to SSTI",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2139",
+   "task_id": "T2139",
+   "title": "Prevent information exposure through APIs",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1203",
+   "task_id": "T1203",
+   "title": "Test if container CPU priority is appropriately set (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T167",
+   "task_id": "T167",
+   "title": "Test that the application is not vulnerable to JSON Hijacking",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3907",
+   "task_id": "T3907",
+   "title": "Ensure pipeline definition and security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T375",
+   "task_id": "T375",
+   "title": "Release resources when no longer needed",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1173",
+   "task_id": "T1173",
+   "title": "Verify that daemon configuration files are secured (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2605",
+   "task_id": "T2605",
+   "title": "Validate database traffic",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T279",
+   "task_id": "T279",
+   "title": "Avoid dynamically loading any code without proper security considerations",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1214",
+   "task_id": "T1214",
+   "title": "Restrict containers from acquiring additional privileges (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T587",
+   "task_id": "T587",
+   "title": "Verify that cryptographically secure algorithms are used for random number generation",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1212",
+   "task_id": "T1212",
+   "title": "Confirm cgroup usage (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T101",
+   "task_id": "T101",
+   "title": "Test that application is not vulnerable to SQL injection",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T27",
+   "task_id": "T27",
+   "title": "Turn off session rewriting",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2606",
+   "task_id": "T2606",
+   "title": "Verify RBAC implemented instead of individual accounts",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T106",
+   "task_id": "T106",
+   "title": "Test that site is not vulnerable to direct object access attacks",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1149",
+   "task_id": "T1149",
+   "title": "Test if JSON files are validated against malicious inputs",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4838",
+   "task_id": "T4838",
+   "title": "Test effectiveness of defenses against vector and embedding weaknesses",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T66",
+   "task_id": "T66",
+   "title": "Prevent web pages from being loaded inside iFrame",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2600",
+   "task_id": "T2600",
+   "title": "Control the result set size returned by a query",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2609",
+   "task_id": "T2609",
+   "title": "Verify that the result set size returned by queries are controlled",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2667",
+   "task_id": "T2667",
+   "title": "Schedule regular database backups to protect availability (Database Server)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1190",
+   "task_id": "T1190",
+   "title": "Restrict Linux Kernel Capabilities within containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2116",
+   "task_id": "T2116",
+   "title": "Verify that image vulnerability scanning is enabled (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1194",
+   "task_id": "T1194",
+   "title": "Do not run SSH within containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T378",
+   "task_id": "T378",
+   "title": "Authorize every request for data objects",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1151",
+   "task_id": "T1151",
+   "title": "Verify that container networks are configured properly (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T54",
+   "task_id": "T54",
+   "title": "Validate file contents",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2604",
+   "task_id": "T2604",
+   "title": "Follow best practices for data restoring operations",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T296",
+   "task_id": "T296",
+   "title": "Test that unencrypted confidential data is not stored without access control mechanisms",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1919",
+   "task_id": "T1919",
+   "title": "Use JSON Web Token (JWT) securely",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4478",
+   "task_id": "T4478",
+   "title": "Design secure plugins for Large Language Models (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4488",
+   "task_id": "T4488",
+   "title": "Mitigate overreliance in Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T222",
+   "task_id": "T222",
+   "title": "Verify server-to-server authentication",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4459",
+   "task_id": "T4459",
+   "title": "Prevent prompt injection in Large Language Models (QA Analyst)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T151",
+   "task_id": "T151",
+   "title": "Use cryptographically secure random numbers",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1206",
+   "task_id": "T1206",
+   "title": "Set the 'on-failure' container restart policy to 5 (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3925",
+   "task_id": "T3925",
+   "title": "Test artifact signing (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3927",
+   "task_id": "T3927",
+   "title": "Test dependency management strategy (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T98",
+   "task_id": "T98",
+   "title": "Test for input validation on a server",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1923",
+   "task_id": "T1923",
+   "title": "Disable swarm mode if not needed",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3929",
+   "task_id": "T3929",
+   "title": "Test artifact certification and uploading rules (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T166",
+   "task_id": "T166",
+   "title": "Protect against JSON hijacking",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T338",
+   "task_id": "T338",
+   "title": "Control access to resources through user authentication and authorization",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4470",
+   "task_id": "T4470",
+   "title": "Protect Large Language Models against supply chain vulnerabilities (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T595",
+   "task_id": "T595",
+   "title": "Test that your application checks for symlinks before opening files",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T89",
+   "task_id": "T89",
+   "title": "Test that site is not vulnerable to XSS",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T119",
+   "task_id": "T119",
+   "title": "Test for clickjacking",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1192",
+   "task_id": "T1192",
+   "title": "Do not expose unnecessary host resources (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1154",
+   "task_id": "T1154",
+   "title": "Secure Docker registries (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T754",
+   "task_id": "T754",
+   "title": "Enable the restriction of processing personal information of an individual for a specific purpose",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T349",
+   "task_id": "T349",
+   "title": "Protect audit information and logs against unauthorized access",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1193",
+   "task_id": "T1193",
+   "title": "Test if unnecessary host resources are exposed (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T757",
+   "task_id": "T757",
+   "title": "Verify if personal information processing stops when user objects to it",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T445",
+   "task_id": "T445",
+   "title": "Verify that only approved cryptographic algorithms and key lengths are used",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T518",
+   "task_id": "T518",
+   "title": "Test that registration and account modification pages are protected against user enumeration",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1209",
+   "task_id": "T1209",
+   "title": "Verify that mount propagation mode is not set to 'shared' (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T228",
+   "task_id": "T228",
+   "title": "Test that application restricts HTTP message size",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T295",
+   "task_id": "T295",
+   "title": "Avoid storing unencrypted confidential data without access control mechanisms",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T394",
+   "task_id": "T394",
+   "title": "Secure one-time passwords (OTP)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4751",
+   "task_id": "T4751",
+   "title": "Reduce the attack surface of container images",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T62",
+   "task_id": "T62",
+   "title": "Protect passwords in property and configuration files",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T76",
+   "task_id": "T76",
+   "title": "Do not hardcode passwords",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2105",
+   "task_id": "T2105",
+   "title": "Enforce the use of client certificate bundles for unprivileged users to access UCP (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T29",
+   "task_id": "T29",
+   "title": "Use anti-Cross-Site Request Forgery (CSRF) tokens",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4750",
+   "task_id": "T4750",
+   "title": "Isolate container networks",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4487",
+   "task_id": "T4487",
+   "title": "Mitigate overreliance in Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1197",
+   "task_id": "T1197",
+   "title": "Test if only needed ports are open on the containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1362",
+   "task_id": "T1362",
+   "title": "Perform message throttling in Web APIs",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4456",
+   "task_id": "T4456",
+   "title": "Prevent prompt injection in Large Language Models (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T177",
+   "task_id": "T177",
+   "title": "Allow users to review and update their personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1174",
+   "task_id": "T1174",
+   "title": "Create non-root users for containers (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T78",
+   "task_id": "T78",
+   "title": "Test strength of password reset mechanism",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T323",
+   "task_id": "T323",
+   "title": "Test that default accounts are disabled or default passwords are changed",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2393",
+   "task_id": "T2393",
+   "title": "Verify the principle of Separation of Duties is strongly implemented",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4474",
+   "task_id": "T4474",
+   "title": "Prevent sensitive information disclosure in Large Language Models (Project Manager)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2652",
+   "task_id": "T2652",
+   "title": "Consider adding plugins for stronger authentication protocols and stricter password complexity rules (MariaDB)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T114",
+   "task_id": "T114",
+   "title": "Test system-to-system authentication lockout or throttling",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4493",
+   "task_id": "T4493",
+   "title": "Prevent model theft in Large Language Models (AI/ML Developer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3910",
+   "task_id": "T3910",
+   "title": "Implement dependency management strategy (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3915",
+   "task_id": "T3915",
+   "title": "Enforce separation of deployment configuration files (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T755",
+   "task_id": "T755",
+   "title": "Maintain a Data Processing Register or Record of Business Processing Activities",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T19",
+   "task_id": "T19",
+   "title": "Restrict Application's Access to Database",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T230",
+   "task_id": "T230",
+   "title": "Test that server-to-server system accounts meet minimum password requirements",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4477",
+   "task_id": "T4477",
+   "title": "Prevent sensitive information disclosure in Large Language Models (Data Scientist)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3930",
+   "task_id": "T3930",
+   "title": "Test package registry security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1363",
+   "task_id": "T1363",
+   "title": "Verify if message throttling is properly performed in Web APIs",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T70",
+   "task_id": "T70",
+   "title": "Implement account lockout or authentication throttling for system accounts",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2106",
+   "task_id": "T2106",
+   "title": "Verify that the use of client certificate bundles for unprivileged users is enforced (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3922",
+   "task_id": "T3922",
+   "title": "Test pipeline efficiency and security (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4471",
+   "task_id": "T4471",
+   "title": "Protect Large Language Models against supply chain vulnerabilities (MLOps Engineer)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T3920",
+   "task_id": "T3920",
+   "title": "Test application and webhook security strategies (GitHub)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T220",
+   "task_id": "T220",
+   "title": "Verify that user password is salted and hashed",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T4473",
+   "task_id": "T4473",
+   "title": "Protect Large Language Models against supply chain vulnerabilities (Data Scientist)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1210",
+   "task_id": "T1210",
+   "title": "Configure seccomp profile (Docker)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "deployment",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T284",
+   "task_id": "T284",
+   "title": "Generate secure access tokens (API tokens)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T285",
+   "task_id": "T285",
+   "title": "Restrict use of access tokens (API tokens)",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T69",
+   "task_id": "T69",
+   "title": "Strong password requirements for server-to-server system accounts",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T176",
+   "task_id": "T176",
+   "title": "Apply principles of privacy when handling personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T238",
+   "task_id": "T238",
+   "title": "Test that users can review and update their personal information",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T10",
+   "task_id": "T10",
+   "title": "Use server-to-server authentication",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2",
+   "task_id": "T2",
+   "title": "Secure the password reset mechanism",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T340",
+   "task_id": "T340",
+   "title": "Use an account and identity management system",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "architecture-design",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1918",
+   "task_id": "T1918",
+   "title": "Integrate with SSO",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2277",
+   "task_id": "T2277",
+   "title": "Test to confirm the use of an account and identity management system",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T1917",
+   "task_id": "T1917",
+   "title": "Perform container security assessment",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T281",
+   "task_id": "T281",
+   "title": "Follow best practices when handling access tokens (API tokens)",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "fail",
+   "phase": "development",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T2276",
+   "task_id": "T2276",
+   "title": "Test to confirm that authorization and authentication controls are in place for access to resources",
+   "sde_task_status": "TODO",
+   "sde_task_status_slug": "TODO",
+   "verification_status": "fail",
+   "phase": "testing",
+   "files_modified": []
+  },
+  {
+   "full_id": "31909-T7",
+   "task_id": "T7",
+   "title": "Salt and hash stored passwords",
+   "sde_task_status": "DONE",
+   "sde_task_status_slug": "DONE",
+   "verification_status": "pass",
+   "phase": "requirements",
+   "files_modified": []
+  }
+ ]
+}
