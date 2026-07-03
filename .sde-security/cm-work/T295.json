@@ -1,0 +1,1 @@
+{"cm_id": "T295", "category": "CODE_FIX", "library_sourced": false, "content_fields": {"name": "t295-avoid-storing-unencrypted-confidential-data-without-access", "desc": "Avoid storing unencrypted confidential data without access control mechanisms"}}

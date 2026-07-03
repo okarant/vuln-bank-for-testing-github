@@ -1,3 +1,4 @@
+import os
 from flask import jsonify, request
 import jwt
 import datetime
@@ -5,9 +6,11 @@ import sqlite3
 from functools import wraps
 
 
-JWT_SECRET = "secret123"
+JWT_SECRET = os.environ.get("JWT_SECRET")
+if not JWT_SECRET:
+    raise RuntimeError("JWT_SECRET must be provided via environment; refusing to start with a hardcoded secret")
 
-ALGORITHMS = ['HS256', 'none']
+ALGORITHMS = ['HS256']
 
 def generate_token(user_id, username, is_admin=False):
     """Generate a JWT token."""
@@ -94,8 +97,8 @@ def init_auth_routes(app):
             
         conn = sqlite3.connect('bank.db')
         c = conn.cursor()
-        query = f"SELECT * FROM users WHERE username='{auth.get('username')}' AND password='{auth.get('password')}'"
-        c.execute(query)
+        query = "SELECT * FROM users WHERE username=? AND password=?"
+        c.execute(query, (auth.get('username'), auth.get('password')))
         user = c.fetchone()
         conn.close()
         
@@ -129,7 +132,7 @@ def init_auth_routes(app):
         
         conn = sqlite3.connect('bank.db')
         c = conn.cursor()
-        c.execute(f"SELECT username, balance FROM users WHERE account_number='{account_number}'")
+        c.execute("SELECT username, balance FROM users WHERE account_number=?", (account_number,))
         user = c.fetchone()
         conn.close()
         
@@ -155,15 +158,15 @@ def init_auth_routes(app):
         conn = sqlite3.connect('bank.db')
         c = conn.cursor()
         
-        c.execute(f"SELECT balance FROM users WHERE id={current_user['user_id']}")
+        c.execute("SELECT balance FROM users WHERE id=?", (current_user['user_id'],))
         balance = c.fetchone()[0]
         
         if balance >= amount:
-            c.execute(f"UPDATE users SET balance = balance - {amount} WHERE id={current_user['user_id']}")
-            c.execute(f"UPDATE users SET balance = balance + {amount} WHERE account_number='{to_account}'")
+            c.execute("UPDATE users SET balance = balance - ? WHERE id=?", (amount, current_user['user_id']))
+            c.execute("UPDATE users SET balance = balance + ? WHERE account_number=?", (amount, to_account))
             conn.commit()
             
-            c.execute(f"SELECT username, balance FROM users WHERE account_number='{to_account}'")
+            c.execute("SELECT username, balance FROM users WHERE account_number=?", (to_account,))
             recipient = c.fetchone()
             
             conn.close()

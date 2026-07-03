@@ -25,6 +25,8 @@ from functools import wraps
 from collections import defaultdict
 import requests
 from urllib.parse import urlparse
+import socket
+import ipaddress
 import platform
 
 # Load environment variables
@@ -382,13 +384,8 @@ def login():
             password = data.get('password')
             suspension_message = 'Your account has been suspended, contact support or walk in to any of our branch to resolve the issue'
             
-            print(f"Login attempt - Username: {username}")
-            
-            query = f"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
-            print(f"Debug - Login query: {query}")
-            
-            user = execute_query(query)
-            print(f"Debug - Query result: {user}")
+            query = "SELECT * FROM users WHERE username=%s AND password=%s"
+            user = execute_query(query, (username, password))
             
             if user and len(user) > 0:
                 user = user[0]  # Get first row
@@ -669,7 +666,21 @@ def upload_profile_picture_url(current_user):
         if not image_url:
             return jsonify({'status': 'error', 'message': 'image_url is required'}), 400
 
-        resp = requests.get(image_url, timeout=10, allow_redirects=True, verify=False)
+        # SSRF mitigation (T1365): only allow http/https to public hosts; block
+        # private/loopback/link-local/metadata ranges, disable redirects, verify TLS.
+        parsed_url = urlparse(image_url)
+        if parsed_url.scheme not in ('http', 'https') or not parsed_url.hostname:
+            return jsonify({'status': 'error', 'message': 'Only http(s) URLs are allowed'}), 400
+        try:
+            resolved = socket.getaddrinfo(parsed_url.hostname, None)
+        except socket.gaierror:
+            return jsonify({'status': 'error', 'message': 'Unable to resolve host'}), 400
+        for family, _, _, _, sockaddr in resolved:
+            ip_obj = ipaddress.ip_address(sockaddr[0])
+            if ip_obj.is_private or ip_obj.is_loopback or ip_obj.is_link_local or ip_obj.is_reserved or ip_obj.is_multicast:
+                return jsonify({'status': 'error', 'message': 'URL resolves to a disallowed address'}), 400
+
+        resp = requests.get(image_url, timeout=10, allow_redirects=False, verify=True)
         if resp.status_code >= 400:
             return jsonify({'status': 'error', 'message': f'Failed to fetch URL: HTTP {resp.status_code}'}), 400
 

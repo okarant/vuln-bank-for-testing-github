@@ -1,0 +1,1 @@
+{"cm_id": "T2269", "category": "CODE_FIX", "library_sourced": false, "content_fields": {"name": "t2269-prevent-batching-attacks-graphql", "desc": "Prevent batching attacks (GraphQL)"}}

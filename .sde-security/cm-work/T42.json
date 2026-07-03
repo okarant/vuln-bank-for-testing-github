@@ -1,0 +1,1 @@
+{"cm_id": "T42", "category": "CODE_FIX", "library_sourced": false, "content_fields": {"name": "t42-avoid-relying-on-untrusted-data-for-server-side-selection", "desc": "Avoid relying on untrusted data for server-side selection"}}

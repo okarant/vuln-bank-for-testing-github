@@ -1,0 +1,773 @@
+[
+ {
+  "cm_id": "T17",
+  "domain": "authorization",
+  "tech_slug": null,
+  "dir": "skills/authorization/T17-do-not-only-rely-on-client-side-authorization",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "CT435",
+  "domain": "injection",
+  "tech_slug": null,
+  "dir": "skills/injection/CT435-bind-variables-in-sql-statements-oleg-test",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T20",
+  "domain": "authentication",
+  "tech_slug": null,
+  "dir": "skills/authentication/T20-generate-unique-session-ids-and-reset-old-ids-af",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2",
+  "domain": "authentication",
+  "tech_slug": "python",
+  "dir": "skills/authentication/T2-python",
+  "source": "LIBRARY:TA8478",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8478",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T49",
+  "domain": "logging-monitoring",
+  "tech_slug": "python",
+  "dir": "skills/logging-monitoring/T49-python",
+  "source": "LIBRARY:TA8625",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8625",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T29",
+  "domain": "injection",
+  "tech_slug": null,
+  "dir": "skills/injection/T29-use-anti-cross-site-request-forgery-csrf-tokens",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T38",
+  "domain": "injection",
+  "tech_slug": null,
+  "dir": "skills/injection/T38-bind-variables-in-sql-statements",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T42",
+  "domain": "injection",
+  "tech_slug": null,
+  "dir": "skills/injection/T42-avoid-relying-on-untrusted-data-for-server-side",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T36",
+  "domain": "injection",
+  "tech_slug": "javascript",
+  "dir": "skills/injection/T36-javascript",
+  "source": "LIBRARY:TA8479",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8479",
+  "technology": "JavaScript"
+ },
+ {
+  "cm_id": "T37",
+  "domain": "injection",
+  "tech_slug": "python",
+  "dir": "skills/injection/T37-python",
+  "source": "LIBRARY:TA8540",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8540",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T50",
+  "domain": "authorization",
+  "tech_slug": null,
+  "dir": "skills/authorization/T50-use-indirect-object-reference-maps-if-accessing",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T281",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T281-follow-best-practices-when-handling-access-token",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T295",
+  "domain": "crypto",
+  "tech_slug": null,
+  "dir": "skills/crypto/T295-avoid-storing-unencrypted-confidential-data-with",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T284",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T284-generate-secure-access-tokens-api-tokens",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T279",
+  "domain": "injection",
+  "tech_slug": null,
+  "dir": "skills/injection/T279-avoid-dynamically-loading-any-code-without-prope",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T257",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T257-secure-cross-origin-resource-sharing-cors",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T536",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T536-restrict-the-size-of-incoming-messages-in-servic",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T544",
+  "domain": "privacy",
+  "tech_slug": null,
+  "dir": "skills/privacy/T544-anonymize-de-identify-identifying-information-be",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T604",
+  "domain": "privacy",
+  "tech_slug": null,
+  "dir": "skills/privacy/T604-implement-a-consent-withdrawal-mechanism",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T66",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T66-prevent-web-pages-from-being-loaded-inside-ifram",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T166",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T166-protect-against-json-hijacking",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T60",
+  "domain": "crypto",
+  "tech_slug": null,
+  "dir": "skills/crypto/T60-use-correct-and-approved-cryptographic-algorithm",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T178",
+  "domain": "privacy",
+  "tech_slug": null,
+  "dir": "skills/privacy/T178-obtain-consent-from-users-prior-to-collecting-pe",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T59",
+  "domain": "crypto",
+  "tech_slug": "python",
+  "dir": "skills/crypto/T59-python",
+  "source": "LIBRARY:TA8547",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8547",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T76",
+  "domain": "authentication",
+  "tech_slug": "python",
+  "dir": "skills/authentication/T76-python",
+  "source": "LIBRARY:TA8509",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8509",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T156",
+  "domain": "crypto",
+  "tech_slug": null,
+  "dir": "skills/crypto/T156-validate-certificate-and-its-chain-of-trust-prop",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T70",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T70-implement-account-lockout-or-authentication-thro",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T1365",
+  "domain": "injection",
+  "tech_slug": "python",
+  "dir": "skills/injection/T1365-python",
+  "source": "LIBRARY:TA8521",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8521",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T2602",
+  "domain": "logging-monitoring",
+  "tech_slug": null,
+  "dir": "skills/logging-monitoring/T2602-log-typical-database-and-server-activities-and-r",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2269",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T2269-prevent-batching-attacks-graphql",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T754",
+  "domain": "privacy",
+  "tech_slug": null,
+  "dir": "skills/privacy/T754-enable-the-restriction-of-processing-personal-in",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T69",
+  "domain": "authentication",
+  "tech_slug": "python",
+  "dir": "skills/authentication/T69-python",
+  "source": "LIBRARY:TA8615",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8615",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T151",
+  "domain": "crypto",
+  "tech_slug": null,
+  "dir": "skills/crypto/T151-use-cryptographically-secure-random-numbers",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T1918",
+  "domain": "authentication",
+  "tech_slug": null,
+  "dir": "skills/authentication/T1918-integrate-with-sso",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2283",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T2283-configure-graphql-correctly",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T1919",
+  "domain": "authentication",
+  "tech_slug": null,
+  "dir": "skills/authentication/T1919-use-json-web-token-jwt-securely",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2599",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T2599-protect-against-connection-string-parameter-poll",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2281",
+  "domain": "api-security",
+  "tech_slug": "python",
+  "dir": "skills/api-security/T2281-python",
+  "source": "LIBRARY:TA8570",
+  "category": "CODE_FIX",
+  "library": true,
+  "amendment_id": "TA8570",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T1362",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T1362-perform-message-throttling-in-web-apis",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T744",
+  "domain": "privacy",
+  "tech_slug": null,
+  "dir": "skills/privacy/T744-protect-pseudonymized-personal-information",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2139",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T2139-prevent-information-exposure-through-apis",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T378",
+  "domain": "authorization",
+  "tech_slug": null,
+  "dir": "skills/authorization/T378-authorize-every-request-for-data-objects",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2598",
+  "domain": "authorization",
+  "tech_slug": null,
+  "dir": "skills/authorization/T2598-implement-query-level-access-control",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T1468",
+  "domain": "crypto",
+  "tech_slug": null,
+  "dir": "skills/crypto/T1468-encrypt-sensitive-data-at-rest-in-the-browser",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T1144",
+  "domain": "injection",
+  "tech_slug": null,
+  "dir": "skills/injection/T1144-prevent-server-side-template-injection-ssti",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T338",
+  "domain": "authentication",
+  "tech_slug": null,
+  "dir": "skills/authentication/T338-control-access-to-resources-through-user-authent",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T2600",
+  "domain": "api-security",
+  "tech_slug": null,
+  "dir": "skills/api-security/T2600-control-the-result-set-size-returned-by-a-query",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T186",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T186-use-recommended-settings-and-the-latest-patches",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T394",
+  "domain": "authentication",
+  "tech_slug": null,
+  "dir": "skills/authentication/T394-secure-one-time-passwords-otp",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T184",
+  "domain": "authorization",
+  "tech_slug": null,
+  "dir": "skills/authorization/T184-perform-authorization-checks-on-restful-web-serv",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T1539",
+  "domain": "logging-monitoring",
+  "tech_slug": null,
+  "dir": "skills/logging-monitoring/T1539-clear-browser-data-on-user-logout",
+  "source": "TEMPLATE",
+  "category": "CODE_FIX",
+  "library": false
+ },
+ {
+  "cm_id": "T4457",
+  "domain": "llm-security",
+  "tech_slug": "python",
+  "dir": "skills/llm-security/T4457-python",
+  "source": "LIBRARY:TA8621",
+  "category": "ML_CODE",
+  "library": true,
+  "amendment_id": "TA8621",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T4460",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4460-handle-insecure-output-in-large-language-models",
+  "source": "TEMPLATE",
+  "category": "ML_CODE",
+  "library": false
+ },
+ {
+  "cm_id": "T4465",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4465-prevent-training-data-poisoning-in-large-languag",
+  "source": "TEMPLATE",
+  "category": "ML_CODE",
+  "library": false
+ },
+ {
+  "cm_id": "T4468",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4468-prevent-large-language-models-denial-of-service",
+  "source": "TEMPLATE",
+  "category": "ML_CODE",
+  "library": false
+ },
+ {
+  "cm_id": "T4472",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4472-protect-large-language-models-against-supply-cha",
+  "source": "TEMPLATE",
+  "category": "ML_CODE",
+  "library": false
+ },
+ {
+  "cm_id": "T4476",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4476-prevent-sensitive-information-disclosure-in-larg",
+  "source": "TEMPLATE",
+  "category": "ML_CODE",
+  "library": false
+ },
+ {
+  "cm_id": "T4484",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4484-mitigate-excessive-agency-in-large-language-mode",
+  "source": "TEMPLATE",
+  "category": "ML_CODE",
+  "library": false
+ },
+ {
+  "cm_id": "T4493",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4493-prevent-model-theft-in-large-language-models-ai",
+  "source": "TEMPLATE",
+  "category": "ML_CODE",
+  "library": false
+ },
+ {
+  "cm_id": "T4458",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4458-prevent-prompt-injection-in-large-language-model",
+  "source": "TEMPLATE",
+  "category": "ML_DOC",
+  "library": false
+ },
+ {
+  "cm_id": "T4464",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4464-prevent-training-data-poisoning-in-large-languag",
+  "source": "TEMPLATE",
+  "category": "ML_DOC",
+  "library": false
+ },
+ {
+  "cm_id": "T4473",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4473-protect-large-language-models-against-supply-cha",
+  "source": "TEMPLATE",
+  "category": "ML_DOC",
+  "library": false
+ },
+ {
+  "cm_id": "T4477",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4477-prevent-sensitive-information-disclosure-in-larg",
+  "source": "TEMPLATE",
+  "category": "ML_DOC",
+  "library": false
+ },
+ {
+  "cm_id": "T4494",
+  "domain": "llm-security",
+  "tech_slug": null,
+  "dir": "skills/llm-security/T4494-prevent-model-theft-in-large-language-models-dat",
+  "source": "TEMPLATE",
+  "category": "ML_DOC",
+  "library": false
+ },
+ {
+  "cm_id": "T21",
+  "domain": "crypto",
+  "tech_slug": "python",
+  "dir": "skills/crypto/T21-python",
+  "source": "LIBRARY:TA8620",
+  "category": "INFRA",
+  "library": true,
+  "amendment_id": "TA8620",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T35",
+  "domain": "infrastructure",
+  "tech_slug": null,
+  "dir": "skills/infrastructure/T35-fine-tune-http-server-settings",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T374",
+  "domain": "infrastructure",
+  "tech_slug": null,
+  "dir": "skills/infrastructure/T374-offload-http-request-handling-to-dedicated-modul",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T558",
+  "domain": "infrastructure",
+  "tech_slug": null,
+  "dir": "skills/infrastructure/T558-authenticate-all-other-components-before-any-net",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T214",
+  "domain": "infrastructure",
+  "tech_slug": null,
+  "dir": "skills/infrastructure/T214-protect-confidential-files-on-operating-system-o",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T349",
+  "domain": "logging-monitoring",
+  "tech_slug": null,
+  "dir": "skills/logging-monitoring/T349-protect-audit-information-and-logs-against-unaut",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T19",
+  "domain": "general-security",
+  "tech_slug": "python",
+  "dir": "skills/general-security/T19-python",
+  "source": "LIBRARY:TA8571",
+  "category": "INFRA",
+  "library": true,
+  "amendment_id": "TA8571",
+  "technology": "Python"
+ },
+ {
+  "cm_id": "T573",
+  "domain": "infrastructure",
+  "tech_slug": null,
+  "dir": "skills/infrastructure/T573-prevent-uddi-ebxml-spoofing",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T4746",
+  "domain": "infrastructure",
+  "tech_slug": null,
+  "dir": "skills/infrastructure/T4746-ensure-container-images-are-secure",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T4751",
+  "domain": "infrastructure",
+  "tech_slug": null,
+  "dir": "skills/infrastructure/T4751-reduce-the-attack-surface-of-container-images",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3903",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3903-implement-application-and-webhook-security-strat",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3905",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3905-ensure-pipeline-efficiency-and-security-github",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3906",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3906-implement-secure-build-worker-management-github",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3907",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3907-ensure-pipeline-definition-and-security-github",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3908",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3908-enforce-artifact-signing-github",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3909",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3909-ensure-third-party-artifact-security-github",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3910",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3910-implement-dependency-management-strategy-github",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3912",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3912-enforce-artifact-certification-and-uploading-rul",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ },
+ {
+  "cm_id": "T3913",
+  "domain": "supply-chain",
+  "tech_slug": null,
+  "dir": "skills/supply-chain/T3913-implement-package-registry-security-github",
+  "source": "TEMPLATE",
+  "category": "INFRA",
+  "library": false
+ }
+]

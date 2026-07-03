@@ -1,0 +1,14 @@
+{
+ "cm_id": "T69",
+ "endpoint": "library/tasks/T69/amendments/",
+ "http_status": 200,
+ "result": "LIBRARY_SOURCED",
+ "retry_count": 0,
+ "queried_at": "2026-07-03T10:18:22Z",
+ "matched_amendments": [
+  {
+   "amendment_id": "TA8615",
+   "technology": "Python"
+  }
+ ]
+}

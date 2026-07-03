@@ -1,0 +1,1 @@
+{"cm_id": "T279", "category": "CODE_FIX", "library_sourced": false, "content_fields": {"name": "t279-avoid-dynamically-loading-any-code-without-proper-security", "desc": "Avoid dynamically loading any code without proper security considerations"}}

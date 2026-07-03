@@ -1,0 +1,96 @@
+{
+  "source_skill": "apply-security-fixes",
+  "handoff_version": "2",
+  "generated_at": "2026-07-03T10:42:11.124945Z",
+  "upstream_handoff": ".sde-handoff.json",
+  "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+  "project_id": 31945,
+  "security_branch": "oleg-qa-live2-20260703",
+  "scope": "domain=injection",
+  "totals": {
+    "applied": 3,
+    "documented": 6,
+    "skipped": 0,
+    "scoped_total": 9
+  },
+  "countermeasures": [
+    {
+      "id": "CT435",
+      "full_id": "31945-CT435",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T38",
+      "full_id": "31945-T38",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T1365",
+      "full_id": "31945-T1365",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T279",
+      "full_id": "31945-T279",
+      "status": "Documented",
+      "category": "CODE_FIX",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T1144",
+      "full_id": "31945-T1144",
+      "status": "Documented",
+      "category": "CODE_FIX",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T29",
+      "full_id": "31945-T29",
+      "status": "Documented",
+      "category": "CODE_FIX",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T36",
+      "full_id": "31945-T36",
+      "status": "Documented",
+      "category": "CODE_FIX",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T37",
+      "full_id": "31945-T37",
+      "status": "Documented",
+      "category": "CODE_FIX",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T42",
+      "full_id": "31945-T42",
+      "status": "Documented",
+      "category": "CODE_FIX",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    }
+  ]
+}

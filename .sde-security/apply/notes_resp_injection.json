@@ -1,0 +1,228 @@
+{
+  "composite_response": [
+    {
+      "reference_id": "T38",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Applied] Fixed in auth.py (api_login, api_check_balance, api_transfer): replaced f-string SQL with parameterized queries using ? placeholders and bound params. Enforces T38 bind-variables across the sqlite auth surfaces. [QA batched/domain=injection]",
+        "id": 98490,
+        "created": "2026-07-03T06:39:39.739950-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:39.739950-04:00",
+        "extra": {},
+        "task": "T38"
+      }
+    },
+    {
+      "reference_id": "T1365",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Applied] Fixed in app.py (/upload_profile_picture_url): added SSRF guard - scheme allowlist (http/https), DNS resolution with private/loopback/link-local/reserved/multicast rejection, allow_redirects=False, verify=True (was verify=False). Library Format B (TA8521) intent translated to Python/Flask. [QA batched/domain=injection]",
+        "id": 98491,
+        "created": "2026-07-03T06:39:40.220785-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:40.220785-04:00",
+        "extra": {},
+        "task": "T1365"
+      }
+    },
+    {
+      "reference_id": "T279",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Documented] No dynamic code-loading surface in repo: AI scan found no eval()/exec()/__import__/importlib/pickle load of untrusted input across app.py, auth.py, ai_agent_deepseek.py, transaction_graphql.py, merchant_payments.py.\n\n== Why Not Code-Fixable ==\nRepository performs no runtime code/library loading from untrusted data; there is no insecure call site to remediate.\n\n== Recommended Action ==\nIf dynamic import/plugin loading is added later, gate it behind an allowlist and integrity checks. [QA batched/domain=injection]",
+        "id": 98492,
+        "created": "2026-07-03T06:39:40.359122-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:40.359122-04:00",
+        "extra": {},
+        "task": "T279"
+      }
+    },
+    {
+      "reference_id": "T1144",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Documented] No SSTI surface: no render_template_string / jinja2.Template / string-built templates found; all rendering uses static render_template(...) files with Jinja2 autoescape.\n\n== Why Not Code-Fixable ==\nNo user-controlled template string is compiled; SSTI is not reachable.\n\n== Recommended Action ==\nNever pass user input to render_template_string; keep autoescape enabled. [QA batched/domain=injection]",
+        "id": 98493,
+        "created": "2026-07-03T06:39:40.644322-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:40.644322-04:00",
+        "extra": {},
+        "task": "T1144"
+      }
+    },
+    {
+      "reference_id": "T29",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Documented] Primary API auth is JWT bearer tokens in the Authorization header (not ambient cookies) for the /api/* endpoints, so classic form-CSRF cannot forge those calls.\n\n== Why Not Code-Fixable ==\nAdding global CSRF token middleware would break the token-in-header JSON API; the cookie 'token' fallback in token_required is the real residual risk.\n\n== Recommended Action ==\nRemove the cookie token fallback or set SameSite=Strict; add Flask-WTF CSRFProtect for the HTML form routes. [QA batched/domain=injection]",
+        "id": 98494,
+        "created": "2026-07-03T06:39:41.498095-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:41.498095-04:00",
+        "extra": {},
+        "task": "T29"
+      }
+    },
+    {
+      "reference_id": "T36",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Documented] Library recipe (Format B, TA8479) targets client-side JavaScript output escaping; server rendering uses Jinja2 autoescape. static/*.js should use safe DOM APIs.\n\n== Why Not Code-Fixable ==\nThe recipe's escaping belongs in client JS; no unsafe server-side HTML interpolation found.\n\n== Recommended Action ==\nUse textContent/DOMPurify in static/merchant.js and static/dashboard.js instead of innerHTML with untrusted data. [QA batched/domain=injection]",
+        "id": 98495,
+        "created": "2026-07-03T06:39:41.610236-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:41.610236-04:00",
+        "extra": {},
+        "task": "T36"
+      }
+    },
+    {
+      "reference_id": "T37",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Documented] DOM-based XSS is a client-side concern; server templates rely on Jinja2 autoescape and no |safe on untrusted data was found. Library Format B (TA8540).\n\n== Why Not Code-Fixable ==\nNo server-side sink renders untrusted data unescaped into the DOM.\n\n== Recommended Action ==\nSanitize any client-side DOM writes; avoid innerHTML with untrusted values. [QA batched/domain=injection]",
+        "id": 98496,
+        "created": "2026-07-03T06:39:41.987422-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:41.987422-04:00",
+        "extra": {},
+        "task": "T37"
+      }
+    },
+    {
+      "reference_id": "T42",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Documented] No untrusted-data-driven server-side selection sink found (no open redirect from request params, no user-controlled template/handler dispatch).\n\n== Why Not Code-Fixable ==\nNo dispatch/redirect target is chosen directly from untrusted input.\n\n== Recommended Action ==\nIf added, map user input through a server-side allowlist rather than using it directly. [QA batched/domain=injection]",
+        "id": 98497,
+        "created": "2026-07-03T06:39:42.091314-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-03T06:39:42.091314-04:00",
+        "extra": {},
+        "task": "T42"
+      }
+    }
+  ]
+}

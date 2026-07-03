@@ -1,0 +1,70 @@
+{
+ "all_or_none": false,
+ "strict_ref_checking": false,
+ "composite_request": [
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T38/notes/",
+   "reference_id": "T38",
+   "body": {
+    "text": "[AI-Applied] Fixed in auth.py (api_login, api_check_balance, api_transfer): replaced f-string SQL with parameterized queries using ? placeholders and bound params. Enforces T38 bind-variables across the sqlite auth surfaces. [QA batched/domain=injection]"
+   }
+  },
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T1365/notes/",
+   "reference_id": "T1365",
+   "body": {
+    "text": "[AI-Applied] Fixed in app.py (/upload_profile_picture_url): added SSRF guard - scheme allowlist (http/https), DNS resolution with private/loopback/link-local/reserved/multicast rejection, allow_redirects=False, verify=True (was verify=False). Library Format B (TA8521) intent translated to Python/Flask. [QA batched/domain=injection]"
+   }
+  },
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T279/notes/",
+   "reference_id": "T279",
+   "body": {
+    "text": "[AI-Documented] No dynamic code-loading surface in repo: AI scan found no eval()/exec()/__import__/importlib/pickle load of untrusted input across app.py, auth.py, ai_agent_deepseek.py, transaction_graphql.py, merchant_payments.py.\n\n== Why Not Code-Fixable ==\nRepository performs no runtime code/library loading from untrusted data; there is no insecure call site to remediate.\n\n== Recommended Action ==\nIf dynamic import/plugin loading is added later, gate it behind an allowlist and integrity checks. [QA batched/domain=injection]"
+   }
+  },
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T1144/notes/",
+   "reference_id": "T1144",
+   "body": {
+    "text": "[AI-Documented] No SSTI surface: no render_template_string / jinja2.Template / string-built templates found; all rendering uses static render_template(...) files with Jinja2 autoescape.\n\n== Why Not Code-Fixable ==\nNo user-controlled template string is compiled; SSTI is not reachable.\n\n== Recommended Action ==\nNever pass user input to render_template_string; keep autoescape enabled. [QA batched/domain=injection]"
+   }
+  },
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T29/notes/",
+   "reference_id": "T29",
+   "body": {
+    "text": "[AI-Documented] Primary API auth is JWT bearer tokens in the Authorization header (not ambient cookies) for the /api/* endpoints, so classic form-CSRF cannot forge those calls.\n\n== Why Not Code-Fixable ==\nAdding global CSRF token middleware would break the token-in-header JSON API; the cookie 'token' fallback in token_required is the real residual risk.\n\n== Recommended Action ==\nRemove the cookie token fallback or set SameSite=Strict; add Flask-WTF CSRFProtect for the HTML form routes. [QA batched/domain=injection]"
+   }
+  },
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T36/notes/",
+   "reference_id": "T36",
+   "body": {
+    "text": "[AI-Documented] Library recipe (Format B, TA8479) targets client-side JavaScript output escaping; server rendering uses Jinja2 autoescape. static/*.js should use safe DOM APIs.\n\n== Why Not Code-Fixable ==\nThe recipe's escaping belongs in client JS; no unsafe server-side HTML interpolation found.\n\n== Recommended Action ==\nUse textContent/DOMPurify in static/merchant.js and static/dashboard.js instead of innerHTML with untrusted data. [QA batched/domain=injection]"
+   }
+  },
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T37/notes/",
+   "reference_id": "T37",
+   "body": {
+    "text": "[AI-Documented] DOM-based XSS is a client-side concern; server templates rely on Jinja2 autoescape and no |safe on untrusted data was found. Library Format B (TA8540).\n\n== Why Not Code-Fixable ==\nNo server-side sink renders untrusted data unescaped into the DOM.\n\n== Recommended Action ==\nSanitize any client-side DOM writes; avoid innerHTML with untrusted values. [QA batched/domain=injection]"
+   }
+  },
+  {
+   "method": "POST",
+   "path": "/api/v2/projects/31945/tasks/31945-T42/notes/",
+   "reference_id": "T42",
+   "body": {
+    "text": "[AI-Documented] No untrusted-data-driven server-side selection sink found (no open redirect from request params, no user-controlled template/handler dispatch).\n\n== Why Not Code-Fixable ==\nNo dispatch/redirect target is chosen directly from untrusted input.\n\n== Recommended Action ==\nIf added, map user input through a server-side allowlist rather than using it directly. [QA batched/domain=injection]"
+   }
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"cm_id": "T2599", "category": "CODE_FIX", "library_sourced": false, "content_fields": {"name": "t2599-protect-against-connection-string-parameter-pollution", "desc": "Protect against connection string parameter pollution"}}

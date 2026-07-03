@@ -1,0 +1,1 @@
+{ "skill": "setup-security-plan-from-repo", "fetched_at": "2026-07-03T09:55:41Z", "sha256_skill": "72b48404fb972b8781cf8e6167ad459239702477c8eb962a0ea6db4c9d2e8a16", "sha256_agents": "ec7fa233de8d15c08598c53e41a4da19f31d68cbdf44e15ab6b635fdba93976a", "skill_chars": 77809, "agents_chars": 17413, "source": "on-disk sde-mcp/src (BE-THE-SERVER)" }

@@ -1,0 +1,1156 @@
+{
+ "source_skill": "generate-security-skill-files",
+ "stage": "skill-files-generated",
+ "evidence_source": "codebase",
+ "assessment_mode": "initial",
+ "version_label": null,
+ "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+ "project_id": 31945,
+ "project_name": "oleg-vbank-qa2",
+ "business_unit_id": 2469,
+ "application_id": 9229,
+ "risk_policy_id": "159",
+ "sde_host": "https://cd.sdelements.com",
+ "technology_pool": [
+  "Web application",
+  "Web service",
+  "Uses a database",
+  "Uses third-party software libraries, modules, and/or open source/COTS components",
+  "Contains components that communicate through a network",
+  "This is a financial application",
+  "Linux/Unix",
+  "JavaScript",
+  "Python",
+  "GraphQL",
+  "HTML5",
+  "CORS",
+  "Stand-alone database that supports SQL",
+  "PostgreSQL",
+  "SQLite local data storage",
+  "The application reads/writes data from/to files",
+  "JSON",
+  "Has direct or third party authentication for end users, devices or nodes",
+  "Uses passwords",
+  "Generates one-time password",
+  "Generates API tokens",
+  "Uses database authentication",
+  "Yes",
+  "Has change existing password function",
+  "Has forgot password function",
+  "Yes",
+  "Yes",
+  "Uses dynamic code/library loading",
+  "Forwards user requests to remote services",
+  "Uses Large Language Models (LLMs)",
+  "Role-based AI content",
+  "Prompt engineering",
+  "Retrieval augmented generation",
+  "Receives text input from users",
+  "Passwords stored in configuration files",
+  "Uses encryption functions (not including SSL)",
+  "Uses multi-threaded programming",
+  "Generates temporary files",
+  "Has file upload or file transfer functions",
+  "Performs diagnostic/debug logging",
+  "Generates random numbers",
+  "Uses an HTTP-based protocol",
+  "RESTful web services",
+  "In-scope for PCI-DSS 4.0",
+  "Yes",
+  "GAPP",
+  "GitHub",
+  "Yes",
+  "ESAPI",
+  "Burp Suite",
+  "Docker",
+  "Changes to hardware design",
+  "Changes to AI",
+  "Changes to servers/frameworks and/or configuration",
+  "Changes to authentication",
+  "Changes to session management",
+  "New transactions / use cases",
+  "Changes to inbound/outbound interfaces",
+  "Changes to processes/activities",
+  "Changes to user output",
+  "New/modified user input OR changes to how user input is used"
+ ],
+ "agents_md": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/AGENTS.md",
+ "skill_files": [
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T17-do-not-only-rely-on-client-side-authorization/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/CT435-bind-variables-in-sql-statements-oleg-test/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T20-generate-unique-session-ids-and-reset-old-ids-af/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T2-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/logging-monitoring/T49-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T29-use-anti-cross-site-request-forgery-csrf-tokens/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T38-bind-variables-in-sql-statements/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T42-avoid-relying-on-untrusted-data-for-server-side/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T36-javascript/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T37-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T50-use-indirect-object-reference-maps-if-accessing/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T281-follow-best-practices-when-handling-access-token/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T295-avoid-storing-unencrypted-confidential-data-with/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T284-generate-secure-access-tokens-api-tokens/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T279-avoid-dynamically-loading-any-code-without-prope/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T257-secure-cross-origin-resource-sharing-cors/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T536-restrict-the-size-of-incoming-messages-in-servic/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/privacy/T544-anonymize-de-identify-identifying-information-be/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/privacy/T604-implement-a-consent-withdrawal-mechanism/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T66-prevent-web-pages-from-being-loaded-inside-ifram/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T166-protect-against-json-hijacking/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T60-use-correct-and-approved-cryptographic-algorithm/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/privacy/T178-obtain-consent-from-users-prior-to-collecting-pe/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T59-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T76-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T156-validate-certificate-and-its-chain-of-trust-prop/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T70-implement-account-lockout-or-authentication-thro/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T1365-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/logging-monitoring/T2602-log-typical-database-and-server-activities-and-r/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2269-prevent-batching-attacks-graphql/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/privacy/T754-enable-the-restriction-of-processing-personal-in/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T69-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T151-use-cryptographically-secure-random-numbers/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T1918-integrate-with-sso/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2283-configure-graphql-correctly/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T1919-use-json-web-token-jwt-securely/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2599-protect-against-connection-string-parameter-poll/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2281-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T1362-perform-message-throttling-in-web-apis/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/privacy/T744-protect-pseudonymized-personal-information/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2139-prevent-information-exposure-through-apis/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T378-authorize-every-request-for-data-objects/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T2598-implement-query-level-access-control/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T1468-encrypt-sensitive-data-at-rest-in-the-browser/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/injection/T1144-prevent-server-side-template-injection-ssti/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T338-control-access-to-resources-through-user-authent/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/api-security/T2600-control-the-result-set-size-returned-by-a-query/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T186-use-recommended-settings-and-the-latest-patches/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authentication/T394-secure-one-time-passwords-otp/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/authorization/T184-perform-authorization-checks-on-restful-web-serv/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/logging-monitoring/T1539-clear-browser-data-on-user-logout/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4457-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4460-handle-insecure-output-in-large-language-models/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4465-prevent-training-data-poisoning-in-large-languag/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4468-prevent-large-language-models-denial-of-service/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4472-protect-large-language-models-against-supply-cha/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4476-prevent-sensitive-information-disclosure-in-larg/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4484-mitigate-excessive-agency-in-large-language-mode/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4493-prevent-model-theft-in-large-language-models-ai/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4458-prevent-prompt-injection-in-large-language-model/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4464-prevent-training-data-poisoning-in-large-languag/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4473-protect-large-language-models-against-supply-cha/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4477-prevent-sensitive-information-disclosure-in-larg/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4494-prevent-model-theft-in-large-language-models-dat/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/crypto/T21-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/infrastructure/T35-fine-tune-http-server-settings/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/infrastructure/T374-offload-http-request-handling-to-dedicated-modul/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/infrastructure/T558-authenticate-all-other-components-before-any-net/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/infrastructure/T214-protect-confidential-files-on-operating-system-o/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/logging-monitoring/T349-protect-audit-information-and-logs-against-unaut/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/general-security/T19-python/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/infrastructure/T573-prevent-uddi-ebxml-spoofing/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/infrastructure/T4746-ensure-container-images-are-secure/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/infrastructure/T4751-reduce-the-attack-surface-of-container-images/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3903-implement-application-and-webhook-security-strat/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3905-ensure-pipeline-efficiency-and-security-github/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3906-implement-secure-build-worker-management-github/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3907-ensure-pipeline-definition-and-security-github/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3908-enforce-artifact-signing-github/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3909-ensure-third-party-artifact-security-github/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3910-implement-dependency-management-strategy-github/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3912-enforce-artifact-certification-and-uploading-rul/SKILL.md",
+  "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/supply-chain/T3913-implement-package-registry-security-github/SKILL.md"
+ ],
+ "selection_mode": "all",
+ "selected_cm_ids": [
+  "T17",
+  "CT435",
+  "T20",
+  "T21",
+  "T19",
+  "T2",
+  "T35",
+  "T49",
+  "T29",
+  "T38",
+  "T42",
+  "T36",
+  "T37",
+  "T50",
+  "T281",
+  "T295",
+  "T284",
+  "T279",
+  "T257",
+  "T536",
+  "T558",
+  "T544",
+  "T742",
+  "T573",
+  "T604",
+  "T66",
+  "T166",
+  "T60",
+  "T178",
+  "T214",
+  "T59",
+  "T76",
+  "T4474",
+  "T2256",
+  "T4462",
+  "T156",
+  "T2468",
+  "T70",
+  "T4466",
+  "T1365",
+  "T2602",
+  "T2269",
+  "T754",
+  "T4482",
+  "T374",
+  "T4472",
+  "T69",
+  "T151",
+  "T4470",
+  "T3907",
+  "T3903",
+  "T2170",
+  "T1918",
+  "T4457",
+  "T4746",
+  "T4484",
+  "T3909",
+  "T4473",
+  "T2283",
+  "T2128",
+  "T4468",
+  "T3908",
+  "T4465",
+  "T1919",
+  "T2599",
+  "T2281",
+  "T755",
+  "T1362",
+  "T4458",
+  "T1917",
+  "T744",
+  "T2139",
+  "T378",
+  "T4476",
+  "T4477",
+  "T2598",
+  "T4491",
+  "T3906",
+  "T1468",
+  "T1144",
+  "T3901",
+  "T3912",
+  "T338",
+  "T349",
+  "T4493",
+  "T3913",
+  "T2348",
+  "T4751",
+  "T2600",
+  "T3902",
+  "T3905",
+  "T3900",
+  "T186",
+  "T3910",
+  "T394",
+  "T3914",
+  "T184",
+  "T4460",
+  "T1539",
+  "T4455",
+  "T4464",
+  "T4494"
+ ],
+ "total_countermeasures": 102,
+ "project_total_countermeasures": 102,
+ "expected_skill_files": 83,
+ "code_fix_count": 59,
+ "documentation_count": 24,
+ "process_count": 19,
+ "git_enabled": true,
+ "security_branch": "security-hardening/oleg-vbank-qa2-20260703",
+ "ai_backup_archive": null,
+ "scaffold": null,
+ "initial_commit": null,
+ "spec_sources": {
+  "local_files": [],
+  "confluence_pages": [],
+  "jira_issues": []
+ },
+ "library_sourced_cms": [
+  {
+   "cm_id": "T2",
+   "amendment_id": "TA8478",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T49",
+   "amendment_id": "TA8625",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T36",
+   "amendment_id": "TA8479",
+   "matched_technology": "JavaScript"
+  },
+  {
+   "cm_id": "T37",
+   "amendment_id": "TA8540",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T59",
+   "amendment_id": "TA8547",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T76",
+   "amendment_id": "TA8509",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T1365",
+   "amendment_id": "TA8521",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T69",
+   "amendment_id": "TA8615",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T2281",
+   "amendment_id": "TA8570",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T4457",
+   "amendment_id": "TA8621",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T21",
+   "amendment_id": "TA8620",
+   "matched_technology": "Python"
+  },
+  {
+   "cm_id": "T19",
+   "amendment_id": "TA8571",
+   "matched_technology": "Python"
+  }
+ ],
+ "library_lookup_audit": [
+  {
+   "cm_id": "CT435",
+   "endpoint": "library/tasks/CT435/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T1144",
+   "endpoint": "library/tasks/T1144/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T1362",
+   "endpoint": "library/tasks/T1362/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T1365",
+   "endpoint": "library/tasks/T1365/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8521",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T1468",
+   "endpoint": "library/tasks/T1468/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T151",
+   "endpoint": "library/tasks/T151/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T1539",
+   "endpoint": "library/tasks/T1539/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T156",
+   "endpoint": "library/tasks/T156/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T166",
+   "endpoint": "library/tasks/T166/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T17",
+   "endpoint": "library/tasks/T17/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T178",
+   "endpoint": "library/tasks/T178/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T184",
+   "endpoint": "library/tasks/T184/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T186",
+   "endpoint": "library/tasks/T186/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T19",
+   "endpoint": "library/tasks/T19/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8571",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T1918",
+   "endpoint": "library/tasks/T1918/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T1919",
+   "endpoint": "library/tasks/T1919/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T2",
+   "endpoint": "library/tasks/T2/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8478",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T20",
+   "endpoint": "library/tasks/T20/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T21",
+   "endpoint": "library/tasks/T21/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8620",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T2139",
+   "endpoint": "library/tasks/T2139/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T214",
+   "endpoint": "library/tasks/T214/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T2269",
+   "endpoint": "library/tasks/T2269/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T2281",
+   "endpoint": "library/tasks/T2281/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8570",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T2283",
+   "endpoint": "library/tasks/T2283/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T257",
+   "endpoint": "library/tasks/T257/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T2598",
+   "endpoint": "library/tasks/T2598/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T2599",
+   "endpoint": "library/tasks/T2599/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T2600",
+   "endpoint": "library/tasks/T2600/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T2602",
+   "endpoint": "library/tasks/T2602/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T279",
+   "endpoint": "library/tasks/T279/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T281",
+   "endpoint": "library/tasks/T281/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T284",
+   "endpoint": "library/tasks/T284/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T29",
+   "endpoint": "library/tasks/T29/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T295",
+   "endpoint": "library/tasks/T295/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T338",
+   "endpoint": "library/tasks/T338/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T349",
+   "endpoint": "library/tasks/T349/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T35",
+   "endpoint": "library/tasks/T35/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T36",
+   "endpoint": "library/tasks/T36/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8479",
+     "technology": "JavaScript"
+    }
+   ]
+  },
+  {
+   "cm_id": "T37",
+   "endpoint": "library/tasks/T37/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8540",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T374",
+   "endpoint": "library/tasks/T374/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T378",
+   "endpoint": "library/tasks/T378/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T38",
+   "endpoint": "library/tasks/T38/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3903",
+   "endpoint": "library/tasks/T3903/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3905",
+   "endpoint": "library/tasks/T3905/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3906",
+   "endpoint": "library/tasks/T3906/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3907",
+   "endpoint": "library/tasks/T3907/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3908",
+   "endpoint": "library/tasks/T3908/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3909",
+   "endpoint": "library/tasks/T3909/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3910",
+   "endpoint": "library/tasks/T3910/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3912",
+   "endpoint": "library/tasks/T3912/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T3913",
+   "endpoint": "library/tasks/T3913/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T394",
+   "endpoint": "library/tasks/T394/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T42",
+   "endpoint": "library/tasks/T42/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4457",
+   "endpoint": "library/tasks/T4457/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8621",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T4458",
+   "endpoint": "library/tasks/T4458/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4460",
+   "endpoint": "library/tasks/T4460/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4464",
+   "endpoint": "library/tasks/T4464/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4465",
+   "endpoint": "library/tasks/T4465/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4468",
+   "endpoint": "library/tasks/T4468/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4472",
+   "endpoint": "library/tasks/T4472/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4473",
+   "endpoint": "library/tasks/T4473/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4476",
+   "endpoint": "library/tasks/T4476/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4477",
+   "endpoint": "library/tasks/T4477/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4484",
+   "endpoint": "library/tasks/T4484/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4493",
+   "endpoint": "library/tasks/T4493/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4494",
+   "endpoint": "library/tasks/T4494/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4746",
+   "endpoint": "library/tasks/T4746/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T4751",
+   "endpoint": "library/tasks/T4751/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T49",
+   "endpoint": "library/tasks/T49/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8625",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T50",
+   "endpoint": "library/tasks/T50/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T536",
+   "endpoint": "library/tasks/T536/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T544",
+   "endpoint": "library/tasks/T544/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T558",
+   "endpoint": "library/tasks/T558/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T573",
+   "endpoint": "library/tasks/T573/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T59",
+   "endpoint": "library/tasks/T59/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8547",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T60",
+   "endpoint": "library/tasks/T60/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T604",
+   "endpoint": "library/tasks/T604/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T66",
+   "endpoint": "library/tasks/T66/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T69",
+   "endpoint": "library/tasks/T69/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8615",
+     "technology": "Python"
+    }
+   ]
+  },
+  {
+   "cm_id": "T70",
+   "endpoint": "library/tasks/T70/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T744",
+   "endpoint": "library/tasks/T744/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T754",
+   "endpoint": "library/tasks/T754/amendments/",
+   "http_status": 200,
+   "result": "TEMPLATE_NO_MATCH",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": []
+  },
+  {
+   "cm_id": "T76",
+   "endpoint": "library/tasks/T76/amendments/",
+   "http_status": 200,
+   "result": "LIBRARY_SOURCED",
+   "retry_count": 0,
+   "queried_at": "2026-07-03T10:18:22Z",
+   "matched_amendments": [
+    {
+     "amendment_id": "TA8509",
+     "technology": "Python"
+    }
+   ]
+  }
+ ],
+ "created_at": "2026-07-03T10:22:23Z"
+}

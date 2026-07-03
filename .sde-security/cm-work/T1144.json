@@ -1,0 +1,1 @@
+{"cm_id": "T1144", "category": "CODE_FIX", "library_sourced": false, "content_fields": {"name": "t1144-prevent-server-side-template-injection-ssti", "desc": "Prevent Server-Side Template Injection (SSTI)"}}

@@ -1,0 +1,1 @@
+{"cm_id": "T29", "category": "CODE_FIX", "library_sourced": false, "content_fields": {"name": "t29-use-anti-cross-site-request-forgery-csrf-tokens", "desc": "Use anti-Cross-Site Request Forgery (CSRF) tokens"}}
