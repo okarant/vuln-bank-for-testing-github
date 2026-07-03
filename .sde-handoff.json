@@ -1,0 +1,227 @@
+{
+  "source_skill": "generate-security-skill-files",
+  "stage": "skill-files-generated",
+  "evidence_source": "codebase",
+  "assessment_mode": "initial",
+  "version_label": null,
+  "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+  "project_id": 31942,
+  "project_name": "oleg-vuln-bank-live-20260703",
+  "business_unit_id": 2468,
+  "application_id": 9227,
+  "risk_policy_id": "159",
+  "sde_host": "https://demo.sdelements.com",
+  "technology_pool": [
+    "Bash/Shell",
+    "Burp Suite",
+    "CORS",
+    "Changes to AI",
+    "Changes to authentication",
+    "Changes to hardware design",
+    "Changes to inbound/outbound interfaces",
+    "Changes to processes/activities",
+    "Changes to servers/frameworks and/or configuration",
+    "Changes to session management",
+    "Changes to user output",
+    "Contains components that communicate through a network",
+    "Docker",
+    "ESAPI",
+    "Forwards user requests to remote services",
+    "GAPP",
+    "Generates API tokens",
+    "Generates random numbers",
+    "Generates temporary files",
+    "GraphQL",
+    "HTML5",
+    "Has change existing password function",
+    "Has direct or third party authentication for end users, devices or nodes",
+    "Has file upload or file transfer functions",
+    "Has forgot password function",
+    "In-scope for PCI-DSS 4.0",
+    "JSON",
+    "JavaScript",
+    "Linux/Unix",
+    "New transactions / use cases",
+    "New/modified user input OR changes to how user input is used",
+    "Passwords stored in configuration files",
+    "Performs diagnostic/debug logging",
+    "PostgreSQL",
+    "Prompt engineering",
+    "Python",
+    "RESTful web services",
+    "Receives text input from users",
+    "Role-based AI content",
+    "SQLite local data storage",
+    "Stand-alone database that supports SQL",
+    "The application reads/writes data from/to files",
+    "This is a financial application",
+    "Uses Large Language Models (LLMs)",
+    "Uses a database",
+    "Uses an HTTP-based protocol",
+    "Uses database authentication",
+    "Uses dynamic code/library loading",
+    "Uses multi-threaded programming",
+    "Uses passwords",
+    "Uses third-party software libraries, modules, and/or open source/COTS components",
+    "Web application",
+    "Web service",
+    "Yes"
+  ],
+  "agents_md": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/AGENTS.md",
+  "skill_files": [
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/sql-injection/T38-bind-variables-in-sql-statements/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/xss/T36-javascript/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/secrets/T76-python/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/csrf/T29-use-anti-csrf-tokens/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4457-python/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/llm-security/T4465-prevent-training-data-poisoning/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/transport-security/T21-python/SKILL.md",
+    "/root/dev-work-sde-mcp/vuln-bank-for-testing-github/skills/container-security/T4746-ensure-container-images-are-secure/SKILL.md"
+  ],
+  "selection_mode": "search",
+  "selected_cm_ids": [
+    "T38",
+    "T36",
+    "T76",
+    "T29",
+    "T4457",
+    "T4465",
+    "T4746",
+    "T21",
+    "T2348",
+    "T178"
+  ],
+  "total_countermeasures": 10,
+  "project_total_countermeasures": 99,
+  "expected_skill_files": 8,
+  "code_fix_count": 6,
+  "documentation_count": 2,
+  "process_count": 2,
+  "git_enabled": true,
+  "security_branch": "security-hardening/oleg-vuln-bank-live-20260703-20260703",
+  "ai_backup_archive": null,
+  "scaffold": null,
+  "initial_commit": null,
+  "spec_sources": {
+    "local_files": [],
+    "confluence_pages": [],
+    "jira_issues": []
+  },
+  "library_sourced_cms": [
+    {
+      "cm_id": "T21",
+      "amendment_id": "TA8620",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T36",
+      "amendment_id": "TA8479",
+      "matched_technology": "JavaScript"
+    },
+    {
+      "cm_id": "T4457",
+      "amendment_id": "TA8621",
+      "matched_technology": "Python"
+    },
+    {
+      "cm_id": "T76",
+      "amendment_id": "TA8509",
+      "matched_technology": "Python"
+    }
+  ],
+  "library_lookup_audit": [
+    {
+      "cm_id": "T21",
+      "endpoint": "library/tasks/T21/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": [
+        {
+          "amendment_id": "TA8620",
+          "technology": "Python"
+        }
+      ]
+    },
+    {
+      "cm_id": "T29",
+      "endpoint": "library/tasks/T29/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": []
+    },
+    {
+      "cm_id": "T36",
+      "endpoint": "library/tasks/T36/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": [
+        {
+          "amendment_id": "TA8479",
+          "technology": "JavaScript"
+        }
+      ]
+    },
+    {
+      "cm_id": "T38",
+      "endpoint": "library/tasks/T38/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": []
+    },
+    {
+      "cm_id": "T4457",
+      "endpoint": "library/tasks/T4457/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": [
+        {
+          "amendment_id": "TA8621",
+          "technology": "Python"
+        }
+      ]
+    },
+    {
+      "cm_id": "T4465",
+      "endpoint": "library/tasks/T4465/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": []
+    },
+    {
+      "cm_id": "T4746",
+      "endpoint": "library/tasks/T4746/amendments/",
+      "http_status": 200,
+      "result": "TEMPLATE_NO_MATCH",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": []
+    },
+    {
+      "cm_id": "T76",
+      "endpoint": "library/tasks/T76/amendments/",
+      "http_status": 200,
+      "result": "LIBRARY_SOURCED",
+      "retry_count": 0,
+      "queried_at": "2026-07-03T00:27:06.343082+00:00",
+      "matched_amendments": [
+        {
+          "amendment_id": "TA8509",
+          "technology": "Python"
+        }
+      ]
+    }
+  ],
+  "created_at": "2026-07-03T00:31:21.217372+00:00"
+}

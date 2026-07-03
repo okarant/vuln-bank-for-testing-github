@@ -1,0 +1,4 @@
+{ "all_or_none": false, "strict_ref_checking": false, "composite_request": [
+  { "method": "POST", "path": "/api/v2/projects/31942/tasks/31942-T2348/notes/", "reference_id": "T2348", "body": { "text": "[AI-Noted] Organizational/process requirement: Perform code reviews. Not applicable for code fixes." } },
+  { "method": "POST", "path": "/api/v2/projects/31942/tasks/31942-T178/notes/", "reference_id": "T178", "body": { "text": "[AI-Noted] Organizational/process requirement: Obtain consent from users prior to collecting personal information. Not applicable for code fixes." } }
+]}

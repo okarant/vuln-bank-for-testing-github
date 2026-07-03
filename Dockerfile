@@ -1,11 +1,17 @@
-FROM python:3.9-slim
+# Pin to a specific patch release of a minimal base image. In CI, pin by digest
+# (FROM python:3.9.18-slim@sha256:...) and scan/sign the image before deployment.
+FROM python:3.9.18-slim
 
 ENV PYTHONUNBUFFERED=1
 
-# Install PostgreSQL client
-RUN apt-get update && apt-get install -y \
+# Install PostgreSQL client (no recommended extras -> smaller attack surface)
+RUN apt-get update && apt-get install -y --no-install-recommends \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
+
+# Create a non-root user/group to run the application (least privilege)
+RUN groupadd --system appgroup \
+    && useradd --system --gid appgroup --home-dir /app --shell /usr/sbin/nologin appuser
 
 WORKDIR /app
 
@@ -17,9 +23,13 @@ RUN mkdir -p static/uploads templates
 
 COPY . .
 
-# Ensure uploads directory exists and has proper permissions
-RUN chmod 777 static/uploads
-RUN chmod +x /app/start.sh
+# Least-privilege permissions (no world-writable 777) and non-root ownership
+RUN chown -R appuser:appgroup /app \
+    && chmod 755 static/uploads \
+    && chmod +x /app/start.sh
+
+# Drop root: run the container process as the unprivileged app user
+USER appuser
 
 EXPOSE 5000
 

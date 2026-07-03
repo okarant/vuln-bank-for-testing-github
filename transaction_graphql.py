@@ -43,7 +43,8 @@ class TransactionSummaryType(graphene.ObjectType):
 
 def _load_user_actor(user_id):
     rows = execute_query(
-        f"SELECT id, username, account_number, is_admin FROM users WHERE id = {user_id}"
+        "SELECT id, username, account_number, is_admin FROM users WHERE id = %s",
+        (user_id,)
     )
 
     if not rows:
@@ -75,7 +76,8 @@ def _resolve_scope(actor, requested_account_number):
 
 def _load_actor_by_account_number(account_number):
     rows = execute_query(
-        f"SELECT id, username, account_number, is_admin FROM users WHERE account_number = '{account_number}'"
+        "SELECT id, username, account_number, is_admin FROM users WHERE account_number = %s",
+        (account_number,)
     )
     if not rows:
         return None

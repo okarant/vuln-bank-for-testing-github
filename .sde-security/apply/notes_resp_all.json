@@ -1,0 +1,116 @@
+{
+  "composite_response": [
+    {
+      "reference_id": "T36",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Applied] Fixed in templates/dashboard.html and templates/blog.html: removed |safe filters on user-controlled username and user_bio (restoring Jinja2 context-aware HTML auto-escaping), and replaced innerHTML string concatenation of the search query with textContent + createElement to stop DOM-based XSS. The library recipe was JavaScript-context; translated its intent to this repo's Python/Jinja2 stack (Format B cross-stack translation).",
+        "id": 97075,
+        "created": "2026-07-02T20:55:32.535124-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-02T20:55:32.535124-04:00",
+        "extra": {},
+        "task": "T36"
+      }
+    },
+    {
+      "reference_id": "T4457",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Applied] Fixed in ai_agent_deepseek.py: replaced the injection-obeying system prompt with an immutable security contract (user text = untrusted data, no role changes, no full-DB dumps, no privileged actions from chat); delimited untrusted user content in <user_message> tags and added best-effort input sanitization; removed the logic that expanded database context in response to prompt-injection attempts.",
+        "id": 97076,
+        "created": "2026-07-02T20:55:32.666361-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-02T20:55:32.666361-04:00",
+        "extra": {},
+        "task": "T4457"
+      }
+    },
+    {
+      "reference_id": "T4746",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Applied] Infrastructure fix applied in Dockerfile: added a non-root appuser/appgroup and USER directive, removed world-writable chmod 777 on static/uploads (now 755 + chown to appuser), added --no-install-recommends, and pinned the base image to python:3.9.18-slim. Registry digest-pinning, image scanning and signing remain CI/registry responsibilities (documented inline).",
+        "id": 97077,
+        "created": "2026-07-02T20:55:32.748038-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-02T20:55:32.748038-04:00",
+        "extra": {},
+        "task": "T4746"
+      }
+    },
+    {
+      "reference_id": "T21",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Documented] Fix applied but scope extends beyond repository files; reclassified as Documented for accurate downstream verification. TLS termination, certificate/PKI management, cipher/protocol hardening, and HTTPS ingress for this Flask app are provided by external infrastructure (reverse proxy / load balancer / ingress) - the skill's own 'Cannot Do' boundary confirms external infra is out of repo scope. Recommended: enforce TLS 1.2+ with a modern cipher suite and HTTPS-only redirects at the ingress/LB and disable compression on secret-bearing responses.",
+        "id": 97078,
+        "created": "2026-07-02T20:55:32.869943-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-02T20:55:32.869943-04:00",
+        "extra": {},
+        "task": "T21"
+      }
+    }
+  ]
+}

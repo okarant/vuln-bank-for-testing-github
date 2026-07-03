@@ -1,0 +1,38 @@
+{
+  "all_or_none": false,
+  "strict_ref_checking": false,
+  "composite_request": [
+    {
+      "method": "POST",
+      "path": "/api/v2/projects/31942/tasks/31942-T36/notes/",
+      "reference_id": "T36",
+      "body": {
+        "text": "[AI-Applied] Fixed in templates/dashboard.html and templates/blog.html: removed |safe filters on user-controlled username and user_bio (restoring Jinja2 context-aware HTML auto-escaping), and replaced innerHTML string concatenation of the search query with textContent + createElement to stop DOM-based XSS. The library recipe was JavaScript-context; translated its intent to this repo's Python/Jinja2 stack (Format B cross-stack translation)."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/projects/31942/tasks/31942-T4457/notes/",
+      "reference_id": "T4457",
+      "body": {
+        "text": "[AI-Applied] Fixed in ai_agent_deepseek.py: replaced the injection-obeying system prompt with an immutable security contract (user text = untrusted data, no role changes, no full-DB dumps, no privileged actions from chat); delimited untrusted user content in <user_message> tags and added best-effort input sanitization; removed the logic that expanded database context in response to prompt-injection attempts."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/projects/31942/tasks/31942-T4746/notes/",
+      "reference_id": "T4746",
+      "body": {
+        "text": "[AI-Applied] Infrastructure fix applied in Dockerfile: added a non-root appuser/appgroup and USER directive, removed world-writable chmod 777 on static/uploads (now 755 + chown to appuser), added --no-install-recommends, and pinned the base image to python:3.9.18-slim. Registry digest-pinning, image scanning and signing remain CI/registry responsibilities (documented inline)."
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/api/v2/projects/31942/tasks/31942-T21/notes/",
+      "reference_id": "T21",
+      "body": {
+        "text": "[AI-Documented] Fix applied but scope extends beyond repository files; reclassified as Documented for accurate downstream verification. TLS termination, certificate/PKI management, cipher/protocol hardening, and HTTPS ingress for this Flask app are provided by external infrastructure (reverse proxy / load balancer / ingress) - the skill's own 'Cannot Do' boundary confirms external infra is out of repo scope. Recommended: enforce TLS 1.2+ with a modern cipher suite and HTTPS-only redirects at the ingress/LB and disable compression on secret-bearing responses."
+      }
+    }
+  ]
+}

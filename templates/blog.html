@@ -189,7 +189,10 @@
 
             if (query && query.trim() !== '') {
                 searchInfo.style.display = 'block';
-                searchInfo.innerHTML = 'Searching for: <strong>' + query + '</strong>';
+                searchInfo.textContent = 'Searching for: ';
+                const strongEl = document.createElement('strong');
+                strongEl.textContent = query;
+                searchInfo.appendChild(strongEl);
 
                 if (updateUrl) {
                     const url = new URL(window.location);

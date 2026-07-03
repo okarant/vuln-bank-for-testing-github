@@ -1,0 +1,101 @@
+{
+  "source_skill": "apply-security-fixes",
+  "handoff_version": "2",
+  "generated_at": "2026-07-03T00:56:48.170438Z",
+  "upstream_handoff": ".sde-handoff.json",
+  "repository_path": "/root/dev-work-sde-mcp/vuln-bank-for-testing-github",
+  "project_id": 31942,
+  "security_branch": "security-hardening/oleg-vuln-bank-live-20260703-20260703",
+  "scope": "all",
+  "totals": {
+    "applied": 6,
+    "documented": 1,
+    "skipped": 1,
+    "scoped_total": 8
+  },
+  "countermeasures": [
+    {
+      "id": "T38",
+      "full_id": "31942-T38",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "transaction_graphql.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T29",
+      "full_id": "31942-T29",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "app.py",
+        "templates/login.html",
+        "requirements.txt"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T76",
+      "full_id": "31942-T76",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "auth.py",
+        "app.py",
+        "database.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T36",
+      "full_id": "31942-T36",
+      "status": "Applied",
+      "category": "CODE_FIX",
+      "files_modified": [
+        "templates/dashboard.html",
+        "templates/blog.html"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T4457",
+      "full_id": "31942-T4457",
+      "status": "Applied",
+      "category": "ML_CODE",
+      "files_modified": [
+        "ai_agent_deepseek.py"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T4746",
+      "full_id": "31942-T4746",
+      "status": "Applied",
+      "category": "INFRA",
+      "files_modified": [
+        "Dockerfile"
+      ],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T21",
+      "full_id": "31942-T21",
+      "status": "Documented",
+      "category": "CODE_FIX",
+      "files_modified": [],
+      "sde_note_result": "ADDED"
+    },
+    {
+      "id": "T4465",
+      "full_id": "31942-T4465",
+      "status": "Skipped",
+      "category": "ML_DOC",
+      "files_modified": [],
+      "sde_note_result": "NOT_SENT"
+    }
+  ]
+}

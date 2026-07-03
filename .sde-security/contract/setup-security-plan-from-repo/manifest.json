@@ -1,0 +1,9 @@
+{
+  "skill": "setup-security-plan-from-repo",
+  "fetched_at": "2026-07-03T00:00:00Z",
+  "source": "on-disk sde-mcp/src/prompts (BE-THE-SERVER authoritative)",
+  "sha256_skill": "bbc5b79c352f",
+  "sha256_agents": "ec7fa233de8d",
+  "skill_chars": 76649,
+  "agents_chars": 17413
+}

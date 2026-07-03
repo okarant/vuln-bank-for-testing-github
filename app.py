@@ -10,6 +10,7 @@ import auth
 from werkzeug.utils import secure_filename 
 from flask_swagger_ui import get_swaggerui_blueprint
 from flask_cors import CORS
+from flask_wtf.csrf import CSRFProtect
 from database import (
     init_connection_pool,
     init_db,
@@ -34,6 +35,11 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
+# CSRF protection (T29): synchronizer anti-CSRF tokens on all state-changing requests.
+# SECRET_KEY is loaded from the environment (never hardcoded) and used to sign tokens.
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
+csrf = CSRFProtect(app)
+
 # Initialize database connection pool
 init_connection_pool()
 
@@ -53,7 +59,7 @@ app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 init_auth_routes(app)
 init_merchant_payment_routes(app)
 
-app.secret_key = "secret123"
+# app.secret_key is configured from os.environ['SECRET_KEY'] above; no hardcoded key.
 
 # Rate limiting configuration
 RATE_LIMIT_WINDOW = 3 * 60 * 60  # 3 hours in seconds
@@ -318,12 +324,18 @@ def register():
                     'tried_at': str(datetime.now())
                 }), 400
             
-            # Build dynamic query based on user input fields
+            # Build dynamic query based on user input fields.
+            # Column identifiers cannot be bound as parameters, so restrict them to a
+            # fixed allowlist to prevent SQL injection through attacker-controlled keys.
+            ALLOWED_FIELDS = {
+                'username', 'password', 'account_number', 'balance',
+                'is_admin', 'profile_picture', 'reset_pin', 'bio', 'is_suspended'
+            }
             fields = ['username', 'password', 'account_number']
             values = [user_data.get('username'), user_data.get('password'), account_number]
             
             for key, value in user_data.items():
-                if key not in ['username', 'password']:
+                if key not in ['username', 'password'] and key in ALLOWED_FIELDS:
                     fields.append(key)
                     values.append(value)
             
@@ -384,10 +396,8 @@ def login():
             
             print(f"Login attempt - Username: {username}")
             
-            query = f"SELECT * FROM users WHERE username='{username}' AND password='{password}'"
-            print(f"Debug - Login query: {query}")
-            
-            user = execute_query(query)
+            query = "SELECT * FROM users WHERE username = %s AND password = %s"
+            user = execute_query(query, (username, password))
             print(f"Debug - Query result: {user}")
             
             if user and len(user) > 0:
@@ -489,7 +499,8 @@ def dashboard(current_user):
 def check_balance(account_number):
     try:
         user = execute_query(
-            f"SELECT username, balance FROM users WHERE account_number='{account_number}'"
+            "SELECT username, balance FROM users WHERE account_number = %s",
+            (account_number,)
         )
         
         if user:
@@ -1090,7 +1101,8 @@ def create_admin(current_user):
         account_number = generate_account_number()
         
         execute_query(
-            f"INSERT INTO users (username, password, account_number, is_admin) VALUES ('{username}', '{password}', '{account_number}', true)",
+            "INSERT INTO users (username, password, account_number, is_admin) VALUES (%s, %s, %s, true)",
+            (username, password, account_number),
             fetch=False
         )
         
@@ -1116,7 +1128,8 @@ def forgot_password():
             username = data.get('username')
             
             user = execute_query(
-                f"SELECT id FROM users WHERE username='{username}'"
+                "SELECT id FROM users WHERE username = %s",
+                (username,)
             )
             
             if user:
@@ -1203,7 +1216,8 @@ def api_v1_forgot_password():
         username = data.get('username')
         
         user = execute_query(
-            f"SELECT id FROM users WHERE username='{username}'"
+            "SELECT id FROM users WHERE username = %s",
+            (username,)
         )
         
         if user:
@@ -1246,7 +1260,8 @@ def api_v2_forgot_password():
         username = data.get('username')
         
         user = execute_query(
-            f"SELECT id FROM users WHERE username='{username}'"
+            "SELECT id FROM users WHERE username = %s",
+            (username,)
         )
         
         if user:
@@ -1286,7 +1301,8 @@ def api_v3_forgot_password():
         username = data.get('username')
         
         user = execute_query(
-            f"SELECT id FROM users WHERE username='{username}'"
+            "SELECT id FROM users WHERE username = %s",
+            (username,)
         )
         
         if user:

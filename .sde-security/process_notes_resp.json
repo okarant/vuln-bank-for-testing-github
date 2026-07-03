@@ -1,0 +1,60 @@
+{
+  "composite_response": [
+    {
+      "reference_id": "T2348",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Noted] Organizational/process requirement: Perform code reviews. Not applicable for code fixes.",
+        "id": 97061,
+        "created": "2026-07-02T20:25:59.516283-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-02T20:25:59.516283-04:00",
+        "extra": {},
+        "task": "T2348"
+      }
+    },
+    {
+      "reference_id": "T178",
+      "http_status_code": 201,
+      "http_headers": {
+        "Content-Type": "application/json",
+        "Allow": "GET, POST, HEAD, OPTIONS"
+      },
+      "body": {
+        "automatic": false,
+        "text": "[AI-Noted] Organizational/process requirement: Obtain consent from users prior to collecting personal information. Not applicable for code fixes.",
+        "id": 97062,
+        "created": "2026-07-02T20:25:59.608020-04:00",
+        "updater": {
+          "id": 15721,
+          "email": "okarant@securitycompass.com",
+          "first_name": "Oleg",
+          "last_name": "Karant",
+          "is_active": true,
+          "role": {
+            "id": "UR4",
+            "name": "Administrator"
+          }
+        },
+        "updated": "2026-07-02T20:25:59.608020-04:00",
+        "extra": {},
+        "task": "T178"
+      }
+    }
+  ]
+}

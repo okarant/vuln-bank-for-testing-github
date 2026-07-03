@@ -1,0 +1,9 @@
+{
+  "skill": "generate-security-skill-files",
+  "fetched_at": "2026-07-03T00:22:12.148447Z",
+  "sha256_skill": "e0d73096daf0",
+  "sha256_agents": "c415c5b91d68",
+  "skill_chars": 84306,
+  "agents_chars": 19581,
+  "source": "on-disk src/prompts (authoritative per QA BE-THE-SERVER)"
+}

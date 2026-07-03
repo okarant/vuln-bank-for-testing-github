@@ -1,0 +1,10 @@
+{ "all_or_none": false, "strict_ref_checking": false, "composite_request": [
+  { "method": "GET", "path": "/api/v2/library/tasks/T38/amendments/", "reference_id": "T38" },
+  { "method": "GET", "path": "/api/v2/library/tasks/T36/amendments/", "reference_id": "T36" },
+  { "method": "GET", "path": "/api/v2/library/tasks/T76/amendments/", "reference_id": "T76" },
+  { "method": "GET", "path": "/api/v2/library/tasks/T29/amendments/", "reference_id": "T29" },
+  { "method": "GET", "path": "/api/v2/library/tasks/T4457/amendments/", "reference_id": "T4457" },
+  { "method": "GET", "path": "/api/v2/library/tasks/T4465/amendments/", "reference_id": "T4465" },
+  { "method": "GET", "path": "/api/v2/library/tasks/T4746/amendments/", "reference_id": "T4746" },
+  { "method": "GET", "path": "/api/v2/library/tasks/T21/amendments/", "reference_id": "T21" }
+]}
